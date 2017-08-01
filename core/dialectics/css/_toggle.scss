@@ -1,0 +1,43 @@
+/**
+ * Styles for the toggle module
+ */
+
+ .toggle{
+ 	margin: 0;
+ 	padding: 0;
+ 	list-style-image: none;
+ 	list-style: none;
+ }
+
+
+input[type="radio"].toggle-option{
+ 	display: none;
+
+ 	& + label{
+	 	display: inline-block;
+	 	padding: 18px;
+		border-top: 2px solid #c3c9cd;
+ 		border-bottom: 2px solid #c3c9cd;
+ 		border-right: 2px solid rgba(#c3c9cd,0);
+ 		border-left: 2px solid rgba(#c3c9cd,1);
+ 	}
+ 	
+
+ 	&:checked ~ label{
+ 		border-top: 2px solid #c3c9cd;
+ 		border-bottom: 2px solid #c3c9cd;
+ 		border-right: 2px solid rgba(#c3c9cd,1);
+ 		border-left: 2px solid rgba(#c3c9cd,0);
+ 	}
+
+ 	&:checked + label{
+ 		border: 2px solid $blue;
+ 	}
+}
+
+ 	
+
+ 	
+
+ 		
+ 

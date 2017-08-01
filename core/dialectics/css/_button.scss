@@ -1,0 +1,54 @@
+/**
+ * Styles for the button module
+ */
+
+
+//placeholder
+%std-btn{
+	display: inline-block;
+	text-decoration: none;
+ 	@extend .body-l;
+}
+
+ .box-button{
+ 	@extend %std-btn;
+ 	padding: 10px 20px;
+ }
+
+ .box-button-blue{
+ 	background: $blue;
+ 	color: white;
+ }
+
+ .box-button-black{
+ 	background: $dark-grey;
+ 	color: white;
+ }
+
+  .box-button-white{
+ 	background: white;
+ 	color: $blue;
+ }
+
+ .ghost-button{
+ 	@extend %std-btn;
+ 	padding: 8px 20px;
+ 	border-width: 2px;
+ 	border-style: solid;
+ 	background: white;
+ }
+
+ .ghost-button-blue{
+ 	border-color: $blue;
+ 	color: $blue;
+ }
+
+ .ghost-button-black{
+ 	border-color: $dark-grey;
+ 	color: $dark-grey;
+ }
+
+ .ghost-button-white{
+ 	border-color: white;
+ 	color: white;
+ }

@@ -1,0 +1,69 @@
+/**
+ * Styles for the checkbox module
+ */
+
+
+//default checkbox
+.checkbox{
+	position: absolute;
+	visibility: hidden;
+}
+
+.checkbox-label{
+	position: relative;
+	z-index: 10;
+} 
+
+
+.checkbox-label-box, .checkbox-label-name{
+	vertical-align: middle;
+}
+
+.checkbox-label-box{
+	@include size(20px);
+	display: inline-block;
+	position: relative;
+	background-color: $layout-grey;
+}
+
+.checkbox-label-name{
+	display: inline-block;
+	position: relative;
+	margin-left: 14px;
+}
+
+
+.checkbox-label-box-white{
+	background-color: white;
+}
+
+
+
+
+//State Changes
+
+.checkbox:checked + .checkbox-label{
+	.checkbox-label-box{
+		&:before{
+			@extend %grana_icons;
+			position: absolute;
+			content: '\e808';
+
+			font-size: 12px;
+			font-weight: bold;
+			top: 4px;
+			left: 2px;
+
+			color: $blue;
+		}
+	}
+
+	.checkbox-label-box-white, .checkbox-label-box-checkgrey{
+		&:before{
+			color: $primary-color;
+		}
+	}
+
+
+
+}
