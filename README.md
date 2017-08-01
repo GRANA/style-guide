@@ -28,5 +28,7 @@ Instructions for adding necessary files to project. ie. sass files, js etc...
 - Bourbon 4.2.2
 - Neat 2.0.0
 
+## CSS Conventions
 
+We follow modular methodology when writing our css. Please refer to our document on [SMACSS](https://granacom.atlassian.net/wiki/display/TD/Scalable+and+Modular+Architecture+for+CSS)
 
