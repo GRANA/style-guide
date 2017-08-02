@@ -19,10 +19,9 @@ that serves as a foundation for grana.com. Provides documentation
 on implementation for developers and designers with the goal of maintaining consistency.
 
 ## Features
-- Base reset styling
 - Typography classes for extending
 - Default colours
-- Custom UI components with js functionality
+- Custom UI components
 - Grana font iconography
 
 ## Installation
@@ -41,7 +40,9 @@ Instructions for adding necessary files to project. ie. sass files, js etc...
 - Bourbon 4.2.2
 - Neat 2.0.0
 
-## CSS Conventions
+## Sass
 
 We follow modular methodology when writing our css. Please refer to our document on [SMACSS](https://granacom.atlassian.net/wiki/display/TD/Scalable+and+Modular+Architecture+for+CSS)
+
+Sass formatting shall follow Thoughtbot's sass guide [here](https://github.com/thoughtbot/guides/tree/master/style/sass).
 
