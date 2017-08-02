@@ -19,10 +19,9 @@ that serves as a foundation for grana.com. Provides documentation
 on implementation for developers and designers with the goal of maintaining consistency.
 
 ## Features
-- Base reset styling
 - Typography classes for extending
 - Default colours
-- Custom UI components with js functionality
+- Custom UI components
 - Grana font iconography
 
 ## Installation
