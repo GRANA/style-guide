@@ -19,13 +19,13 @@
 			border-radius: 50%;
 			position: absolute;
 			content: '';
-			background-color: $layout-grey;
+			background-color: $secondary-background;
 
 		}
 
 		&:before{
 			@include size(20px);
-			border: 1px solid #CAD0D3;
+			border: 1px solid $text-04;
 			left: 0;
 			z-index: 10;
 		}
@@ -48,8 +48,8 @@
 .radiobutton-whitegrey{
 	& + label{
 		&:before{
-			border: 3px solid white;
-			background-color: white;
+			border: 3px solid $inverse-01;
+			background-color: $inverse-01;
 		}
 	}
 }
@@ -57,8 +57,8 @@
 .radiobutton-greygrey{
 	& + label{
 		&:before{
-			border: 3px solid $layout-grey;
-			background-color: $layout-grey;
+			border: 3px solid $secondary-background;
+			background-color: $secondary-background;
 		}
 	}
 }
@@ -80,13 +80,13 @@
 
 	&:hover + label, &:checked + label{
 		&:before{
-			border: 1px solid $blue;
+			border: 1px solid $primary-brand;
 		}
 	}
 
 	&:checked + label{
 		&:after{
-		    background-color: $blue;
+		    background-color: $primary-brand;
 
 		}
 	}
@@ -95,7 +95,7 @@
 .radiobutton-whitegrey,.radiobutton-greygrey{
 	&:checked + label{
 		&:before{
-		    background-color: $primary-color;
+		    background-color: $primary-text;
 
 		}
 	}

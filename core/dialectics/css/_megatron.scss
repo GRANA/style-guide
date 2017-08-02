@@ -6,7 +6,7 @@
 
 //General megatron module styles
 .megatron{
-	@extend %full-flexi-container;
+	@extend %layout-full-flexi;
   @include grid-container();
 	position: relative;
 	background-size:cover;
@@ -16,7 +16,7 @@
 
 .megatron-fixed{
 	position: relative;
-	@extend %fixed-container;
+	@extend %layout-fixed;
 	height: 100%;
 	z-index: 2;
 }

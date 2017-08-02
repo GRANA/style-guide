@@ -1,0 +1,76 @@
+ // These are the typography standards that are used on the Grana 
+ // website for both desktop and mobile. 
+ // Sofia Pro is the standard typeface used across the Grana brand.  
+ // Desktop and mobile typography vary due to the readability and 
+ // legibility on different screen sizes. Type styles that are 
+ // named the same should refer back to the device to determine 
+ // followed style.
+
+ .body-l{
+ 	font-size: 15px;
+ 	line-height: 20px;
+ }
+
+ .body-m{
+ 	font-size: 12px;
+ 	line-height: 16px;
+ }
+
+ .body-s{
+ 	font-size: 10px;
+ 	line-height: 12px;
+ }
+
+ .heading{
+ 	margin: 0;
+ 	font-weight: 400;
+ }
+
+ .heading-semi{
+	font-weight: 600;
+}
+
+ .heading-xl{
+ 	font-size: 60px;
+ 	line-height: 72px;
+ }
+
+ .heading-l{
+ 	font-size: 30px;
+ 	line-height: 40px;
+ }
+
+ .heading-m{
+ 	font-size: 25px;
+ 	line-height: 30px;
+ }
+
+ .heading-s{
+ 	font-size: 20px;
+ 	line-height: 24px;
+ }
+
+ .heading-xs{
+ 	font-size: 15px;
+ 	line-height: 20px;
+ }
+
+.heading-xxs{
+ 	font-size: 12px;
+ 	line-height: 16px;
+ }
+
+.megaheading{
+ 	margin: 0;
+ 	font-weight: 400;
+ }
+
+ .megaheading-xl{
+ 	font-size: 120px;
+ 	line-height: 132px;
+ }
+
+ .megaheading-l{
+ 	font-size: 100px;
+ 	line-height: 110px;
+ }

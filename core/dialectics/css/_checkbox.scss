@@ -23,7 +23,7 @@
 	@include size(20px);
 	display: inline-block;
 	position: relative;
-	background-color: $layout-grey;
+	background-color: $secondary-background;
 }
 
 .checkbox-label-name{
@@ -54,13 +54,13 @@
 			top: 4px;
 			left: 2px;
 
-			color: $blue;
+			color: $primary-brand;
 		}
 	}
 
 	.checkbox-label-box-white, .checkbox-label-box-checkgrey{
 		&:before{
-			color: $primary-color;
+			color: $primary-text;
 		}
 	}
 

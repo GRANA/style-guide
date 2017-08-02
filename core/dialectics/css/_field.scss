@@ -18,7 +18,7 @@
   font-weight: 400;
 	top: 15px;
   left: 18px;
-  color: #91989C;
+  color: $secondary-body-text;
   transform-origin: left center;
   @include transition(transform .2s ease);
   @include transform(translate(0px,0px) scale(1));
@@ -30,7 +30,7 @@ input[type="text"]{
     @extend .body-l;
     outline: none;
     border: none;
-    background: #F9F9F9;
+    background-color: $secondary-background;
 
     width: 100%;
     padding: 12px 20px 12px 20px;
@@ -40,7 +40,7 @@ input[type="text"]{
   }
 
   &.field-text-white{
-    background: white;
+    background-color: $primary-inverse-text;
   }
 }
 
@@ -48,7 +48,7 @@ input[type="text"]{
 .field-helper{
 	@extend .body-m;
 	margin-top: 10px;
-	color: #91989C;
+	color: $secondary-body-text;
 }
 
 .field-helper-error{
@@ -73,7 +73,7 @@ input[type="text"]{
 
 	cursor: pointer;
 
-	color: $blue !important;
+	color: $primary-brand !important;
 
 	&-apply,&-applied,&-remove{
 		display: none;
@@ -115,19 +115,19 @@ input[type="text"]{
 
 input[type="text"]{
   &.field-text:focus{
-  	border-bottom: 2px solid $blue;
+  	border-bottom: 2px solid $primary-brand;
   }
 }
 
 .field-group.is-error{
   input[type="text"]{
     &.field-text{
-    	border-bottom: 2px solid $red;
+    	border-bottom: 2px solid $error;
     }
   }
 
   .field-helper{
-  	color: $red;
+  	color: $error;
   }
 }
 
@@ -135,15 +135,15 @@ input[type="text"]{
 .field-group.is-success{
 
 	.field-text{
-		border-bottom: 2px solid $seafoam;
+		border-bottom: 2px solid $success;
 	}
 
 	.field-helper{
-		color: $seafoam;
+		color: $success;
 	}
 
 	.field-submit-btn{
-		color: $seafoam;
+		color: $success;
 		&:before{
 			@extend %grana_icons;
 			content: '\e812';
@@ -166,7 +166,7 @@ input[type="text"]{
 	cursor: pointer;
 
 	.field-submit-btn{
-		color: $red;
+		color: $error;
 		&:before{
 			@extend %grana_icons;
 			content: '\e800';
@@ -186,7 +186,7 @@ input[type="text"]{
 
 .field-group.is-disabled{
 	.field-helper, .field-label{
-		color: #CAD0D3;
+		color: $inactive-text;
 		text-decoration: line-through;
 	}
 }

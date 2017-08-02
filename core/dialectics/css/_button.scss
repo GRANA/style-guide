@@ -16,18 +16,18 @@
  }
 
  .box-button-blue{
- 	background: $blue;
- 	color: white;
+ 	background-color: $primary-brand;
+ 	color: $primary-inverse-text;
  }
 
  .box-button-black{
- 	background: $dark-grey;
- 	color: white;
+ 	background-color: $primary-text;
+ 	color: $primary-inverse-text;
  }
 
   .box-button-white{
- 	background: white;
- 	color: $blue;
+ 	background-color: $primary-inverse-text;
+ 	color: $primary-brand;
  }
 
  .ghost-button{
@@ -35,20 +35,20 @@
  	padding: 8px 20px;
  	border-width: 2px;
  	border-style: solid;
- 	background: white;
+ 	background-color: $primary-inverse-text;
  }
 
  .ghost-button-blue{
- 	border-color: $blue;
- 	color: $blue;
+ 	border-color: $primary-brand;
+ 	color: $primary-brand;
  }
 
  .ghost-button-black{
- 	border-color: $dark-grey;
- 	color: $dark-grey;
+ 	border-color: $primary-text;
+ 	color: $primary-text;
  }
 
  .ghost-button-white{
- 	border-color: white;
- 	color: white;
+ 	border-color: $primary-inverse-text;
+ 	color: $primary-inverse-text;
  }

@@ -1,0 +1,29 @@
+/**
+FONTS
+*/
+@include font-face("sofiapro", "../fonts/sofiapro/SofiaProRegular", $file-formats: eot woff2 woff ttf svg);
+@include font-face("sofiapro", "../fonts/sofiapro/SofiaProMedium", 500, $file-formats: eot woff2 woff ttf svg);
+@include font-face("sofiapro", "../fonts/sofiapro/SofiaProSemiBold", 600, $file-formats: eot woff2 woff ttf svg);
+
+@include font-face("grana_icons", "../fonts/grana_icons/grana_icons_v3.02", $file-formats: eot woff ttf svg);
+
+$sofiapro: "sofiapro", arial, sans-serif; 
+
+
+%grana_icons{
+  font-family: "grana_icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
