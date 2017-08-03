@@ -64,7 +64,7 @@
   @include transition(all .4s ease);
 
   &.multislider-item-third{
-    @extend .gr-col-4;
+    @include grid-column(4);
   }
 
   &.multislider-item-full{
