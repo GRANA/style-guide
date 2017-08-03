@@ -36,6 +36,7 @@ Instructions for adding necessary files to project. ie. sass files, js etc...
 
 ### Dependencies
 
+- Jquery 1.11.1
 - Sass 3.4.22 
 - Bourbon 4.2.2
 - Neat 2.0.0
