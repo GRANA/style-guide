@@ -46,7 +46,7 @@
 
 
 .multislider-items{
-  @extend %clearliststyle;
+  @include clearliststyle;
   position: relative;
   text-align: center;
 }
