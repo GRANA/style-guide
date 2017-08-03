@@ -82,6 +82,7 @@
   img{
     position: absolute;
     opacity: 0;
+    @include transition(opacity .2s ease);
   }
 }
 
@@ -95,7 +96,7 @@
 
 .multislider-desc{
   margin: 0 0 10px 0;
-  color: #919191;
+  color: $secondary-body-text;
 }
 
 
@@ -132,7 +133,7 @@
 
 .multislider-image{
   img.lazy-loaded{
-      @include fadeIn();
+      opacity: 1;
     }
 }
 
