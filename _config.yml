@@ -1,0 +1,4 @@
+exclude: ["./_dev/_assets/_sass"]
+
+source: ./_dev
+destination: ./docs

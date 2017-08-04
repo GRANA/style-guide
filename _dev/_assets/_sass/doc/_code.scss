@@ -1,0 +1,19 @@
+/**
+* Code tag styling for highlight.js
+**/
+
+.hljs{
+	padding: 1.4em;
+}
+
+.hljs,.hljs-subst{
+	color: $blue;
+}
+
+.hljs-attr{
+	color: lighten($blue, 20%);
+}
+
+.hljs-type, .hljs-string, .hljs-number, .hljs-selector-id, .hljs-selector-class, .hljs-quote, .hljs-template-tag, .hljs-deletion{
+	color: $red;
+}
