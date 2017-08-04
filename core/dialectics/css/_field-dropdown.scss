@@ -1,103 +1,93 @@
-/**
-* Dropdown module. A sub module of field.
-**/
+//
+// Dropdown module. A sub module of field.
+//
 
-$dropdown-colour: #F9F9F9;
-.field-dropdown{
-	position: relative;
-	background: $dropdown-colour;
-	@extend .body-l;
-	@include user-select(none);
-	width: 100%;
-	z-index: 50;
-	text-transform: lowercase;
+.field-dropdown {
+  @extend %body-l;
+  @include user-select(none);
+  
+  background: $primary-background;
+  position: relative;
   text-align: left;
+  text-transform: lowercase;
+  width: 100%;
+  z-index: 50;
+  
+  &:after, 
+  &-label {
+    color: $primary-text;
+  }
 
-	&:after, &-label{
-		color: #91989c;
-	}
+  &:after {
+    @extend %grana-icons;
+    @include transform(rotate(90deg));
+    content: "\e813";
+    font-size: 10px;
+    margin: 0 20px;
+    position: absolute;
+    right: 0;
+    top: 18px;
+  }
+}
 
-	&:after{
-		@extend %grana_icons;
-		position: absolute;
-		content: '\e813';
-		@include transform(rotate(90deg));
-		margin: 0 20px;
-		font-size: 10px;
-		top: 18px;
-		right: 0;
-	}
+.field-dropdown, 
+.field-dropdown-item { 
+  cursor: pointer;
+  padding: 13px 50px 13px 20px;
+}
 
-	&, &-item{
-		cursor: pointer;
-		padding: 13px 50px 13px 20px;
-	}
+.field-dropdown-label {
+  display: block;
+  height: 20px;
+}
 
-	&-label{
-		display: block;
-		height: 20px;
-	}
+.field-dropdown-list-container {
+  @include size(inherit 150px);
+  display: none;
+  left: 0;
+  overflow: scroll;
+  position: absolute;
+  top: 100%;
+}
 
-	&-list-container{
-		position: absolute;
-		display: none;
-		top: 100%;
-		left: 0;
-		@include size(inherit 150px);
-		overflow: scroll;
-	}
+.field-dropdown-list {
+  @include clearliststyle;
+  background-color: $secondary-background;
+  position: relative;
+  width: inherit;
+}
 
-	&-list{
-		position: relative;
-		width: inherit;
+.field-dropdown-item {
+  color: $primary-text;
 
-		list-style: none;
-	    list-style-image: none;
-	    padding: 0;
-	    margin: 0;
+  &:hover {
+    color: $secondary-cta;
+  }
 
-	    background: $dropdown-colour;
-	}
+  &.is-selected {
+    @extend %heading-semi;
+    color: $primary-text;
+  }
 
+  &.is-disabled {
+    color: $inactive-text;
+    text-decoration: line-through;
+  }
 
-
-	&-item{
-		color: #91989c;
-
-		&:hover{
-			color: #35393C;
-		}
-	}
+  &.is-focused {
+    color: $primary-text;
+  }
 }
 
 //States
 
-.field-dropdown.is-open{
-	.field-dropdown-list-container{
-		display: block;
-	}
+.is-open {
+  .field-dropdown-list-container {
+    display: block;
+  }
 
-	.field-dropdown-label, &:after{
-		color: #CAD0D3;
-	}
-
+  .field-dropdown-label, 
+  &:after {
+    color: $text-04;
+  }
 }
-
-.field-dropdown-item{
-	&.is-selected{
-		@extend .heading-semi;
-		color: #35393D;
-	}
-
-	&.is-disabled{
-		text-decoration: line-through;
-		color: #cad0d3;
-	}
-
-	&.is-focused{
-		color: #35393C;
-	}
-}
-
-
-

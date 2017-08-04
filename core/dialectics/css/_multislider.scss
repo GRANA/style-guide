@@ -1,102 +1,104 @@
-/**
- * Style for team size guide
- */
+//
+// Style for team size guide
+//
 
 .multislider {
-  position: relative;
   @include user-select(none);
+  position: relative;  
 }
 
 .multislider-arrow {
+  @include transform-style(preserve-3d);
+  @include backface-visibility(hidden);
+  @include transition(opacity 0.2s ease);
+  cursor: pointer;
   display: inline-block;
+  opacity: 1;
   position: absolute;
   top: 35%;
   z-index: 2;
-  opacity: 1;
 
-  cursor: pointer;
-
-  @include transform-style(preserve-3d);
-  @include backface-visibility(hidden);
-  @include transition(opacity .2s ease);
-
-  &:after{
-    @extend %grana_icons;
-    position: relative;
-    margin: 50px;
-
-    content: '\e813';
+  &:after {
+    @extend %grana-icons;
+    @include transition(all 0.2s ease); 
+    content: "\e813";
     font-size: 24px;
-
-    text-decoration: none;
-    @include transition(all .2s ease);
+    margin: 50px;
+    position: relative;
+    text-decoration: none;  
   }
 }
 
-.multislider-arrow-left{
+.multislider-arrow-left {
   left: -40px;
 
-  &:after{
+  &:after {
     @include transform(rotate(180deg));
   }
 }
-.multislider-arrow-right{
+
+.multislider-arrow-right {
   right: -40px;
 }
 
-
-.multislider-items{
+.multislider-items {
   @include clearliststyle;
   position: relative;
   text-align: center;
 }
 
 
-.multislider-item{
+.multislider-item {
+  @include transition(all 0.4s ease);
   display: block;
-  position: absolute;
-  padding: 0 10px;
   opacity: 0;
+  padding: 0 10px;
+  position: absolute;
   z-index: 0;
 
-  //border: 1px solid grey;
+  &.is-selected {
+    opacity: 1;
+    z-index: 1;
+  }
 
-  @include transition(all .4s ease);
+  &.is-previous {
+    z-index: 0;
+  }
 
-  &.multislider-item-third{
+  &.multislider-item-third {
     @include grid-column(4);
   }
 
-  &.multislider-item-full{
+  &.multislider-item-full {
     width: 100%;
   }
-
 }
 
-.multislider-image{
-  position: relative;
+.multislider-image {
+  @include transition(opacity 0.4s ease);
   left: 0;
   opacity: 0.2;
-  @include transition( opacity .4s ease);
+  position: relative;
 
-  img{
-    position: absolute;
+  img {
+    @include transition(opacity 0.2s ease);
     opacity: 0;
-    @include transition(opacity .2s ease);
+    position: absolute;
+  }
+
+  .lazy-loaded {
+    opacity: 1;
   }
 }
 
-
-.multislider-item-bottom{
+.multislider-item-bottom {
+  @include transition(opacity 0.4s ease);
   opacity: 0;
-  @include transition( opacity .4s ease);
 }
 
-
-
-.multislider-desc{
-  margin: 0 0 10px 0;
+.multislider-desc {
   color: $secondary-body-text;
+  margin: 0 0 10px;
 }
 
 
@@ -104,41 +106,17 @@
 //States
 
 //carousel transition states.
-.is-visible{
-  .multislider-image{
+.is-visible {
+  .multislider-image {
     opacity: 1;
   }
 
-  .multislider-item-bottom{
+  .multislider-item-bottom {
     opacity: 1;
   }
-
 }
 
-//fade transition states.
-.multislider-item{
-
-  &.is-selected{
-    opacity: 1;
-    z-index: 1;
-  }
-
-  &.is-previous{
-    z-index: 0;
-  }
-}
-
-
-
-
-.multislider-image{
-  img.lazy-loaded{
-      opacity: 1;
-    }
-}
-
-.multislider-arrow-hide{
-  opacity: 0;
-
+.multislider-arrow-hide {
   cursor: default;
+  opacity: 0;
 }

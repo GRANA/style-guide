@@ -1,65 +1,66 @@
-/**
- * Arrow link
- */
+//
+// Arrow link
+//
 
-.arrow-link{
-  margin: 0 25px;
+.arrow-link {
   color: $primary-text;
   font-size: 1.7rem;
-
+  margin: 0 25px;
   text-transform: lowercase;
 
-  &:after{
-      @extend %grana_icons;
-        position: relative;
-        margin-left: 10px;
+  &:after { 
+    @extend %grana-icons;
+    @include transition(all 0.2s ease);
+    content: "\e813";
+    font-size: 1rem;
+    margin-left: 10px;
+    position: relative;
+    text-decoration: none;
+        
+  }
 
-        content: '\e813';
-        font-size: 1rem;
-
-        text-decoration: none;
-        @include transition(all .2s ease);
-    }
-
-    &:hover, &:focus, &:active{
-        color: $secondary-text;
-    }
+  &:hover,
+  &:focus,
+  &:active {
+    color: $secondary-text;
+  }
 }
 
 
-.arrow-link-lg{
+.arrow-link-lg {
+  font-size: 2rem;
+  
+  &:after {
+    font-size: 1.6rem;
+  }
+}
+
+.arrow-link-xlg {
+  font-size: 3rem;
+
+  &:after {
     font-size: 2rem;
-
-    &:after{
-        font-size: 1.6rem;
-    }
-}
-
-.arrow-link-xlg{
-    font-size: 3rem;
-
-    &:after{
-        font-size: 2rem;
-    }
+  }
 }
 
 
-.arrow-link-shop{
-    margin: 0;
-}
-.arrow-link-stack{
-    display: block;
-    margin: 0;
-
-    &:not(:last-child){
-        margin: 20px 0;
-    }
+.arrow-link-shop {
+  margin: 0;
 }
 
-.arrow-link-tight{
-    margin: 0 10px;
+.arrow-link-stack {
+  display: block;
+  margin: 0;
+
+  &:not(:last-child) {
+    margin: 20px 0;
+  }
 }
 
-.arrow-link-wide{
-    margin: 0 40px;
+.arrow-link-tight {
+  margin: 0 10px;
+}
+
+.arrow-link-wide {
+  margin: 0 40px;
 }

@@ -1,54 +1,51 @@
-/**
- * Styles for the button module
- */
+// these are the basic button styles that are used on 
+// v4 of the Grana website.
 
-
-//placeholder
-%std-btn{
-	display: inline-block;
-	text-decoration: none;
- 	@extend .body-l;
+%std-btn {
+  @extend %body-l;
+  display: inline-block;
+  text-decoration: none;
 }
 
- .box-button{
- 	@extend %std-btn;
- 	padding: 10px 20px;
- }
+.box-button {
+  @extend %std-btn;
+  padding: 10px 20px;
+}
 
- .box-button-blue{
- 	background-color: $primary-brand;
- 	color: $primary-inverse-text;
- }
+.box-button-blue {
+  background-color: $primary-brand;
+  color: $primary-inverse-text;
+}
 
- .box-button-black{
- 	background-color: $primary-text;
- 	color: $primary-inverse-text;
- }
+.box-button-black {
+  background-color: $primary-text;
+  color: $primary-inverse-text;
+}
 
-  .box-button-white{
- 	background-color: $primary-inverse-text;
- 	color: $primary-brand;
- }
+.box-button-white {
+  background-color: $primary-inverse-text;
+  color: $primary-brand;
+}
 
- .ghost-button{
- 	@extend %std-btn;
- 	padding: 8px 20px;
- 	border-width: 2px;
- 	border-style: solid;
- 	background-color: $primary-inverse-text;
- }
+.ghost-button {
+  @extend %std-btn;
+  background-color: $primary-inverse-text;
+  border-style: solid;
+  border-width: 2px;
+  padding: 8px 20px;
+}
 
- .ghost-button-blue{
- 	border-color: $primary-brand;
- 	color: $primary-brand;
- }
+.ghost-button-blue {
+  border-color: $primary-brand;
+  color: $primary-brand;
+}
 
- .ghost-button-black{
- 	border-color: $primary-text;
- 	color: $primary-text;
- }
+.ghost-button-black {
+  border-color: $primary-text;
+  color: $primary-text;
+}
 
- .ghost-button-white{
- 	border-color: $primary-inverse-text;
- 	color: $primary-inverse-text;
- }
+.ghost-button-white {
+  border-color: $primary-inverse-text;
+  color: $primary-inverse-text;
+}

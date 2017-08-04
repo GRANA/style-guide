@@ -1,77 +1,72 @@
-.datatable{
-	width: 100%;
-	border-collapse: collapse;
+.datatable {
+  border-collapse: collapse;
+  width: 100%;
+   
+  th {
+    @extend %heading-xs;
+    @extend %heading-semi;
+    background: $secondary-background;
+    color: $primary-text;
+    height: 44px;
+  }
 
-	th{
-		@extend .heading-xs;
-		@extend .heading-semi;
-
-		height: 44px;
-		background: #F9F9F9;
-		color: #363B40;
+  thead,
+  tbody {
+    td {  
+      @extend %body-l;
+      border: 2px solid $secondary-background;
+      color: $primary-text;
+      padding-bottom: 9px;
+      padding-top: 9px;
+      vertical-align: top;
 	}
 
-	thead,tbody{
-		td{
-			@extend .body-l;
-			padding-top: 9px;
-			padding-bottom: 9px;
-			border: 2px solid #F9F9F9;
-			color: #666C73;
-			vertical-align: top;
-		}
-
-		th,td{
-			padding-left: 20px;
-			text-align: left;
-		}
-
-	}
-
-
+    th,
+    td {
+      padding-left: 20px;
+      text-align: left;
+    }
+  }
 }
 
-.datatable-helper{
-
-	td{
-		@extend .body-m;
-		color: #91989C;
-	}
-
-	tr:first-child td{
-		padding-top: 20px;
-	}
+.datatable-helper {
+  td {
+    @extend %body-m;
+    color: $secondary-body-text;
+  }
+  
+  tr:first-child td {
+    padding-top: 20px;
+  }
 }
-
 
 //table modifier for smaller screens
-.datatable-mobile{
+.datatable-mobile {
 
-	th{
-		@extend .heading-xxs;
-		height: 40px;
+  th {
+    @extend %heading-xxs;
+    height: 40px;
+  }
 
-	}
+  thead,
+  tbody {
+    td {
+      @extend %body-m;
+      height: 32px;
+    }
 
-	thead,tbody{
-		td{
-			@extend .body-m;
-			height: 32px;
-		}
-
-		th, td{
-			&:not(:first-child){
-				padding-left: 0px;
-				padding-right: 20px;
-				text-align: right;
-			}
-		}
-	}
-
-	.datatable-helper{
-		td{
-			@extend .body-s;
-			padding-top: 10px;
-		}
-	}
+    th, 
+    td:not(:first-child) {
+      padding-left: 0;
+      padding-right: 20px;
+      text-align: right;
+    }
+  }
+  
+  .datatable-helper {
+    td {
+      @extend %body-s;
+      padding-top: 10px;
+    }
+  }
 }

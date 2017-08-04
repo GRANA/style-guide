@@ -8,7 +8,7 @@
   }
 }(function($) {
 
-function fieldDropdown(el, options) {
+  function fieldDropdown(el, options) {
     var defaults = {
       inputSelector: '.field-dropdown',
       wrapperSelector: '.field-group',
@@ -112,12 +112,11 @@ function fieldDropdown(el, options) {
 
       var selected = false;
 
-      if(defaultVal) {
+      if (defaultVal) {
         selected = this.selectItemByValue(defaultVal);
       }
 
-      if(!selected) {
-
+      if (!selected) {
         var $selected = this.$scrollList.find('.is-selected');
 
         if ($selected.length > 0) {
@@ -128,7 +127,6 @@ function fieldDropdown(el, options) {
           var $firstItem = this.$listItems.first();
           this.selectItem($firstItem[0]);
         }
-
       }
 
 
@@ -141,9 +139,10 @@ function fieldDropdown(el, options) {
      * @return {Boolean} True or false depending on if the value exists
      */
     selectItemByValue: function(val) {
-      var $targetEl = this.$el.find(this.input + '-item[data-' + this.inputValAttr + '="' + val +'"]');
+      var $targetEl = this.$el.find(
+          this.input + '-item[data-' + this.inputValAttr + '="' + val + '"]');
 
-      if($targetEl.length > 0){
+      if ($targetEl.length > 0) {
         this.selectItem($targetEl[0]);
         return true;
       }
@@ -228,7 +227,7 @@ function fieldDropdown(el, options) {
         var $itemEl = this.$listItems.eq(existKey);
         var $nextItem = this.$listItems.eq(existKey + 1);
 
-        if( $nextItem.length > 0) {
+        if ($nextItem.length > 0) {
           var letter = this.getItemFirstLetter($nextItem);
 
           if (letter === key && !$itemEl.hasClass('is-disabled')) {
@@ -363,10 +362,7 @@ function fieldDropdown(el, options) {
   };
 
   function fieldMobileDropdown(el, options) {
-    var defaults = {
-      defaultItem: false,
-      onselect: function() {}
-    };
+    var defaults = {defaultItem: false, onselect: function() {}};
 
     this.options = $.extend({}, defaults, options);
 
@@ -387,7 +383,7 @@ function fieldDropdown(el, options) {
       var context = this;
       this.selectDefault(this.defaultItem);
 
-      $('body').on('change',this.$select,function(){
+      $('body').on('change', this.$select, function() {
         var $selected = context.$el.find(':selected');
         context.selectItem($selected);
       });
@@ -398,12 +394,11 @@ function fieldDropdown(el, options) {
 
       var selected = false;
 
-      if(defaultVal) {
+      if (defaultVal) {
         selected = this.selectItemByValue(defaultVal);
       }
 
-      if(!selected) {
-
+      if (!selected) {
         var $selected = this.$el.find(':selected');
 
         if ($selected.length > 0) {
@@ -412,7 +407,6 @@ function fieldDropdown(el, options) {
           var $firstItem = this.$el.find('option').first();
           this.selectItem($firstItem);
         }
-
       }
 
 
@@ -425,9 +419,9 @@ function fieldDropdown(el, options) {
      * @return {Boolean} True or false depending on if the value exists
      */
     selectItemByValue: function(val) {
-      var $targetEl = this.$el.find('option[value="' + val +'"]');
+      var $targetEl = this.$el.find('option[value="' + val + '"]');
 
-      if($targetEl.length > 0){
+      if ($targetEl.length > 0) {
         this.selectItem($targetEl);
         return true;
       }
@@ -441,10 +435,9 @@ function fieldDropdown(el, options) {
       this.updateLabel($selected.html());
 
       // check if there is a callback that needs to be executed
-        if (this.options.onselect &&
-            typeof this.options.onselect == 'function') {
-          this.options.onselect(el);
-        }
+      if (this.options.onselect && typeof this.options.onselect == 'function') {
+        this.options.onselect(el);
+      }
     },
 
     updateLabel: function(string) {

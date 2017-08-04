@@ -6,71 +6,80 @@
  // named the same should refer back to the device to determine 
  // followed style.
 
- .body-l{
- 	font-size: 15px;
- 	line-height: 20px;
- }
-
- .body-m{
- 	font-size: 12px;
- 	line-height: 16px;
- }
-
- .body-s{
- 	font-size: 10px;
- 	line-height: 12px;
- }
-
- .heading{
- 	margin: 0;
- 	font-weight: 400;
- }
-
- .heading-semi{
-	font-weight: 600;
+%line-height-1-0 {
+  line-height: 1;
 }
 
- .heading-xl{
- 	font-size: 60px;
- 	line-height: 72px;
- }
+%line-height-1-1 {
+  line-height: 1.1;
+}
 
- .heading-l{
- 	font-size: 30px;
- 	line-height: 40px;
- }
+%line-height-1-2 {
+  line-height: 1.2;
+}
 
- .heading-m{
- 	font-size: 25px;
- 	line-height: 30px;
- }
+%line-height-1-3 {
+  line-height: 1.3;
+}
 
- .heading-s{
- 	font-size: 20px;
- 	line-height: 24px;
- }
+%line-height-1-4 { 
+  line-height: 1.4;
+}
 
- .heading-xs{
- 	font-size: 15px;
- 	line-height: 20px;
- }
+%body-l {
+  font-size: 15px;
+}
 
-.heading-xxs{
- 	font-size: 12px;
- 	line-height: 16px;
- }
+%body-m {
+  font-size: 12px;
+}
 
-.megaheading{
- 	margin: 0;
- 	font-weight: 400;
- }
+%body-s {
+  font-size: 10px;
+}
 
- .megaheading-xl{
- 	font-size: 120px;
- 	line-height: 132px;
- }
+%heading {
+  font-weight: 400;
+  margin: 0;
+}
 
- .megaheading-l{
- 	font-size: 100px;
- 	line-height: 110px;
- }
+%heading-semi {
+  font-weight: 600;
+}
+
+%heading-xl {
+  font-size: 60px;
+}
+
+%heading-l {
+  font-size: 30px;
+}
+
+%heading-m {
+  font-size: 25px;
+}
+
+%heading-s {
+  font-size: 20px;
+}
+
+%heading-xs {
+  font-size: 15px;
+}
+
+%heading-xxs {
+  font-size: 12px;
+}
+
+%megaheading {
+  font-weight: 400;
+  margin: 0;
+}
+
+%megaheading-xl {
+  font-size: 120px;
+}
+
+%megaheading-l {
+  font-size: 100px;
+}

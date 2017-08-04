@@ -1,11 +1,11 @@
 
 $layout-fixed: 1200px;
 
-%layout-fixed{
-	width: $layout-fixed;
+%layout-fixed {
+  width: $layout-fixed;
 }
 
-%layout-full-flexi{
-	width: 100%;
-	min-width: $layout-fixed;
+%layout-full-flexi {
+  min-width: $layout-fixed;
+  width: 100%;
 }
