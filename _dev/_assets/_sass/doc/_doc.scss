@@ -30,16 +30,16 @@ $sidebar-width: 280px;
 }
 
 .doc-content-wrapper {
-  @include outer-container(960px);
   padding: 0 40px;
+  width: 960px;
 }
 
 
 .doc-sidenav {
   @include size($sidebar-width 100%);
-  background-color: $tricolor-grey;
-  border-right: 1px solid darken($tricolor-grey, 10%);
-  color: $primary-color;
+  background-color: $secondary-background;
+  border-right: 1px solid darken($secondary-background, 10%);
+  color: $primary-text;
   left: 0;
   overflow: auto;
   position: fixed;
@@ -72,7 +72,7 @@ $sidebar-width: 280px;
 .doc-main-section {
   @extend %heading;
   @extend %heading-l;
-  border-bottom: 1px solid $primary-color;
+  border-bottom: 1px solid $primary-text;
   padding: 10px 0;
 }
 
@@ -80,7 +80,7 @@ $sidebar-width: 280px;
 // Item
 
 .doc-item {
-  border-bottom: 1px solid darken($tricolor-grey, 10%);
+  border-bottom: 1px solid darken($secondary-background, 10%);
   padding: 20px 0;
 }
 

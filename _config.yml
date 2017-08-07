@@ -1,4 +1,6 @@
-exclude: ["./_dev/_assets/_sass"]
-
 source: ./_dev
 destination: ./docs
+sass:
+    load_paths:
+      - _assets/sass
+      - ../
