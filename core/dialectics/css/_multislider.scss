@@ -4,7 +4,7 @@
 
 .multislider {
   @include user-select(none);
-  position: relative;  
+  position: relative;
 }
 
 .multislider-arrow {
@@ -20,12 +20,12 @@
 
   &:after {
     @extend %grana-icons;
-    @include transition(all 0.2s ease); 
+    @include transition(all 0.2s ease);
     content: "\e813";
     font-size: 24px;
     margin: 50px;
     position: relative;
-    text-decoration: none;  
+    text-decoration: none;
   }
 }
 
@@ -103,9 +103,9 @@
 
 
 
-//States
+// States
 
-//carousel transition states.
+// carousel transition states.
 .is-visible {
   .multislider-image {
     opacity: 1;

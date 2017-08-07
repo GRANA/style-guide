@@ -7,8 +7,8 @@
   position: relative;
 }
 
-.field-group, 
-.field-label, 
+.field-group,
+.field-label,
 .field-text {
   @extend %body-l;
 }
@@ -61,14 +61,14 @@
   height: 45px;
   outline: none;
   padding: 0 20px 0 10px;
-	
+
   &-apply,
   &-applied,
   &-remove {
     display: none;
   }
-  
-  &-applied { 
+
+  &-applied {
     cursor: default;
   }
 }
@@ -82,9 +82,9 @@
   }
 }
 
-//States
+// States
 
-.is-filled, 
+.is-filled,
 .is-focus {
   .field-label {
     @include transform(translate(0, -24px) scale(0.8));
@@ -106,7 +106,7 @@
   .field-text {
     border-bottom: 2px solid $error;
   }
-  
+
   .field-helper {
     color: $error;
   }
@@ -129,7 +129,7 @@
       @extend %grana-icons;
       content: "\e812";
       font-size: 10px;
-      margin: 0 10px 0 0;		
+      margin: 0 10px 0 0;
 	}
 
     &-apply {
@@ -145,7 +145,7 @@
 .is-remove {
   cursor: pointer;
 
-  .field-submit-btn { 
+  .field-submit-btn {
     color: $error;
 
     &:before {
@@ -155,11 +155,11 @@
       margin: 0 10px 0 0;
     }
 
-    &-apply, 
+    &-apply,
     &-applied {
       display: none;
     }
-    
+
     &-remove {
       display: block;
     }
@@ -167,11 +167,9 @@
 }
 
 .is-disabled {
-  .field-helper, 
+  .field-helper,
   .field-label {
     color: $inactive-text;
     text-decoration: line-through;
   }
 }
-
-

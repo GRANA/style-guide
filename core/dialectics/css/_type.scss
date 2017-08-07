@@ -1,9 +1,9 @@
- // These are the typography standards that are used on the Grana 
- // website for both desktop and mobile. 
- // Sofia Pro is the standard typeface used across the Grana brand.  
- // Desktop and mobile typography vary due to the readability and 
- // legibility on different screen sizes. Type styles that are 
- // named the same should refer back to the device to determine 
+ // These are the typography standards that are used on the Grana
+ // website for both desktop and mobile.
+ // Sofia Pro is the standard typeface used across the Grana brand.
+ // Desktop and mobile typography vary due to the readability and
+ // legibility on different screen sizes. Type styles that are
+ // named the same should refer back to the device to determine
  // followed style.
 
 %line-height-1-0 {
@@ -22,8 +22,12 @@
   line-height: 1.3;
 }
 
-%line-height-1-4 { 
+%line-height-1-4 {
   line-height: 1.4;
+
+  &:after {
+    content: "";
+  }
 }
 
 %body-l {
