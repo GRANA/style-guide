@@ -2,7 +2,7 @@
 // Styles for the radiobutton module
 //
 
-//default checkbox
+// default checkbox
 .radiobutton {
   position: absolute;
   visibility: hidden;
@@ -13,7 +13,7 @@
     margin-right: 20px;
     position: relative;
 
-    &:before, 
+    &:before,
     &:after {
       background-color: $secondary-background;
       border-radius: 50%;
@@ -29,7 +29,7 @@
       left: 0;
       z-index: 10;
     }
-    
+
     &:after {
       @include size(14px);
       left: 3px;
@@ -38,13 +38,13 @@
     }
   }
 
-  &:hover + label, 
+  &:hover + label,
   &:checked + label {
     &:before {
       border: 1px solid $primary-brand;
 	}
   }
-  
+
   &:checked + label {
     &:after {
       background-color: $primary-brand;

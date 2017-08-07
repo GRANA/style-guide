@@ -5,15 +5,14 @@
 .field-dropdown {
   @extend %body-l;
   @include user-select(none);
-  
   background: $primary-background;
   position: relative;
   text-align: left;
   text-transform: lowercase;
   width: 100%;
   z-index: 50;
-  
-  &:after, 
+
+  &:after,
   &-label {
     color: $primary-text;
   }
@@ -30,8 +29,8 @@
   }
 }
 
-.field-dropdown, 
-.field-dropdown-item { 
+.field-dropdown,
+.field-dropdown-item {
   cursor: pointer;
   padding: 13px 50px 13px 20px;
 }
@@ -79,14 +78,14 @@
   }
 }
 
-//States
+// States
 
 .is-open {
   .field-dropdown-list-container {
     display: block;
   }
 
-  .field-dropdown-label, 
+  .field-dropdown-label,
   &:after {
     color: $text-04;
   }

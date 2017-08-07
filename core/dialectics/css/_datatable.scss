@@ -1,7 +1,7 @@
 .datatable {
   border-collapse: collapse;
   width: 100%;
-   
+
   th {
     @extend %heading-xs;
     @extend %heading-semi;
@@ -12,7 +12,7 @@
 
   thead,
   tbody {
-    td {  
+    td {
       @extend %body-l;
       border: 2px solid $secondary-background;
       color: $primary-text;
@@ -34,13 +34,14 @@
     @extend %body-m;
     color: $secondary-body-text;
   }
-  
+
   tr:first-child td {
     padding-top: 20px;
   }
 }
 
-//table modifier for smaller screens
+// table modifier for smaller screens
+
 .datatable-mobile {
 
   th {
@@ -55,14 +56,14 @@
       height: 32px;
     }
 
-    th, 
+    th,
     td:not(:first-child) {
       padding-left: 0;
       padding-right: 20px;
       text-align: right;
     }
   }
-  
+
   .datatable-helper {
     td {
       @extend %body-s;

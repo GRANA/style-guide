@@ -1,12 +1,12 @@
 //
 // Checkboxes allow the user to select multiple options from a set.
 // If you have multiple options appearing in a list, you can preserve
-// space by using checkboxes. If you have a single option, avoid 
+// space by using checkboxes. If you have a single option, avoid
 // using a checkbox and use a radio button instead.
 //
 
 
-//default checkbox
+// default checkbox
 .checkbox {
   position: absolute;
   visibility: hidden;
@@ -15,9 +15,9 @@
 .checkbox-label {
   position: relative;
   z-index: 10;
-} 
+}
 
-.checkbox-label-box, 
+.checkbox-label-box,
 .checkbox-label-name {
   vertical-align: middle;
 }
@@ -40,7 +40,7 @@
   background-color: $primary-background;
 }
 
-//State Changes
+// State Changes
 
 .checkbox:checked + .checkbox-label {
   .checkbox-label-box {
@@ -55,8 +55,8 @@
       top: 4px;
 	}
   }
-  
-  .checkbox-label-box-white, 
+
+  .checkbox-label-box-white,
   .checkbox-label-box-checkgrey {
     &:before {
       color: $primary-text;

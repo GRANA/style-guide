@@ -8,10 +8,10 @@
 
 @include font-face("grana_icons", "../fonts/grana_icons/grana_icons_v3.02", $file-formats: eot woff ttf svg);
 
-$sofiapro: "sofiapro", arial, sans-serif; 
+$sofiapro: "sofiapro", arial, sans-serif;
 
 
-%grana-icons { 
+%grana-icons {
   display: inline-block;
   font-family: "grana_icons";
   -moz-osx-font-smoothing: grayscale;

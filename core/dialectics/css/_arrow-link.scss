@@ -8,7 +8,7 @@
   margin: 0 25px;
   text-transform: lowercase;
 
-  &:after { 
+  &:after {
     @extend %grana-icons;
     @include transition(all 0.2s ease);
     content: "\e813";
@@ -16,7 +16,7 @@
     margin-left: 10px;
     position: relative;
     text-decoration: none;
-        
+
   }
 
   &:hover,
@@ -29,7 +29,7 @@
 
 .arrow-link-lg {
   font-size: 2rem;
-  
+
   &:after {
     font-size: 1.6rem;
   }
