@@ -4,3 +4,4 @@ sass:
     load_paths:
       - _assets/sass
       - ../
+    style: compressed
