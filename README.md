@@ -54,7 +54,7 @@ Sass formatting shall follow Thoughtbot's sass guide [here](https://github.com/t
 
 ## Documentation
 
-The documentation uses Jekyll static webpage builder hosted on Github pages. Viewing the doc locally requires installation of [Jekyll](https://jekyllrb.com/) and [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md). It is recommended that contributors develop the core style guide using the documentation pages.
+The documentation uses Jekyll static webpage builder hosted on Github pages. Viewing the doc locally requires installation of [npm](https://www.npmjs.com/get-npm), [Jekyll](https://jekyllrb.com/), and [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md). It is recommended that contributors develop the core style guide using the documentation pages.
 
 ### Local setup
 
