@@ -52,3 +52,17 @@ We follow modular methodology when writing our css. Please refer to our document
 
 Sass formatting shall follow Thoughtbot's sass guide [here](https://github.com/thoughtbot/guides/tree/master/style/sass).
 
+## Documentation
+
+The documentation uses Jekyll static webpage builder hosted on Github pages. Viewing the doc locally requires installation of [Jekyll](https://jekyllrb.com/) and [Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md). It is recommended that contributors develop the core style guide using the documentation pages.
+
+### Local setup
+
+1. Clone this repository into your directory:
+   ```bash
+   git clone https://github.com/GRANA/style.guide.git
+   ```
+2. While in the directory, run gulp to build project:
+   ```bash
+   gulp jekyll
+   ```
