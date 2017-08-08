@@ -32,7 +32,12 @@ Instructions for adding repository using Git submodules.
 
 ### Project
 
-Instructions for adding necessary files to project. ie. sass files, js etc...
+1. Import Style Guide into the projects main.scss file:
+
+```scss
+   @import "dialectics/core/dialectics";
+   ```
+2. Include js files in dialectics/core/dialectics/js
 
 ### Dependencies
 
