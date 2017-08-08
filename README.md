@@ -60,18 +60,18 @@ The documentation uses Jekyll static webpage builder hosted on Github pages. Vie
 
 1. Clone this repository into your directory:
 
-   ```bash
+```bash
    git clone https://github.com/GRANA/style.guide.git
    ```
    
 2. While in the directory, run node package manager to install dependency modules:
 
-   ```bash
+ ```bash
    npm install
    ```
    
 3.  Run gulp to build project:
 
-   ```bash
+```bash
    gulp jekyll
    ```
