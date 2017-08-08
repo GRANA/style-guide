@@ -59,10 +59,12 @@ The documentation uses Jekyll static webpage builder hosted on Github pages. Vie
 ### Local setup
 
 1. Clone this repository into your directory:
+
    ```bash
    git clone https://github.com/GRANA/style.guide.git
    ```
 2. While in the directory, run gulp to build project:
+
    ```bash
    gulp jekyll
    ```
