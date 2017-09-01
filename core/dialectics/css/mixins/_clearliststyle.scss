@@ -1,0 +1,8 @@
+// Removes standard list styling for ul and ol elements.
+
+@mixin clearliststyle() {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}

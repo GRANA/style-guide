@@ -1,0 +1,122 @@
+//
+// Style for team size guide
+//
+
+.multislider {
+  @include user-select(none);
+  position: relative;
+}
+
+.multislider-arrow {
+  @include transform-style(preserve-3d);
+  @include backface-visibility(hidden);
+  @include transition(opacity 0.2s ease);
+  cursor: pointer;
+  display: inline-block;
+  opacity: 1;
+  position: absolute;
+  top: 35%;
+  z-index: 2;
+
+  &:after {
+    @extend %grana-icons;
+    @include transition(all 0.2s ease);
+    content: "\e813";
+    font-size: 24px;
+    margin: 50px;
+    position: relative;
+    text-decoration: none;
+  }
+}
+
+.multislider-arrow-left {
+  left: -40px;
+
+  &:after {
+    @include transform(rotate(180deg));
+  }
+}
+
+.multislider-arrow-right {
+  right: -40px;
+}
+
+.multislider-items {
+  @include clearliststyle;
+  position: relative;
+  text-align: center;
+}
+
+
+.multislider-item {
+  @include transition(all 0.4s ease);
+  display: block;
+  opacity: 0;
+  padding: 0 10px;
+  position: absolute;
+  z-index: 0;
+
+  &.is-selected {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  &.is-previous {
+    z-index: 0;
+  }
+
+  &.multislider-item-third {
+    @include grid-column(4);
+  }
+
+  &.multislider-item-full {
+    width: 100%;
+  }
+}
+
+.multislider-image {
+  @include transition(opacity 0.4s ease);
+  left: 0;
+  opacity: 0.2;
+  position: relative;
+
+  img {
+    @include transition(opacity 0.2s ease);
+    opacity: 0;
+    position: absolute;
+  }
+
+  .lazy-loaded {
+    opacity: 1;
+  }
+}
+
+.multislider-item-bottom {
+  @include transition(opacity 0.4s ease);
+  opacity: 0;
+}
+
+.multislider-desc {
+  color: $secondary-body-text;
+  margin: 0 0 10px;
+}
+
+
+
+// States
+
+// carousel transition states.
+.is-visible {
+  .multislider-image {
+    opacity: 1;
+  }
+
+  .multislider-item-bottom {
+    opacity: 1;
+  }
+}
+
+.multislider-arrow-hide {
+  cursor: default;
+  opacity: 0;
+}

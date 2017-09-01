@@ -1,0 +1,88 @@
+//
+// Styles for the radiobutton module
+//
+
+// default checkbox
+.radiobutton {
+  position: absolute;
+  visibility: hidden;
+
+  + label {
+    display: block;
+    margin-bottom: 0;
+    margin-right: 20px;
+    position: relative;
+
+    &:before,
+    &:after {
+      background-color: $secondary-background;
+      border-radius: 50%;
+      content: "";
+      display: inline-block;
+      position: absolute;
+      vertical-align: middle;
+    }
+
+    &:before {
+      @include size(20px);
+      border: 1px solid $text-04;
+      left: 0;
+      z-index: 10;
+    }
+
+    &:after {
+      @include size(14px);
+      left: 3px;
+      top: 3px;
+      z-index: 11;
+    }
+  }
+
+  &:hover + label,
+  &:checked + label {
+    &:before {
+      border: 1px solid $primary-brand;
+	}
+  }
+
+  &:checked + label {
+    &:after {
+      background-color: $primary-brand;
+    }
+  }
+}
+
+.radiobutton-whitegrey {
+  + label {
+    &:before {
+      background-color: $inverse-01;
+      border: 3px solid $inverse-01;
+    }
+  }
+}
+
+.radiobutton-greygrey {
+  + label {
+    &:before {
+      background-color: $secondary-background;
+      border: 3px solid $secondary-background;
+    }
+  }
+}
+
+.radiobutton-whitegrey,
+.radiobutton-greygrey {
+  &:checked + label {
+    &:before {
+      background-color: $primary-text;
+    }
+  }
+}
+
+.radiobutton-label-name {
+  display: inline-block;
+  font-weight: 400;
+  margin-left: 40px;
+  position: relative;
+  vertical-align: middle;
+}

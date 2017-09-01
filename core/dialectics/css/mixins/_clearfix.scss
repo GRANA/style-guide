@@ -1,0 +1,9 @@
+// Fix for elements containing float children.
+
+@mixin clearfix() {
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
