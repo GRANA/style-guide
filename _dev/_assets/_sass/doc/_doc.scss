@@ -7,6 +7,7 @@
 $sidebar-width: 230px;
 
 .doc {
+  color: $primary-text;
   font-family: $sofiapro;
 }
 
@@ -27,6 +28,54 @@ $sidebar-width: 230px;
   position: absolute;
   right: 0;
   top: 0;
+}
+
+.doc-content {
+  bottom: 0;
+  left: $sidebar-width;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+
+.doc-examples,
+.doc-info {
+  position: relative;
+}
+
+.doc-examples {
+  margin-left: 45%;
+}
+
+.doc-info {
+  float: left;
+  width: 45%;
+}
+
+.doc-info-pad {
+  padding: 0 40px;
+}
+
+.doc-section {
+  @include clearfix();
+
+  h1 {
+    @extend %heading-l;
+    @extend %line-height-1-1;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  p {
+    margin: 20px 0 0;
+  }
+}
+
+.doc-section-pad {
+  padding: 60px 0;
 }
 
 .doc-p {
