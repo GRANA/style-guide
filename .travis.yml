@@ -17,6 +17,10 @@ script: "gulp jekyll"
 deploy:
   provider: pages
   skip_cleanup: true
+  email: adam@grana.com
+  name: Adam clone
+  fqdn: styleguide.grana.com
+  local_dir: docs
   github_token: $GITHUB_TOKEN
   on:
     branch: master
