@@ -1,9 +1,10 @@
 $sidebar-width: 230px;
+$sidenav-logo-height: 50px;
 
 .sidenav {
   @include size($sidebar-width 100%);
   background-color: $secondary-background;
-  border-right: 1px solid darken($secondary-background, 5%);
+  border-right: 1px solid darken($secondary-background, 3%);
   color: $primary-text;
   left: 0;
   overflow: auto;
@@ -12,7 +13,7 @@ $sidebar-width: 230px;
 }
 
 .sidenav-logo-section {
-  height: 50px;
+  height: $sidenav-logo-height;
 }
 
 .sidenav-logo {
@@ -27,5 +28,45 @@ $sidebar-width: 230px;
     content: "\e814";
     position: relative;
     width: auto;
+  }
+}
+
+.sidenav-menu {
+  bottom: 0;
+  left: 0;
+  overflow: scroll;
+  position: absolute;
+  top: $sidenav-logo-height;
+  width: 100%;
+}
+
+.sidenav-menu-heading {
+  @extend %heading;
+  @extend %heading-xs;
+  @extend %line-height-1-3;
+  color: $primary-text;
+  padding: 0 20px 15px;
+
+  &:first-child {
+    padding: 20px 20px 15px;
+  }
+}
+
+.sidenav-menu-items {
+  @include clearliststyle();
+  padding-bottom: 30px;
+}
+
+.sidenav-menu-link {
+  @extend %body-l;
+  @extend %line-height-1-3;
+  color: $secondary-text;
+  display: block;
+  padding: 5px 20px;
+  text-decoration: none;
+
+  &:hover {
+    color: $primary-text;
+    text-decoration: underline;
   }
 }
