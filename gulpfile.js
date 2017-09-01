@@ -24,19 +24,6 @@ gulp.task('scss-lint', function() {
     .pipe(scsslint({ 'config': 'scss-lint.yml' }));
 });
 
-gulp.task('compress', function (cb) {
-  pump([
-    gulp.src('./core/dialectics/js/*.js'),
-    concat('core.concat.js'),
-    gulp.dest('./_dev/js/'),
-    uglify(),
-    rename({
-      suffix: '.min'
-    }),
-    gulp.dest('./_dev/js')
-  ]);
-});
-
 gulp.task('watch', function() {
   gulp.watch('./**/*.scss', ['sass','scss-lint']);
 });
@@ -60,8 +47,24 @@ gulp.task('build-jekyll', (code) => {
     .on('close', code);
 })
 
+gulp.task('jekyll-compress', function () {
+  gulp.src('./core/dialectics/js/*.js')
+  .pipe(uglify())
+  .pipe(rename({
+            suffix: '.min'
+        }))
+  .pipe(gulp.dest('./docs/js'));
+  
+});
+
+gulp.task('jekyll-fontcopy', function() {
+   gulp.src('./core/dialectics/fonts/**/*')
+  .pipe(gulp.dest('./docs/fonts'));
+
+});
+
 
 gulp.task('default', ['scss-lint','sass']);
 gulp.task('jekyll', function(callback){
-  sequence('build-jekyll', 'default', 'compress', callback);
+  sequence('build-jekyll', 'default', 'jekyll-fontcopy','jekyll-compress', callback);
 });
