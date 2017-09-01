@@ -7,18 +7,7 @@
 $sidebar-width: 280px;
 
 .doc {
-  @include size(100% auto);
   font-family: $sofiapro;
-
-  // Temp reset for headers
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 400;
-  }
 }
 
 // standard styling
@@ -32,26 +21,6 @@ $sidebar-width: 280px;
 .doc-content-wrapper {
   padding: 0 40px;
   width: 960px;
-}
-
-
-.doc-sidenav {
-  @include size($sidebar-width 100%);
-  background-color: $secondary-background;
-  border-right: 1px solid darken($secondary-background, 10%);
-  color: $primary-text;
-  left: 0;
-  overflow: auto;
-  position: fixed;
-  top: 0;
-}
-
-.doc-sidenav-logo {
-  color: $primary-brand;
-  display: block;
-  font-size: 1.9rem;
-  margin: 50px;
-  text-align: center;
 }
 
 .doc-main {
