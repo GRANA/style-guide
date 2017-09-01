@@ -1,9 +1,9 @@
-$sidebar-width: 280px;
+$sidebar-width: 230px;
 
 .sidenav {
   @include size($sidebar-width 100%);
   background-color: $secondary-background;
-  border-right: 1px solid darken($secondary-background, 10%);
+  border-right: 1px solid darken($secondary-background, 5%);
   color: $primary-text;
   left: 0;
   overflow: auto;
@@ -11,10 +11,21 @@ $sidebar-width: 280px;
   top: 0;
 }
 
+.sidenav-logo-section {
+  height: 50px;
+}
+
 .sidenav-logo {
   color: $primary-brand;
-  display: block;
-  font-size: 1.9rem;
-  margin: 50px;
-  text-align: center;
+  display: inline-block;
+  left: 20px;
+  position: relative;
+  top: 15px;
+
+  &:before {
+    @extend %grana-icons;
+    content: "\e814";
+    position: relative;
+    width: auto;
+  }
 }
