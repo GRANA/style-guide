@@ -4,13 +4,30 @@
 
 // vars
 
-$sidebar-width: 280px;
+$sidebar-width: 230px;
 
 .doc {
   font-family: $sofiapro;
 }
 
 // standard styling
+
+.doc-background {
+  bottom: 0;
+  left: $sidebar-width;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.doc-background-right {
+  background-color: $ui-03;
+  bottom: 0;
+  left: 45%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 
 .doc-p {
   font-size: 15px;
