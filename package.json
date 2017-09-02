@@ -9,6 +9,7 @@
     "gulp-sass": "latest",
     "gulp-scss-lint": "latest",
     "gulp-uglify": "^3.0.0",
+    "pump": "1.0.2",
     "gulp-util": "latest",
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1",
