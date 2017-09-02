@@ -13,12 +13,12 @@ gulp.task('sass', function() {
   gulp.src('./_dev/css/main.scss')
   .pipe(sass({style: 'expanded'}))
     .on('error', gutil.log)
-  .pipe(gulp.dest('./docs/css'))
+  .pipe(gulp.dest('./_dev/css'))
 });
 
 
 gulp.task('scss-lint', function() {
-  return gulp.src(['./core/**/*.scss','./_dev/_assets/_sass/doc/*.scss'])
+  return gulp.src(['./core/**/*.scss'])
     .pipe(scsslint({ 'config': 'scss-lint.yml' }));
 });
 
@@ -28,7 +28,7 @@ gulp.task('compress', function (cb) {
   .pipe(rename({
             suffix: '.min'
         }))
-  .pipe(gulp.dest('./docs/js'));
+  .pipe(gulp.dest('./_dev/js'));
   
 });
 
@@ -37,14 +37,14 @@ gulp.task('watch', function() {
 });
 
 gulp.task('jshint', function(){
-	gulp.src(['style.guide/core/dialectics/js/*.js'])
+	gulp.src(['./core/dialectics/js/*.js'])
 	.pipe(jshint())
 	.pipe(jshint.reporter('jshint-stylish'));
 });
 
 gulp.task('format', function() {
   // The base option ensures the glob doesn't strip prefixes
-  return gulp.src(['style.guide/core/dialectics/js/*.js'], {base: '.'})
+  return gulp.src(['./core/dialectics/js/*.js'], {base: '.'})
       .pipe(format.format())
       .pipe(gulp.dest('.'));
 });
