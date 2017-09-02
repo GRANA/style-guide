@@ -8,6 +8,8 @@ var rename = require('gulp-rename');
 var format = require('gulp-clang-format');
 var cp = require('child_process');
 var sequence = require('run-sequence');
+var concat = require('gulp-concat');
+var pump = require('pump');
 
 gulp.task('sass', function() {
   gulp.src('./_dev/css/main.scss')
@@ -23,13 +25,16 @@ gulp.task('scss-lint', function() {
 });
 
 gulp.task('compress', function (cb) {
-  gulp.src('./core/dialectics/js/*.js')
-  .pipe(uglify())
-  .pipe(rename({
-            suffix: '.min'
-        }))
-  .pipe(gulp.dest('./_dev/js'));
-  
+  pump([
+    gulp.src('./core/dialectics/js/*.js'),
+    concat('core.concat.js'),
+    gulp.dest('./_dev/js/'),
+    uglify(),
+    rename({
+      suffix: '.min'
+    }),
+    gulp.dest('./_dev/js')
+  ]);
 });
 
 gulp.task('watch', function() {
