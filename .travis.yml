@@ -9,9 +9,6 @@ install:
   - gem install bundler
   - bundle install
 
-before_script:
-- npm install -g gulp-cli
-
 script: "gulp jekyll"
 
 deploy:
