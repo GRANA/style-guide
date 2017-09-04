@@ -2,3 +2,6 @@
 .sass-cache
 .DS_Store
 /.idea
+/css/main.css
+/fonts
+/js
