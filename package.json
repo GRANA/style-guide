@@ -2,7 +2,9 @@
   "devDependencies": {
     "clang-format": "^1.0.49",
     "gulp": "latest",
+    "gulp-cli": "latest",
     "gulp-clang-format": "^1.0.23",
+    "gulp-concat": "^2.6.1",
     "gulp-format": "^1.0.8",
     "gulp-jshint": "^2.0.4",
     "gulp-rename": "^1.2.2",
@@ -12,6 +14,7 @@
     "gulp-util": "latest",
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1",
+    "pump": "1.0.2",
     "run-sequence": "^2.1.0"
   }
 }
