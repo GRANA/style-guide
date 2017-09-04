@@ -66,24 +66,8 @@ gulp.task('jekyll-fontcopy', function() {
 
 });
 
-gulp.task('jekyll-compress', function () {
-  gulp.src('./core/dialectics/js/*.js')
-  .pipe(uglify())
-  .pipe(rename({
-            suffix: '.min'
-        }))
-  .pipe(gulp.dest('./docs/js'));
-  
-});
-
-gulp.task('jekyll-fontcopy', function() {
-   gulp.src('./core/dialectics/fonts/**/*')
-  .pipe(gulp.dest('./docs/fonts'));
-
-});
-
 
 gulp.task('default', ['scss-lint','sass']);
 gulp.task('jekyll', function(callback){
-  sequence('build-jekyll', 'default', 'jekyll-fontcopy','jekyll-compress', callback);
+  sequence('default', 'jekyll-fontcopy','jekyll-compress', 'build-jekyll', callback);
 });
