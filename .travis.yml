@@ -9,6 +9,10 @@ install:
   - gem install bundler
   - bundle install
 
+before_script:
+  # Install gulp cli to ensure gulp command can be run on travis CI
+  - npm install -g gulp-cli
+
 script: "gulp jekyll"
 
 deploy:
