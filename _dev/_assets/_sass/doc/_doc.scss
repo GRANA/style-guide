@@ -7,8 +7,11 @@
 $sidebar-width: 230px;
 
 .doc {
+  @extend %body-l;
+  @extend %line-height-1-1;
   color: $primary-text;
   font-family: $sofiapro;
+  -webkit-font-smoothing: antialiased;
 }
 
 // standard styling
