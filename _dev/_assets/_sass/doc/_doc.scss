@@ -59,7 +59,34 @@ $sidebar-width: 230px;
 }
 
 .doc-examples {
+  color: $secondary-text;
   margin-left: 45%;
+
+  h3 {
+    @extend %heading;
+    @extend %heading-xs;
+    margin-bottom: 20px;
+  }
+
+  pre {
+    margin: 0;
+  }
+}
+
+.doc-examples-pad {
+  padding: 50px 40px;
+}
+
+.doc-example {
+
+  &:not(:first-child) {
+    padding-top: 20px;
+  }
+
+  &:not(:last-child) {
+    padding-bottom: 20px;
+  }
+  
 }
 
 .doc-info {
