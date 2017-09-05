@@ -1,0 +1,69 @@
+<div class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      <h1>textfield</h1>
+      <p>Text input fields allow users on the site to input text, select text, and lookup data via auto-completion. They will usually appear in forms. Users may enter text, numbers, or mixed-format types of input.</p>
+      <p>Upon touching or selecting the text field two actions occur: The cursor is placed there and The keyboard is displayed  (mobile device)</p> 
+      <p>For mobile devices, the auto-correct functionality should be disabled for relevant inputs that include proper names, street names, email addresses, usernames, etc.</p>
+      <p>The auto-capitalisation functionality for the first letter of each text field and the first letter of each sentence should only be enabled where appropriate and if required by the locale.  For example, this is especially relevant for input fields that: ask for proper noun inputs and contains sentence like messages, such as gift card messages</p>
+    </div>
+  </div>
+</div>
+<div class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      <h1>standard textfield</h1>
+      <p>Standard text inputs have the class <code>.field-text</code> and must be wrapped in <code>.field-group</code>. The grouping includes the label with <code>.field-label</code> and optional elements such as <code>.field-helper</code>.</p>
+      <figure>
+        <div class="field-group">
+          <label for="field-preinput" class="field-label">Label text</label>
+          <input type="text" id="field-preinput" class="field-text" name="single-line-field">
+          <div class="field-helper">hint and helper text</div>
+        </div>
+      </figure>
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      <div class="doc-example">
+      <h3>example</h3>
+    <pre><code class="html">&lt;div class="field-group"&gt;
+  &lt;label for="field-preinput" class="field-label">Label text&lt;/label&gt;
+  &lt;input type="text" id="field-preinput" class="field-text" name="single-line-field"&gt;
+  &lt;div class="field-helper">hint and helper text&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      <h1>error textfield</h1>
+      <p class="doc-p">We can change the appearance and state of a standard input; simply add the <code>.is-error</code> modifier to the input's <code>.field-group</code> container. Javascript toggles the error and places a <code>.field-helper</code> element with the appropriate message.</p>
+      <figure>
+        <div class="field-group is-error">
+          <label for="field-errorinput" class="field-label">Label text</label>
+          <input type="text" id="field-errorinput" class="field-text" name="single-line-field">
+          <div class="field-helper">error text</div>
+        </div>
+      </figure>
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      <div class="doc-example">
+      <h3>example</h3>
+<pre><code class="html">
+&lt;div class="field-group is-error"&gt;
+  &lt;label for="field-errorinput" class="field-label">Label text&lt;/label&gt;
+  &lt;input type="text" id="field-errorinput" class="field-text" name="single-line-field"&gt;
+  &lt;div class="field-helper">error text&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+
+    </div>
+  </div>
+</div>
