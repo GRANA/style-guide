@@ -74,7 +74,7 @@ $sidebar-width: 230px;
 }
 
 .doc-examples-pad {
-  padding: 50px 40px;
+  padding: 40px;
 }
 
 .doc-example {
@@ -106,7 +106,7 @@ $sidebar-width: 230px;
   }
 
   h1 {
-    @extend %heading-l;
+    @extend %heading-s;
     @extend %line-height-1-1;
     font-weight: normal;
     margin: 0 0 20px;
