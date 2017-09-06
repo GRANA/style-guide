@@ -1,0 +1,16 @@
+<div class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      {% if include.info %}
+      {% include {{include.info}} %}
+      {% endif %}
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      {% if include.examples %}
+      {% include {{include.examples}} %}
+      {% endif %}
+    </div>
+  </div>
+</div>
