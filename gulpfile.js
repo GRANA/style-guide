@@ -8,28 +8,33 @@ var rename = require('gulp-rename');
 var format = require('gulp-clang-format');
 var cp = require('child_process');
 var sequence = require('run-sequence');
+var concat = require('gulp-concat');
+var pump = require('pump');
 
 gulp.task('sass', function() {
   gulp.src('./_dev/css/main.scss')
   .pipe(sass({style: 'expanded'}))
     .on('error', gutil.log)
-  .pipe(gulp.dest('./docs/css'))
+  .pipe(gulp.dest('./_dev/css'))
 });
 
 
 gulp.task('scss-lint', function() {
-  return gulp.src(['./core/**/*.scss','./_dev/_assets/_sass/doc/*.scss'])
+  return gulp.src(['./core/**/*.scss'])
     .pipe(scsslint({ 'config': 'scss-lint.yml' }));
 });
 
 gulp.task('compress', function (cb) {
-  gulp.src('./core/dialectics/js/*.js')
-  .pipe(uglify())
-  .pipe(rename({
-            suffix: '.min'
-        }))
-  .pipe(gulp.dest('./docs/js'));
-  
+  pump([
+    gulp.src('./core/dialectics/js/*.js'),
+    concat('core.concat.js'),
+    gulp.dest('./_dev/js/'),
+    uglify(),
+    rename({
+      suffix: '.min'
+    }),
+    gulp.dest('./_dev/js')
+  ]);
 });
 
 gulp.task('watch', function() {
@@ -37,14 +42,14 @@ gulp.task('watch', function() {
 });
 
 gulp.task('jshint', function(){
-	gulp.src(['style.guide/core/dialectics/js/*.js'])
+	gulp.src(['./core/dialectics/js/*.js'])
 	.pipe(jshint())
 	.pipe(jshint.reporter('jshint-stylish'));
 });
 
 gulp.task('format', function() {
   // The base option ensures the glob doesn't strip prefixes
-  return gulp.src(['style.guide/core/dialectics/js/*.js'], {base: '.'})
+  return gulp.src(['./core/dialectics/js/*.js'], {base: '.'})
       .pipe(format.format())
       .pipe(gulp.dest('.'));
 });
