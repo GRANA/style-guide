@@ -133,52 +133,7 @@ $doc-layout-border-dark: 1px solid lighten($ui-03, 3%);
 }
 
 .doc-section-pad {
-  padding: 60px 0;
-}
-
-.doc-p {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.333;
-}
-
-.doc-content-wrapper {
-  padding: 0 40px;
-  width: 960px;
-}
-
-.doc-main {
-  margin-left: $sidebar-width;
-  width: calc(100% - #{$sidebar-width});
-}
-
-.doc-main-header {
-  padding: 20px 0;
-
-  h1 {
-    @extend %heading;
-    @extend %heading-m;
-    margin: 0;
-  }
-}
-
-.doc-main-section {
-  @extend %heading;
-  @extend %heading-l;
-  border-bottom: 1px solid $primary-text;
-  padding: 10px 0;
-}
-
-
-// Item
-
-.doc-item {
-  border-bottom: 1px solid darken($secondary-background, 10%);
-  padding: 20px 0;
-}
-
-.doc-item-section:not(:last-child) {
-  margin-bottom: 2em;
+  padding: 50px 0;
 }
 
 // syntax and code
