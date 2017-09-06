@@ -65,8 +65,12 @@ $sidenav-logo-height: 50px;
   padding: 5px 20px;
   text-decoration: none;
 
-  &:hover {
+  &:not(.is-selected):hover {
     color: $primary-text;
     text-decoration: underline;
   }
+}
+
+.sidenav-menu-link.is-selected {
+  color: $primary-brand;
 }
