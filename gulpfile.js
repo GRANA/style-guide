@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var gutil = require('gulp-util');
 var sass = require('gulp-sass');
 var scsslint = require('gulp-scss-lint');
+var eslint = require('gulp-eslint');
 var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
@@ -22,6 +23,13 @@ gulp.task('sass', function() {
 gulp.task('scss-lint', function() {
   return gulp.src(['./core/**/*.scss'])
     .pipe(scsslint({ 'config': 'scss-lint.yml' }));
+});
+
+gulp.task('eslint', () => {
+  return gulp.src(['./core/dialectics/js/**/*.js','./_dev/_assets/**/*.js'])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
 });
 
 gulp.task('watch', function() {
@@ -67,7 +75,7 @@ gulp.task('jekyll-fontcopy', function() {
 });
 
 
-gulp.task('default', ['scss-lint','sass']);
+gulp.task('default', ['scss-lint','sass','eslint']);
 gulp.task('jekyll', function(callback){
   sequence('default', 'jekyll-fontcopy','jekyll-compress', 'build-jekyll', callback);
 });

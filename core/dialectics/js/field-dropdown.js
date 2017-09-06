@@ -1,7 +1,7 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module depending on jQuery.
-    define(['jquery'], factory);
+    define([ 'jquery' ], factory);
   } else {
     // No AMD. Register plugin with global jQuery object.
     factory(jQuery);
@@ -15,7 +15,7 @@
       inputValueAttr: 'field-value',
       defaultItem: false,
       inputName: null,
-      onselect: function() {}
+      onselect: function() {},
     };
 
     this.options = $.extend({}, defaults, options);
@@ -61,8 +61,6 @@
       });
 
       $(document).on('keypress', this.$el, this.onKeypress.bind(this));
-
-
 
     },
 
@@ -140,7 +138,7 @@
      */
     selectItemByValue: function(val) {
       var $targetEl = this.$el.find(
-          this.input + '-item[data-' + this.inputValAttr + '="' + val + '"]');
+        this.input + '-item[data-' + this.inputValAttr + '="' + val + '"]');
 
       if ($targetEl.length > 0) {
         this.selectItem($targetEl[0]);
@@ -252,8 +250,6 @@
         });
       }
 
-
-
     },
 
     /**
@@ -357,7 +353,7 @@
      */
     removeItemFocus: function() {
       this.$el.find('.is-focused').removeClass('is-focused');
-    }
+    },
 
   };
 
@@ -442,7 +438,7 @@
 
     updateLabel: function(string) {
       this.$label.html(string);
-    }
+    },
 
   };
 
