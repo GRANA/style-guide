@@ -64,6 +64,12 @@ gulp.task('jekyll-compress', function () {
     rename({
       suffix: '.min'
     }),
+    gulp.dest('./_dev/js'),
+    gulp.src('./_dev/_assets/_js/*.js'),
+    uglify(),
+    rename({
+      suffix: '.min'
+    }),
     gulp.dest('./_dev/js')
   ]);
 });
