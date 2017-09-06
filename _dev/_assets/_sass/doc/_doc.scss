@@ -5,6 +5,8 @@
 // vars
 
 $sidebar-width: 230px;
+$doc-layout-border-light: 1px solid darken($secondary-background, 3%);
+$doc-layout-border-dark: 1px solid lighten($ui-03, 3%);
 
 .doc {
   @extend %body-l;
@@ -116,6 +118,18 @@ $sidebar-width: 230px;
     @extend %line-height-1-4;
     margin: 20px 0 0;
   }
+}
+
+.doc-section.first-section:not(:first-child) {
+
+  .doc-info {
+    border-top: $doc-layout-border-light;
+  }
+
+  .doc-examples {
+    border-top: $doc-layout-border-dark;
+  }
+  
 }
 
 .doc-section-pad {

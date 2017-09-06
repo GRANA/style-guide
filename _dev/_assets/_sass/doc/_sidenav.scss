@@ -3,7 +3,7 @@ $sidenav-logo-height: 50px;
 .sidenav {
   @include size($sidebar-width 100%);
   background-color: $secondary-background;
-  border-right: 1px solid darken($secondary-background, 3%);
+  border-right: $doc-layout-border-light;
   color: $primary-text;
   left: 0;
   overflow: auto;
