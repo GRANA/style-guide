@@ -55,6 +55,10 @@ $doc-layout-border-dark: 1px solid lighten($ui-03, 3%);
   z-index: 100;
 }
 
+.doc-content-inner {
+  position: relative;
+}
+
 .doc-examples,
 .doc-info {
   position: relative;
