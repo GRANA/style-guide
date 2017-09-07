@@ -1,21 +1,13 @@
 {% assign title = 'example' %}
 {% assign code = '
 <pre><code class="html">&lt;div class="field-group"&gt;
-  &lt;label for="field-preinput" class="field-label">Label text&lt;/label&gt;
-  &lt;input type="text" id="field-preinput" class="field-text" name="single-line-field"&gt;
-  &lt;div class="field-helper">hint and helper text&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-' %}
-{% include example.html %}
-
-{% assign title = 'example' %}
-{% assign code = '
-<pre><code class="html">&lt;div class="field-group"&gt;
-  &lt;label for="field-preinput" class="field-label">Label text&lt;/label&gt;
-  &lt;input type="text" id="field-preinput" class="field-text" name="single-line-field"&gt;
-  &lt;div class="field-helper">hint and helper text&lt;/div&gt;
-&lt;/div&gt;
+  &lt;input type="radio" name="radio-example" id="radio-example-0" class="radiobutton" checked&gt;
+  &lt;label for="radio-example-0"&gt;
+    &lt;span class="radiobutton-label-name"&gt;
+      option 1
+    &lt;/span&gt;
+  &lt;/label&gt;
+ &lt;/div&gt;
 </code></pre>
 ' %}
 {% include example.html %}
