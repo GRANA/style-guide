@@ -1,0 +1,43 @@
+// Module for colour selection
+
+.compact-cs {
+  @include size(20px);
+}
+
+.compact-cs-input {
+  @include size(inherit);
+  position: absolute;
+  visibility: hidden;
+}
+
+.compact-cs-label {
+  @include size(inherit);
+  display: block;
+  margin-bottom: 0;
+  margin-right: 20px;
+  position: relative;
+
+  &:before,
+  &:after {
+    background-color: $secondary-background;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    vertical-align: middle;
+  }
+
+  &:before {
+    @include size(inherit);
+    border: 1px solid $text-04;
+    left: 0;
+    z-index: 10;
+  }
+
+  &:after {
+    @include size(14px);
+    left: 3px;
+    top: 3px;
+    z-index: 11;
+  }
+}
