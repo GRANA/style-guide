@@ -16,28 +16,32 @@
   margin-bottom: 0;
   margin-right: 20px;
   position: relative;
+}
 
-  &:before,
-  &:after {
-    background-color: $secondary-background;
-    border-radius: 50%;
-    content: "";
-    display: inline-block;
-    position: absolute;
-    vertical-align: middle;
-  }
+.compact-cs-circle {
+  @include size(inherit);
+  background-color: $secondary-background;
+  border: 1px solid $text-04;
+  border-radius: 50%;
+  display: inline-block;
+}
 
-  &:before {
-    @include size(inherit);
-    border: 1px solid $text-04;
-    left: 0;
-    z-index: 10;
-  }
-
-  &:after {
-    @include size(14px);
+.compact-cs-input:checked + .compact-cs-label {
+  &:after { 
+    @extend %grana-icons;
+    color: $ui-01;
+    content: "\e808";
+    font-size: 10px;
+    font-weight: bold;
     left: 3px;
-    top: 3px;
-    z-index: 11;
+    position: absolute;
+    top: 5px;
   }
+}
+
+// test colour
+
+.compact-cs-blue {
+  background-color: $primary-brand;
+  border: 1px solid darken($primary-brand, 20%);
 }
