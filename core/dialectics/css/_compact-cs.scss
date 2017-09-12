@@ -1,29 +1,43 @@
 // Module for colour selection
 
+$compact-cs-size: 20px;
+
 .compact-cs {
-  @include size(20px);
+  cursor: pointer;
+  height: $compact-cs-size;
 }
 
 .compact-cs-input {
-  @include size(inherit);
+  @include size($compact-cs-size);
   position: absolute;
   visibility: hidden;
 }
 
 .compact-cs-label {
-  @include size(inherit);
   display: block;
+  height: inherit;
   margin-bottom: 0;
   margin-right: 20px;
   position: relative;
 }
 
 .compact-cs-circle {
-  @include size(inherit);
+  @include size($compact-cs-size);
   background-color: $secondary-background;
   border: 1px solid $text-04;
-  border-radius: 50%;
+  border-radius: 50%; 
   display: inline-block;
+}
+
+.compact-cs-name {
+  @extend %body-m;
+  @include user-select(none);
+  display: inline-block;
+  height: inherit;
+  line-height: 1.7;
+  margin-left: 10px;
+  position: relative;
+  vertical-align: top;
 }
 
 .compact-cs-input:checked + .compact-cs-label {
