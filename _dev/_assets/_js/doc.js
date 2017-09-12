@@ -3,7 +3,7 @@ var granaDocs = (function($) {
   var currentSection, ignoreScrollEvent, $container;
 
   init = function() {
-    
+
     $(function() {
       $.fieldText();
       hljs.initHighlightingOnLoad();
@@ -36,7 +36,7 @@ var granaDocs = (function($) {
     });
 
   };
-  
+
   /**
    * Displays side menu nav link as active
    * @param  {object} link jQuery object of link element to be selected
@@ -45,7 +45,7 @@ var granaDocs = (function($) {
     $('a.sidenav-menu-link').removeClass('is-selected');
     link.addClass('is-selected');
   };
-  
+
   /**
    * Initiate automatic scrolling to a section. If the id and link do
    * not exist, then we set the first section
@@ -63,7 +63,7 @@ var granaDocs = (function($) {
       setDefault();
     }
   };
-  
+
   /**
    * Executes on scroll and determines if the position is on 
    * a new section
@@ -89,7 +89,7 @@ var granaDocs = (function($) {
     }
 
   };
-  
+
   /**
    * Sets the current section to the first section of the
    * document
