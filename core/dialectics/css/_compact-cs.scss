@@ -59,3 +59,10 @@ $compact-cs-size: 20px;
   background-color: $primary-brand;
   border: 1px solid darken($primary-brand, 20%);
 }
+
+$compact-cs-lilac: #bcb8c9;
+
+.compact-cs-lilac {
+  background-color: $compact-cs-lilac;
+  border-color: darken($compact-cs-lilac, 10%);
+}
