@@ -5,7 +5,24 @@ var granaDocs = (function($) {
   init = function() {
 
     $(function() {
+
+      // init core stuff to get ui componenets working
       $.fieldText();
+      $('#slider-example').slider({
+        range: true,
+        min: 0,
+        max: 500,
+        values: [ 75, 300 ],
+        slide: function(event,ui) {
+          $(this).find('.ui-slider-range-min').html('$' + ui.values[0]);
+          $(this).find('.ui-slider-range-max').html('$' + ui.values[1]);
+        },
+      });
+      $('#slider-example').find('.ui-slider-range-min').html('$' + $('#slider-example').slider('values',0));
+      $('#slider-example').find('.ui-slider-range-max').html('$' + $('#slider-example').slider('values',1));
+
+      // document related 
+      // 
       hljs.initHighlightingOnLoad();
 
       $container = $('.doc-content');
