@@ -26,7 +26,9 @@ gulp.task('scss-lint', function() {
 });
 
 gulp.task('eslint', () => {
-  return gulp.src(['./core/dialectics/js/**/*.js','./_dev/_assets/**/*.js'])
+  return gulp.src(['./core/dialectics/js/field-dropdown.js',
+    './core/dialectics/js/field-text.js',
+    './_dev/_assets/**/*.js'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
@@ -56,10 +58,9 @@ gulp.task('build-jekyll', (code) => {
 });
 
 gulp.task('jekyll-compress', function () {
-  pump([
+  return pump([
     gulp.src('./core/dialectics/js/*.js'),
     concat('core.concat.js'),
-    gulp.dest('./_dev/js/'),
     uglify(),
     rename({
       suffix: '.min'
