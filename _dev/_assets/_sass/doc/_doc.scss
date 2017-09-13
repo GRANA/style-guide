@@ -4,88 +4,140 @@
 
 // vars
 
-$sidebar-width: 280px;
+$sidebar-width: 230px;
+$doc-layout-border-light: 1px solid darken($secondary-background, 3%);
+$doc-layout-border-dark: 1px solid lighten($ui-03, 3%);
 
 .doc {
-  @include size(100% auto);
+  @extend %body-l;
+  box-sizing: border-box;
+  color: $primary-text;
   font-family: $sofiapro;
+  -webkit-font-smoothing: antialiased;
 
-  // Temp reset for headers
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 400;
+  * {
+    box-sizing: border-box; 
+  }
+ 
+  *:before,
+  *:after {
+    box-sizing: border-box; 
   }
 }
 
 // standard styling
 
-.doc-p {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.333;
-}
-
-.doc-content-wrapper {
-  padding: 0 40px;
-  width: 960px;
-}
-
-
-.doc-sidenav {
-  @include size($sidebar-width 100%);
-  background-color: $secondary-background;
-  border-right: 1px solid darken($secondary-background, 10%);
-  color: $primary-text;
-  left: 0;
-  overflow: auto;
+.doc-background {
+  bottom: 0;
+  left: $sidebar-width;
   position: fixed;
+  right: 0;
   top: 0;
 }
 
-.doc-sidenav-logo {
-  color: $primary-brand;
-  display: block;
-  font-size: 1.9rem;
-  margin: 50px;
-  text-align: center;
+.doc-background-right {
+  background-color: $ui-03;
+  bottom: 0;
+  left: 45%;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
-.doc-main {
-  margin-left: $sidebar-width;
-  width: calc(100% - #{$sidebar-width});
+.doc-content {
+  bottom: 0;
+  left: $sidebar-width;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
 }
 
-.doc-main-header {
-  padding: 20px 0;
+.doc-content-inner {
+  position: relative;
+}
 
-  h1 {
+.doc-examples,
+.doc-info {
+  position: relative;
+}
+
+.doc-examples {
+  color: $secondary-text;
+  margin-left: 45%;
+
+  h3 {
     @extend %heading;
-    @extend %heading-m;
+    @extend %heading-xs;
+    margin-bottom: 20px;
+  }
+
+  pre {
     margin: 0;
   }
 }
 
-.doc-main-section {
-  @extend %heading;
-  @extend %heading-l;
-  border-bottom: 1px solid $primary-text;
-  padding: 10px 0;
+.doc-examples-pad {
+  padding: 40px;
 }
 
+.doc-example {
 
-// Item
+  &:not(:first-child) {
+    padding-top: 20px;
+  }
 
-.doc-item {
-  border-bottom: 1px solid darken($secondary-background, 10%);
-  padding: 20px 0;
+  &:not(:last-child) {
+    padding-bottom: 20px;
+  }
+  
 }
 
-.doc-item-section:not(:last-child) {
-  margin-bottom: 2em;
+.doc-info {
+  float: left;
+  width: 45%;
+}
+
+.doc-info-pad {
+  padding: 0 40px;
+}
+
+.doc-section {
+  @include clearfix();
+
+  figure {
+    margin: 40px 0;
+  }
+
+  h1 {
+    @extend %heading-s;
+    @extend %line-height-1-1;
+    font-weight: normal;
+    margin: 0 0 20px;
+  }
+
+  p {
+    @extend %line-height-1-4;
+    margin: 20px 0 0;
+  }
+}
+
+.doc-section.first-section:not(:first-child) {
+
+  .doc-info {
+    border-top: $doc-layout-border-light;
+  }
+
+  .doc-examples {
+    border-top: $doc-layout-border-dark;
+  }
+  
+}
+
+.doc-section-pad {
+  padding: 50px 0;
 }
 
 // syntax and code

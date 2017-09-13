@@ -2,13 +2,17 @@
 // Code tag styling for highlight.js
 //
 
+$code-black: #000;
+
 .hljs {
+  background-color: $code-black;
+  font-size: 13px;
   padding: 1.4em;
 }
 
 .hljs,
 .hljs-subst {
-  color: $primary-brand;
+  color: $secondary-text;
 }
 
 .hljs-attr {
