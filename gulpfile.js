@@ -3,10 +3,8 @@ var gutil = require('gulp-util');
 var sass = require('gulp-sass');
 var scsslint = require('gulp-scss-lint');
 var eslint = require('gulp-eslint');
-var jshint = require('gulp-jshint');
 var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
-var format = require('gulp-clang-format');
 var cp = require('child_process');
 var sequence = require('run-sequence');
 var concat = require('gulp-concat');
@@ -26,6 +24,7 @@ gulp.task('eslint', () => {
     .pipe(eslint.failAfterError());
 });
 
+//Compile sass into css
 gulp.task('sass', function() {
   gulp.src('./_dev/css/main.scss')
   .pipe(sass({style: 'expanded'}))
@@ -36,21 +35,6 @@ gulp.task('sass', function() {
 // This watches all modifications in SCSS, and have it checked and generated on the run-time.
 gulp.task('watch', function() {
   gulp.watch('./**/*.scss', ['sass','scss-lint']);
-});
-
-// Style check JS
-gulp.task('jshint', function(){
-	gulp.src(['./core/dialectics/js/*.js'])
-	.pipe(jshint())
-	.pipe(jshint.reporter('jshint-stylish'));
-});
-
-//
-gulp.task('format', function() {
-  // The base option ensures the glob doesn't strip prefixes
-  return gulp.src(['./core/dialectics/js/*.js'], {base: '.'})
-      .pipe(format.format())
-      .pipe(gulp.dest('.'));
 });
 
 // Triggers Jekyll to build the website generating from the _dev folder.
