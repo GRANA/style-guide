@@ -53,7 +53,7 @@ $compact-cs-size: 20px;
   }
 }
 
-// test colour
+// test colours
 
 .compact-cs-blue {
   background-color: $primary-brand;
@@ -66,3 +66,11 @@ $compact-cs-lilac: #bcb8c9;
   background-color: $compact-cs-lilac;
   border-color: darken($compact-cs-lilac, 10%);
 }
+
+$compact-cs-burgundy: #4e3643;
+
+.compact-cs-burgundy {
+  background-color: $compact-cs-burgundy;
+  border-color: darken($compact-cs-burgundy, 10%);
+}
+
