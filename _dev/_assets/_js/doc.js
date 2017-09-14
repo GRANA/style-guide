@@ -44,6 +44,13 @@ var granaDocs = (function($) {
   selectSideNavLink = function(link) {
     $('a.sidenav-menu-link').removeClass('is-selected');
     link.addClass('is-selected');
+
+    toggleSideNavSubItems(link);
+  };
+
+  toggleSideNavSubItems = function(link) {
+    $('.sidenav-menu-items > li').removeClass('is-active');
+    link.closest('.sidenav-menu-items > li').addClass('is-active');
   };
 
   /**
@@ -54,7 +61,7 @@ var granaDocs = (function($) {
   scrollToSection = function(hash) {
     ignoreScrollEvent = true;
 
-    if ($(hash).length > 0 && $('a[href="' + hash + '"').length > 0) {
+    if ($(hash).length > 0 && $('a[href="' + hash + '"]').length > 0) {
       selectSideNavLink($('a[href="' + hash + '"'));
       $container.scrollTop($(hash).position().top);
       currentSection = hash;
