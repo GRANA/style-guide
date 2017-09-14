@@ -1,0 +1,30 @@
+{% assign title = 'html example' %}
+{% assign code = '
+<pre><code class="html">&lt;div id="slider-range-example"&gt;
+  &lt;div class="ui-slider-range-labels"&gt;
+    &lt;div class="ui-slider-range-min"&gt;&lt;/div&gt;
+    &lt;div class="ui-slider-range-max"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  </code></pre>
+' %}
+{% include example.html %}
+
+{% assign title = 'js example' %}
+{% assign code = "
+<pre><code>$('#slider-range-example').slider({
+  range: true,
+  min: 0,
+  max: 100,
+  step: 5,
+  values: [ 20, 50 ],
+  slide: function(event,ui) {
+    $(this).find('.ui-slider-range-min').html('$' + ui.values[0]);
+    $(this).find('.ui-slider-range-max').html('$' + ui.values[1]);
+  },
+});
+$('#slider-range-example').find('.ui-slider-range-min').html('$' + $('#slider-range-example').slider('values',0));
+$('#slider-range-example').find('.ui-slider-range-max').html('$' + $('#slider-range-example').slider('values',1));
+</code></pre>
+" %}
+{% include example.html %}

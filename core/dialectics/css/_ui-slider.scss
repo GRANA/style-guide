@@ -2,6 +2,7 @@
 .ui-slider {
   background-color: $text-04;
   height: 1px;
+  margin: 40px 10px 10px;
   position: relative;
   text-align: left;
 }
@@ -23,7 +24,8 @@
   width: 100%;
 }
 
-.ui-slider-range-min {
+.ui-slider-range-min, 
+.ui-slider-range-cur {
   float: left;
 }
 
@@ -37,6 +39,7 @@
   border: 1px solid $primary-brand;
   border-radius: 50%;
   cursor: pointer;
+  margin-left: -10px;
   outline: none;
   position: absolute;
   top: -10px;

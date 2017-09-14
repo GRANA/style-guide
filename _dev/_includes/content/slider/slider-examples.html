@@ -1,0 +1,26 @@
+{% assign title = 'html example' %}
+{% assign code = '
+<pre><code class="html">&lt;div id="slider-example"&gt;
+  &lt;div class="ui-slider-range-labels"&gt;
+    &lt;div class="ui-slider-range-cur"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  </code></pre>
+' %}
+{% include example.html %}
+
+{% assign title = 'js example' %}
+{% assign code = "
+<pre><code>$('#slider-example').slider({
+  min: 0,
+  max: 100,
+  step: 5,
+  values: [ 20 ],
+  slide: function(event,ui) {
+    $(this).find('.ui-slider-range-cur').html('$' + ui.values[0]);
+  },
+});
+$('#slider-example').find('.ui-slider-range-cur').html('$' + $('#slider-example').slider('values',0));
+</code></pre>
+" %}
+{% include example.html %}
