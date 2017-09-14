@@ -61,7 +61,7 @@ var granaDocs = (function($) {
   scrollToSection = function(hash) {
     ignoreScrollEvent = true;
 
-    if ($(hash).length > 0 && $('a[href="' + hash + '"').length > 0) {
+    if ($(hash).length > 0 && $('a[href="' + hash + '"]').length > 0) {
       selectSideNavLink($('a[href="' + hash + '"'));
       $container.scrollTop($(hash).position().top);
       currentSection = hash;
