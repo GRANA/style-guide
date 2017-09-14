@@ -44,6 +44,13 @@ var granaDocs = (function($) {
   selectSideNavLink = function(link) {
     $('a.sidenav-menu-link').removeClass('is-selected');
     link.addClass('is-selected');
+
+    toggleSideNavSubItems(link);
+  };
+
+  toggleSideNavSubItems = function(link) {
+    $('.sidenav-menu-items > li').removeClass('is-active');
+    link.closest('.sidenav-menu-items > li').addClass('is-active');
   };
 
   /**
