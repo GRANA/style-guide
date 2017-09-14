@@ -74,3 +74,17 @@ $sidenav-logo-height: 50px;
 .sidenav-menu-link.is-selected {
   color: $primary-brand;
 }
+
+.sidenav-menu-sub-items {
+  @include clearliststyle();
+  @include transition(max-height .2s ease);
+  max-height: 0;
+  overflow: hidden;
+  padding-left: 10px;
+}
+
+.is-active {
+  .sidenav-menu-sub-items {
+    max-height: 400px;
+  }
+}
