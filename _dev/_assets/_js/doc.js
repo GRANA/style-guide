@@ -11,8 +11,9 @@ var granaDocs = (function($) {
       $('#slider-example').slider({
         range: true,
         min: 0,
-        max: 500,
-        values: [ 75, 300 ],
+        max: 100,
+        step: 5,
+        values: [ 20, 50 ],
         slide: function(event,ui) {
           $(this).find('.ui-slider-range-min').html('$' + ui.values[0]);
           $(this).find('.ui-slider-range-max').html('$' + ui.values[1]);
