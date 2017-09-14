@@ -18,8 +18,8 @@ gulp.task('scss-lint', function() {
 
 // Style check JS
 gulp.task('eslint', () => {
-  return gulp.src(['./core/dialectics/js/field-dropdown.js',
-    './core/dialectics/js/field-text.js',
+  return gulp.src(['./core/dialectics/js/**/*.js',
+    '!./core/dialectics/js/jquery-ui.js',
     './_dev/_assets/**/*.js'])
     .pipe(eslint())
     .pipe(eslint.format())
