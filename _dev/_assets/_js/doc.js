@@ -5,7 +5,14 @@ var granaDocs = (function($) {
   init = function() {
 
     $(function() {
+
+      // init core stuff to get ui componenets working
       $.fieldText();
+
+      // example related
+      initSliderExamples();
+
+      // document related  
       hljs.initHighlightingOnLoad();
 
       $container = $('.doc-content');

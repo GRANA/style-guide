@@ -18,7 +18,9 @@ gulp.task('scss-lint', function() {
 
 // Style check JS
 gulp.task('eslint', () => {
-  return gulp.src(['./core/dialectics/js/**/*.js','./_dev/_assets/**/*.js'])
+  return gulp.src(['./core/dialectics/js/**/*.js',
+    '!./core/dialectics/js/jquery-ui.js',
+    './_dev/_assets/**/*.js'])
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError());
@@ -46,16 +48,22 @@ gulp.task('build-jekyll', (code) => {
 
 // This minifies all the javascript code into one file, to make it easier for inclusion in Jekyll.
 gulp.task('jekyll-compress', function () {
-  pump([
+  return pump([
     gulp.src('./core/dialectics/js/*.js'),
     concat('core.concat.js'),
-    gulp.dest('./_dev/js/'),
     uglify(),
     rename({
       suffix: '.min'
     }),
     gulp.dest('./_dev/js'),
-    gulp.src('./_dev/_assets/_js/*.js'),
+    gulp.src('./_dev/_assets/_js/doc.js'),
+    uglify(),
+    rename({
+      suffix: '.min'
+    }),
+    gulp.dest('./_dev/js'),
+    gulp.src('./_dev/_assets/_js/example-*.js'),
+    concat('examples.concat.js'),
     uglify(),
     rename({
       suffix: '.min'

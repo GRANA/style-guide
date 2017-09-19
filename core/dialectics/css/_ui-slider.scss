@@ -1,0 +1,54 @@
+
+.ui-slider {
+  background-color: $text-04;
+  height: 1px;
+  margin: 40px 10px 10px;
+  position: relative;
+  text-align: left;
+}
+
+.ui-slider-range {
+  background-color: $primary-brand;
+  display: block;
+  height: 1px;
+  position: absolute;
+  z-index: 1;
+}
+
+.ui-slider-range-labels {
+  @extend %body-m;
+  @extend %line-height-1-2;
+  color: $secondary-text;
+  position: absolute;
+  top: -35px;
+  width: 100%;
+}
+
+.ui-slider-range-min, 
+.ui-slider-range-cur {
+  float: left;
+}
+
+.ui-slider-range-max {
+  float: right;
+}
+
+.ui-slider-handle {
+  @include size(20px);
+  background-color: $primary-background;
+  border: 1px solid $primary-brand;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: -10px;
+  outline: none;
+  position: absolute;
+  top: -10px;
+  z-index: 2;
+}
+
+.ui-slider-disabled {
+  .ui-slider-handle {
+    background-color: $primary-background;
+    border: 1px solid $text-04;
+  }
+}
