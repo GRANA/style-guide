@@ -12,8 +12,7 @@ var granaDocs = (function($) {
       // example related
       initSliderExamples();
 
-      // document related 
-      // 
+      // document related  
       hljs.initHighlightingOnLoad();
 
       $container = $('.doc-content');
