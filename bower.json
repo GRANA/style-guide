@@ -1,0 +1,11 @@
+{
+  "name": "grana-style-guide",
+  "description": "Grana.com core styles and components",
+  "main": "",
+  "authors": [
+    "adam"
+  ],
+  "license": "MIT",
+  "homepage": "https://grana.github.io/style-guide/",
+  "private": true
+}
