@@ -26,9 +26,25 @@ on implementation for developers and designers with the goal of maintaining cons
 
 ## Installation
 
-### Git Submodule
+### Bower
 
-Instructions for adding repository using Git submodules.
+Including the style guide into your grana dev environment requires Bower for handling dependencies.
+
+1. Install Bower using npm:
+
+```bash
+   npm install -g bower
+   ```
+2. In the root project dir, login using your github token:
+
+```bash
+   bower login -t {TOKEN}
+   ```
+3. Install dependencies:
+
+```bash
+   bower install
+   ```
 
 ### Project
 
