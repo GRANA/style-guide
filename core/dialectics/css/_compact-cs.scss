@@ -1,0 +1,76 @@
+// Module for colour selection
+
+$compact-cs-size: 20px;
+
+.compact-cs {
+  cursor: pointer;
+  height: $compact-cs-size;
+}
+
+.compact-cs-input {
+  @include size($compact-cs-size);
+  position: absolute;
+  visibility: hidden;
+}
+
+.compact-cs-label {
+  display: block;
+  height: inherit;
+  margin-bottom: 0;
+  margin-right: 20px;
+  position: relative;
+}
+
+.compact-cs-circle {
+  @include size($compact-cs-size);
+  background-color: $secondary-background;
+  border: 1px solid $text-04;
+  border-radius: 50%; 
+  display: inline-block;
+}
+
+.compact-cs-name {
+  @extend %body-m;
+  @include user-select(none);
+  display: inline-block;
+  height: inherit;
+  line-height: 1.7;
+  margin-left: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+.compact-cs-input:checked + .compact-cs-label {
+  &:after { 
+    @extend %grana-icons;
+    color: $ui-01;
+    content: "\e808";
+    font-size: 10px;
+    font-weight: bold;
+    left: 3px;
+    position: absolute;
+    top: 5px;
+  }
+}
+
+// test colours
+
+.compact-cs-blue {
+  background-color: $primary-brand;
+  border: 1px solid darken($primary-brand, 20%);
+}
+
+$compact-cs-lilac: #bcb8c9;
+
+.compact-cs-lilac {
+  background-color: $compact-cs-lilac;
+  border-color: darken($compact-cs-lilac, 10%);
+}
+
+$compact-cs-burgundy: #4e3643;
+
+.compact-cs-burgundy {
+  background-color: $compact-cs-burgundy;
+  border-color: darken($compact-cs-burgundy, 10%);
+}
+
