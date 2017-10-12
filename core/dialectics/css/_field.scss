@@ -56,11 +56,17 @@
 .field-submit-btn {
   background: transparent;
   border: 0;
-  color: $primary-brand;
+  color: $primary-brand !important;
   cursor: pointer;
   height: 45px;
   outline: none;
   padding: 0 20px 0 10px;
+  
+  &:focus,
+  &:hover {
+    color: $primary-brand;
+  }
+
 
   &-apply,
   &-applied,
