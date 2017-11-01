@@ -12,7 +12,7 @@ var granaDocs = (function($) {
       // example related
       initSliderExamples();
 
-      // document related  
+      // document related
       hljs.initHighlightingOnLoad();
 
       $container = $('.doc-content');
@@ -79,7 +79,7 @@ var granaDocs = (function($) {
   };
 
   /**
-   * Executes on scroll and determines if the position is on 
+   * Executes on scroll and determines if the position is on
    * a new section
    */
   scrollOnSection = function() {
