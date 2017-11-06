@@ -7,7 +7,40 @@
 
 .stepper {
   background-color: $secondary-background;
+  min-width: 100px;
+  position: relative;
   text-align: center;
+}
+
+.stepper-button,
+.stepper-numeric {
+  color: $secondary-body-text;
+}
+
+.stepper-button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  height: 38px;
+  outline: 0;
+  padding: 0 20px;
+  position: absolute;
+  
+  &:before {
+    @extend %grana-icons;
+    font-size: 8px;
+    font-weight: bold;
+    position: relative;
+    top: -2px;
+  }
+}
+
+.stepper-down {
+  left: 0;
+
+  &:before {
+    content: "\e801";
+  }
 }
 
 .stepper-numeric {
@@ -26,4 +59,12 @@
     margin: 0;
   }
 
+}
+
+.stepper-up {
+  right: 0;
+
+  &:before {
+    content: "\e803";
+  }
 }
