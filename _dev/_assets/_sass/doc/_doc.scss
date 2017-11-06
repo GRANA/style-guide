@@ -13,6 +13,7 @@ $doc-layout-border-dark: 1px solid lighten($ui-03, 3%);
   box-sizing: border-box;
   color: $primary-text;
   font-family: $sofiapro;
+  -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 
   * {
