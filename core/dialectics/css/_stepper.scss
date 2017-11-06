@@ -33,6 +33,17 @@
     position: relative;
     top: -2px;
   }
+
+  &:hover {
+    color: $primary-text;
+  }
+}
+
+.stepper-disabled {
+  .stepper-button,
+  .stepper-numeric {
+    color: $inactive-text;
+  }
 }
 
 .stepper-down {
