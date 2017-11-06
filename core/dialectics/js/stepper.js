@@ -14,6 +14,12 @@
     this.options = $.extend({}, defaults, options);
     this.$el = el;
 
+    this.$numInput = this.$el.find('.stepper-numeric');
+    this.$upButton = this.$el.find('.stepper-up');
+    this.$downButton = this.$el.find('.stepper-down');
+
+    this.min = this.$numInput.attr('min');
+    this.max = this.$numInput.attr('max');
 
     this.init();
   }
@@ -22,6 +28,32 @@
 
     init: function() {
       var context = this;
+
+      this.$upButton.on('click', this.increaseValue.bind(this));
+      this.$downButton.on('click', this.decreaseValue.bind(this));
+
+    },
+
+    increaseValue: function() {
+      var curValue = this.$numInput.val();
+      var newValue = parseInt(curValue) + 1;
+
+      if (newValue <= this.max) {
+        this.$numInput.val(newValue);
+        this.$numInput.trigger('change');
+      }
+
+    },
+
+    decreaseValue: function() {
+      var curValue = this.$numInput.val();
+      var newValue = parseInt(curValue) - 1;
+
+      if (newValue >= this.min) {
+        this.$numInput.val(newValue);
+        this.$numInput.trigger('change');
+      }
+
     },
 
 
