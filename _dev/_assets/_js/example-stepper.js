@@ -4,6 +4,8 @@ var exampleStepper = (function($) {
 
     $(function() {
       $('#stepper-example').stepper();
+      $('#stepper-example-blue').stepper();
+      $('#stepper-example-outline').stepper();
     });
 
   };
