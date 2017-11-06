@@ -1,0 +1,19 @@
+// Stepper module variation
+
+.stepper-blue {
+  background-color: $primary-brand;
+
+  .stepper-button,
+  .stepper-numeric {
+    color: $primary-inverse-text;
+  }
+
+  &.stepper-disabled {
+    opacity: 0.4;
+
+    .stepper-button,
+    .stepper-numeric {
+      color: $primary-inverse-text;
+    }
+  }
+}

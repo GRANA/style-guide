@@ -1,0 +1,28 @@
+// Stepper module variation
+
+.stepper-outline {
+  background-color: $primary-background;
+  border: 2px solid $primary-brand;
+
+  .stepper-button,
+  .stepper-numeric {
+    color: $primary-brand;
+  }
+
+  .stepper-button {
+    height: 36px;
+  }
+
+  .stepper-numeric {
+    padding: 8px 11px;
+  }
+
+  &.stepper-disabled {
+    opacity: 0.4;
+
+    .stepper-button,
+    .stepper-numeric {
+      color: $primary-brand;
+    }
+  }
+}
