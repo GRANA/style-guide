@@ -1,0 +1,23 @@
+// Module for stepper
+// 
+// Numeric steppers allows the user to adjust a value by increasing and decreasing it in consistent values.
+// They are used in situations where users need to adjust a value by a small amount. 
+// For precise changes or large adjustments, use a text/number field instead. 
+// Numeric steppers are a desktop only component.
+
+.stepper-input {
+  @extend %body-l;
+  @extend %line-height-1-3;
+  -moz-appearance: textfield;
+  border: 0;
+  font-family: inherit;
+  outline: none;
+  padding: 10px;
+  
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+}
