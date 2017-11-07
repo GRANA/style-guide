@@ -1,0 +1,15 @@
+// Mixin for media queries
+
+$breakpoint-map: (
+  mobile: (
+    max-width: 575px
+  )
+);
+
+@mixin media-break($type) {
+  $break: map-get($breakpoint-map, $type);
+  $width: map-get($break, max-width);
+  @media (max-width: #{$width}) {
+    @content;
+  }
+}
