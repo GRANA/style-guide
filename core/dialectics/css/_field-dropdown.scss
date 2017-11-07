@@ -58,15 +58,15 @@
 }
 
 .field-dropdown-item {
-  color: $primary-text;
+  color: $secondary-body-text;
 
   &:hover {
-    color: $secondary-cta;
+    color: $primary-text;
   }
 
   &.is-selected {
     @extend %heading-semi;
-    color: $primary-text;
+    color: $secondary-text;
   }
 
   &.is-disabled {
