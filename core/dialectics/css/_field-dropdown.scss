@@ -89,6 +89,12 @@
     bottom: 100%;
     top: initial;
   }
+
+  &.is-open {
+    &:after {
+      @include transform(rotate(90deg));
+    }
+  }
 }
 
 
@@ -109,11 +115,3 @@
     color: $text-04;
   }
 }
-
-.field-dropdown-up.is-open {
-  &:after {
-    @include transform(rotate(90deg));
-  }
-}
-
-
