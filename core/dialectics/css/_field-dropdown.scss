@@ -5,7 +5,7 @@
 .field-dropdown {
   @extend %body-l;
   @include user-select(none);
-  background: $primary-background;
+  background: $secondary-background;
   position: relative;
   text-align: left;
   text-transform: lowercase;
