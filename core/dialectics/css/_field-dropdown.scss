@@ -79,6 +79,20 @@
   }
 }
 
+.field-dropdown-up {
+
+  &:after {
+    @include transform(rotate(-90deg));
+  }
+
+  .field-dropdown-list-container {
+    bottom: 100%;
+    top: initial;
+  }
+}
+
+
+
 // States
 
 .is-open {
@@ -95,3 +109,11 @@
     color: $text-04;
   }
 }
+
+.field-dropdown-up.is-open {
+  &:after {
+    @include transform(rotate(90deg));
+  }
+}
+
+
