@@ -86,6 +86,10 @@
     display: block;
   }
 
+  &:after {
+    @include transform(rotate(-90deg));
+  }
+
   .field-dropdown-label,
   &:after {
     color: $text-04;
