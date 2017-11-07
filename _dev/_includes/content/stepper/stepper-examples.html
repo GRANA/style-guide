@@ -1,0 +1,23 @@
+
+{% assign title = 'html example' %}
+{% assign code = '
+<pre><code class="html">&lt;div id="stepper-example" class="stepper"&gt;
+  &lt;button class="stepper-button stepper-down"&gt;&lt;/button&gt;
+  &lt;input type="number" class="stepper-numeric" 
+    min="1" 
+    max="99" 
+    step="1" 
+    value="1" 
+    readonly&gt;
+  &lt;button class="stepper-button stepper-up"&gt;&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+' %}
+{% include example.html %}
+
+{% assign title = 'js example' %}
+{% assign code = "
+<pre><code>$('#stepper-example').stepper();</code></pre>
+" %}
+{% include example.html %}
+
