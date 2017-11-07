@@ -3,7 +3,8 @@
 //
 
 .field-dropdown {
-  @extend %body-l;
+  @extend %body-m;
+  @extend %line-height-1-0;
   @include user-select(none);
   background: $secondary-background;
   position: relative;
@@ -20,24 +21,24 @@
   &:after {
     @extend %grana-icons;
     @include transform(rotate(90deg));
+    bottom: 50%;
     content: "\e813";
     font-size: 10px;
     margin: 0 20px;
+    margin-bottom: -5px;
     position: absolute;
     right: 0;
-    top: 18px;
   }
 }
 
 .field-dropdown,
 .field-dropdown-item {
   cursor: pointer;
-  padding: 13px 50px 13px 20px;
+  padding: 14px 50px 14px 20px;
 }
 
 .field-dropdown-label {
   display: block;
-  height: 20px;
 }
 
 .field-dropdown-list-container {
