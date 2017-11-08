@@ -9,11 +9,21 @@ $sidenav-logo-height: 50px;
   overflow: auto;
   position: fixed;
   top: 0;
+
+  @include media-break(mobile) {
+    @include transform(translate(-100%, 0));
+    width: 100%;
+    z-index: 101;
+  }
 }
 
 .sidenav-logo-section {
   border-bottom: $doc-layout-border-light;
   height: $sidenav-logo-height;
+
+  @include media-break(mobile) {
+    display: none;
+  }
 }
 
 .sidenav-logo {
