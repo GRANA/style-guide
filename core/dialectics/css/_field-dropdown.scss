@@ -4,7 +4,7 @@
 
 .field-dropdown {
   @extend %body-m;
-  @extend %line-height-1-0;
+  @extend %line-height-1-3;
   @include user-select(none);
   background: $secondary-background;
   position: relative;
@@ -34,7 +34,7 @@
 .field-dropdown,
 .field-dropdown-item {
   cursor: pointer;
-  padding: 14px 50px 14px 20px;
+  padding: 12px 50px 12px 20px;
 }
 
 .field-dropdown-label {
