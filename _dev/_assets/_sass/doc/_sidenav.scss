@@ -12,7 +12,8 @@ $sidenav-logo-height: 50px;
 
   @include media-break(mobile) {
     @include transform(translate(-100%, 0));
-    width: 100%;
+    @include transition(transform .2s ease);
+    width: 70%;
     z-index: 101;
   }
 }
@@ -96,5 +97,11 @@ $sidenav-logo-height: 50px;
 .is-active {
   .sidenav-menu-sub-items {
     max-height: 400px;
+  }
+}
+
+.is-expanded {
+  .sidenav {
+    @include transform(translate(0%, 0));
   }
 }
