@@ -1,7 +1,12 @@
 .doc-sandwich {
+  display: none;
   padding: 10px;
   position: absolute;
   right: -45px;
+
+  @include media-break(mobile) {
+    display: inline;
+  }
 }
 
 .doc-sandwich-inner{
