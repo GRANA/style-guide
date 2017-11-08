@@ -20,3 +20,17 @@
 </code></pre>
 ' %}
 {% include example.html %}
+
+{% assign title = 'js example' %}
+{% assign code = '
+<pre><code>$("#dropdown-example").fieldDropdown({
+  inputName: "dropdownExample",
+  defaultItem: "BH",
+  onselect: function(el) {
+    var isoCode = $(el).data("field-value");
+  },
+});
+</code></pre>
+' %}
+{% include example.html %}
+
