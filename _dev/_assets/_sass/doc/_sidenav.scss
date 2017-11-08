@@ -21,10 +21,6 @@ $sidenav-logo-height: 50px;
 .sidenav-logo-section {
   border-bottom: $doc-layout-border-light;
   height: $sidenav-logo-height;
-
-  @include media-break(mobile) {
-    display: none;
-  }
 }
 
 .sidenav-logo {
