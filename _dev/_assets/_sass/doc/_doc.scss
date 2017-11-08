@@ -62,6 +62,10 @@ $doc-layout-border-dark: 1px solid lighten($ui-03, 3%);
   right: 0;
   top: 0;
   z-index: 100;
+
+  @include media-break(mobile) {
+    left: 0;
+  }
 }
 
 .doc-content-inner {

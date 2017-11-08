@@ -1,0 +1,58 @@
+.doc-sandwich {
+  display: none;
+  padding: 10px;
+  position: absolute;
+  right: -45px;
+
+  @include media-break(mobile) {
+    display: inline;
+  }
+}
+
+.doc-sandwich-inner{
+  @include size(25px 16px);
+  background-color: $primary-brand;
+  box-sizing: content-box;
+  position: relative;
+}
+
+.doc-sandwich-inner {
+
+  &:before,
+  &:after {
+    @include transition(all .2s ease);
+    background: $primary-inverse-text;
+    content: '';
+    height: 5px;
+    left: 0;
+    position: absolute;
+    top: 2px;
+    width: 100%;
+  }
+}
+
+.doc-sandwich-inner {
+  &:after {
+    top: 9px;
+  }
+}
+
+.is-expanded {
+  .doc-sandwich-inner {
+    background-color: $primary-background;
+
+    &:before {
+      @include transform(rotate(45deg));
+      background-color: $primary-brand;
+      height:10%;
+      top:50%;
+    }
+
+    &:after {
+      @include transform(rotate(-45deg));
+      background-color: $primary-brand;
+      height:10%;
+      top:50%;
+    }
+  }
+}

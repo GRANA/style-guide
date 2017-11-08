@@ -17,6 +17,8 @@ var granaDocs = (function($) {
 
       $container = $('.doc-content');
 
+      $('.doc-sandwich').on('click', toggleSideNav);
+
       $('a.sidenav-menu-link').on('click', function() {
         selectSideNavLink($(this));
       });
@@ -53,6 +55,20 @@ var granaDocs = (function($) {
     link.addClass('is-selected');
 
     toggleSideNavSubItems(link);
+  };
+
+  /**
+   * Toggle the sidenav for mobile
+   */
+  toggleSideNav = function() {
+    var $doc = $('.doc');
+    var expandState = 'is-expanded';
+
+    if ($doc.hasClass(expandState)) {
+      $doc.removeClass(expandState);
+    } else {
+      $doc.addClass(expandState);
+    }
   };
 
   toggleSideNavSubItems = function(link) {
