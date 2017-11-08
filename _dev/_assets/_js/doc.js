@@ -56,7 +56,7 @@ var granaDocs = (function($) {
 
     toggleSideNavSubItems(link);
   };
-  
+
   /**
    * Toggle the sidenav for mobile
    */
