@@ -10,6 +10,45 @@ var sequence = require('run-sequence');
 var concat = require('gulp-concat');
 var pump = require('pump');
 
+
+gulp.task('compress-core', function () {
+  return pump([
+    gulp.src('./core/dialectics/js/*.js'),
+    concat('core.concat.js'),
+    uglify(),
+    rename({
+      suffix: '.min'
+    }),
+    gulp.dest('./_dev/js')
+  ]);
+});
+
+// This minifies all the javascript code into one file, to make it easier for inclusion in Jekyll.
+gulp.task('compress-doc', function () {
+  return pump([
+    gulp.src('./_dev/_assets/_js/doc.js'),
+    uglify(),
+    rename({
+      suffix: '.min'
+    }),
+    gulp.dest('./_dev/js')
+  ]);
+});
+
+gulp.task('compress-example', function () {
+  return pump([
+    gulp.src('./_dev/_assets/_js/example-*.js'),
+    concat('examples.concat.js'),
+    uglify(),
+    rename({
+      suffix: '.min'
+    }),
+    gulp.dest('./_dev/js')
+  ]);
+});
+
+
+
 // Style check SCSS
 gulp.task('scss-lint', function() {
   return gulp.src(['./core/**/*.scss'])
@@ -47,30 +86,7 @@ gulp.task('build-jekyll', (code) => {
 });
 
 // This minifies all the javascript code into one file, to make it easier for inclusion in Jekyll.
-gulp.task('jekyll-compress', function () {
-  return pump([
-    gulp.src('./_dev/_assets/_js/doc.js'),
-    uglify(),
-    rename({
-      suffix: '.min'
-    }),
-    gulp.dest('./_dev/js'),
-    gulp.src('./_dev/_assets/_js/example-*.js'),
-    concat('examples.concat.js'),
-    uglify(),
-    rename({
-      suffix: '.min'
-    }),
-    gulp.dest('./_dev/js'),
-    gulp.src('./core/dialectics/js/*.js'),
-    concat('core.concat.js'),
-    uglify(),
-    rename({
-      suffix: '.min'
-    }),
-    gulp.dest('./_dev/js'),
-  ]);
-});
+gulp.task('jekyll-compress', ['compress-core','compress-doc','compress-example']);
 
 // This copies the fonts that are currently embeddedd in our core style.
 gulp.task('jekyll-fontcopy', function() {
