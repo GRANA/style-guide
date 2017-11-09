@@ -49,13 +49,6 @@ gulp.task('build-jekyll', (code) => {
 // This minifies all the javascript code into one file, to make it easier for inclusion in Jekyll.
 gulp.task('jekyll-compress', function () {
   return pump([
-    gulp.src('./core/dialectics/js/*.js'),
-    concat('core.concat.js'),
-    uglify(),
-    rename({
-      suffix: '.min'
-    }),
-    gulp.dest('./_dev/js'),
     gulp.src('./_dev/_assets/_js/doc.js'),
     uglify(),
     rename({
@@ -68,7 +61,14 @@ gulp.task('jekyll-compress', function () {
     rename({
       suffix: '.min'
     }),
-    gulp.dest('./_dev/js')
+    gulp.dest('./_dev/js'),
+    gulp.src('./core/dialectics/js/*.js'),
+    concat('core.concat.js'),
+    uglify(),
+    rename({
+      suffix: '.min'
+    }),
+    gulp.dest('./_dev/js'),
   ]);
 });
 

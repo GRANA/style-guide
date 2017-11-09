@@ -10,7 +10,7 @@
 
   function radiobutton(el, options) {
     var defaults = {
-      inputSelector: '.radiobutton'
+      inputSelector: '.radiobutton',
     };
 
     this.options = $.extend({}, defaults, options);
