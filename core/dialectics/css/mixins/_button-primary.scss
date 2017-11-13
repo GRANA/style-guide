@@ -24,14 +24,21 @@
 ///     );
 ///   }
 
-@mixin button-primary($default, $hover, $progress, $disabled) {
+@mixin button-primary($states) {
+
+  $default: map-get($states, default);
+
   background-color: map-get($default, background-color);
   color: map-get($default, color);
+  
+  $hover: map-get($states, hover);
 
   &:hover {
     background-color: map-get($hover, background-color);
     color: map-get($hover, color);
   }
+  
+  $progress: map-get($states, progress);
 
   &:active,
   &:focus,
@@ -39,7 +46,9 @@
     background-color: map-get($progress, background-color);
     color: map-get($progress, color);
   }
-
+  
+  $disabled: map-get($states, disabled);
+  
   &:disabled,
   &.is-disabled {
     background-color: map-get($disabled, background-color);
