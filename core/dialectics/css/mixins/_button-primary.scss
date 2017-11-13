@@ -1,0 +1,49 @@
+/// Creates button style variation
+///
+/// @name Button primary
+///
+/// @argument {map} $default
+///   Setting the default background-color and color
+///   
+/// @argument {map} $hover
+///   Setting the hover state background-color and color
+///   
+/// @argument {map} $progress
+///   Setting the active, focus, and 'progress' state background-color and color
+///
+/// @argument {map} $disabled
+///   Setting the disabled state background-color, color, and opacity
+///
+/// @example scss
+///   .mn--bt-primary-blue {
+///     @include button-primary(
+///      (background-color: $primary-brand, color: $primary-inverse-text),
+///      (background-color: darken($primary-brand, 10%), color: $primary-inverse-text),
+///      (background-color: darken($primary-brand, 20%), color: $primary-inverse-text),
+///      (background-color: $primary-brand, color: $primary-inverse-text, opacity: 0.4)
+///     );
+///   }
+
+@mixin button-primary($default, $hover, $progress, $disabled) {
+  background-color: map-get($default, background-color);
+  color: map-get($default, color);
+
+  &:hover {
+    background-color: map-get($hover, background-color);
+    color: map-get($hover, color);
+  }
+
+  &:active,
+  &:focus,
+  &.is-progress {
+    background-color: map-get($progress, background-color);
+    color: map-get($progress, color);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    background-color: map-get($disabled, background-color);
+    color: map-get($disabled, color);
+    opacity: map-get($disabled, opacity);
+  }
+}
