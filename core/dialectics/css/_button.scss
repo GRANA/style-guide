@@ -38,6 +38,30 @@
   }
 }
 
+$almostblack: #1d1f21;
+
+.mn--bt-primary-almostblack {
+  background-color: $almostblack;
+  color: $primary-inverse-text;
+
+  &:hover {
+    background-color: darken($almostblack, 10%);
+  }
+
+  &:active,
+  &:focus,
+  &.is-progress {
+    background-color: darken($almostblack, 20%);
+  }
+
+  &:disabled,
+  &.is-disabled {
+    background-color: $almostblack;
+    opacity: 0.4;
+  }
+}
+
+
 //deprecated
 
 %std-btn {
