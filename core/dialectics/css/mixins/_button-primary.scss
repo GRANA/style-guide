@@ -30,6 +30,10 @@
 
   background-color: map-get($default, background-color);
   color: map-get($default, color);
+
+  @if map-has-key($default, border-color) {
+    border-color: map-get($default, border-color);
+  }
   
   $hover: map-get($states, hover);
 
@@ -48,7 +52,7 @@
   }
   
   $disabled: map-get($states, disabled);
-  
+
   &:disabled,
   &.is-disabled {
     background-color: map-get($disabled, background-color);

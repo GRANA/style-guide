@@ -1,0 +1,32 @@
+// Ghost button
+
+.mn--bt-ghost {
+  border-style: solid;
+  border-width: 2px;
+  padding-bottom: 11px;
+  padding-top: 11px;
+}
+
+$almostblack: #1d1f21;
+
+.mn--bt-ghost-almostblack {
+  @include button-primary(
+    (
+      default: (background-color: $primary-background, color: $almostblack, border-color: $almostblack),
+      hover: (background-color: $almostblack, color: $primary-inverse-text),
+      progress: (background-color: $almostblack, color: $primary-inverse-text),
+      disabled: (background-color: $primary-background, color: $almostblack, opacity: 0.4)
+    )
+  );
+}
+
+.mn--bt-ghost-blue {
+  @include button-primary(
+    (
+      default: (background-color: $primary-background, color: $primary-brand, border-color: $primary-brand),
+      hover: (background-color: $primary-brand, color: $primary-inverse-text),
+      progress: (background-color: $primary-brand, color: $primary-inverse-text),
+      disabled: (background-color: $primary-background, color: $primary-brand, opacity: 0.4)
+    )
+  );
+}
