@@ -1,5 +1,38 @@
 // these are the basic button styles that are used on
 // v4 of the Grana website.
+// 
+// Module uses 'bt' prefix to denote a button.
+
+%mn--bt {
+  @extend %body-l;
+  @extend %line-height-1-3;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 13px 20px;
+  text-decoration: none;
+}
+
+.mn--bt-primary,
+.mn--bt-ghost {
+  @extend %mn--bt;
+}
+
+.mn--bt-primary-blue {
+  background-color: $primary-brand;
+  color: $primary-inverse-text;
+
+  &:hover {
+    background-color: darken($primary-brand, 10%);
+  }
+
+  &:active,
+  &:focus,
+  &.is-progress {
+    background-color: darken($primary-brand, 20%);
+  }
+}
+
+//deprecated
 
 %std-btn {
   @extend %body-l;
