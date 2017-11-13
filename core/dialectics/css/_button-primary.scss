@@ -31,5 +31,6 @@ $almostblack: #1d1f21;
       hover: (background-color: $almostblack, color: $primary-background),
       progress: (background-color: darken($almostblack, 20%), color: $primary-background),
       disabled: (background-color: $almostblack, color: $primary-background, opacity: 0.4)
+    )
   );
 }
