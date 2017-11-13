@@ -12,45 +12,19 @@
 $almostblack: #1d1f21;
 
 .mn--bt-primary-almostblack {
-  background-color: $almostblack;
-  color: $primary-inverse-text;
-
-  &:hover {
-    background-color: darken($almostblack, 10%);
-  }
-
-  &:active,
-  &:focus,
-  &.is-progress {
-    background-color: darken($almostblack, 20%);
-  }
-
-  &:disabled,
-  &.is-disabled {
-    background-color: $almostblack;
-    opacity: 0.4;
-  }
+  @include button-primary(
+    (background-color: $almostblack, color: $primary-inverse-text),
+    (background-color: darken($almostblack, 10%), color: $primary-inverse-text),
+    (background-color: darken($almostblack, 20%), color: $primary-inverse-text),
+    (background-color: $almostblack, color: $primary-inverse-text, opacity: 0.4)
+  );
 }
 
 .mn--bt-primary-white {
-  background-color: $primary-background;
-  color: $almostblack;
-
-  &:hover {
-    background-color: $almostblack;
-    color: $primary-background;
-  }
-
-  &:active,
-  &:focus,
-  &.is-progress {
-    background-color: darken($almostblack, 20%);
-  }
-
-  &:disabled,
-  &.is-disabled {
-    background-color: $almostblack;
-    color: $primary-background;
-    opacity: 0.4;
-  }
+  @include button-primary(
+    (background-color: $primary-background, color: $almostblack),
+    (background-color: $almostblack, color: $primary-background),
+    (background-color: darken($almostblack, 20%), color: $primary-background),
+    (background-color: $almostblack, color: $primary-background, opacity: 0.4)
+  );
 }
