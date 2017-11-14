@@ -1,0 +1,32 @@
+// Secondary button
+
+.mn--bt-secondary {
+  text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
+
+  &:before {
+    @extend %grana-icons;
+    content: "\e802";
+    font-size: 0.5rem;
+    font-weight: bold;
+    margin: 0 6px 0 0;
+    position: relative;
+    text-decoration: none;
+    top: -1px;
+  }
+}
+
+$almostblack: #1d1f21;
+
+.mn--bt-secondary-almostblack {
+  color: $almostblack;
+}
+
+.mn--bt-secondary-white {
+  color: $primary-inverse-text;
+}
