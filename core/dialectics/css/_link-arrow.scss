@@ -1,0 +1,30 @@
+// Link arrow 
+
+.mn--link-arrow {
+  text-decoration: none;
+
+  &:after {
+    @extend %grana-icons;
+    content: "\e813";
+    font-size: 0.8rem;
+    margin: 0 0 0 10px;
+    position: relative;
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+$almostblack: #1d1f21;
+
+.mn--link-arrow-almostblack {
+  color: $almostblack;
+}
+
+.mn--link-arrow-white {
+  color: $primary-inverse-text;
+}
