@@ -3,4 +3,10 @@
 .mn--link {
   color: $primary-brand;
   text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
 }
