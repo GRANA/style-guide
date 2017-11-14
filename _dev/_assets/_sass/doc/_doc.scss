@@ -24,10 +24,6 @@ $doc-layout-border-dark: 1px solid lighten($ui-03, 3%);
   *:after {
     box-sizing: border-box; 
   }
-
-  a:not(.sidenav-menu-link) {
-    color: $primary-brand;
-  }
 }
 
 // standard styling
