@@ -3,9 +3,10 @@
 //
 
 .field-dropdown {
-  @extend %body-l;
+  @extend %body-m;
+  @extend %line-height-1-3;
   @include user-select(none);
-  background: $primary-background;
+  background: $secondary-background;
   position: relative;
   text-align: left;
   text-transform: lowercase;
@@ -20,24 +21,24 @@
   &:after {
     @extend %grana-icons;
     @include transform(rotate(90deg));
+    bottom: 50%;
     content: "\e813";
     font-size: 10px;
     margin: 0 20px;
+    margin-bottom: -5px;
     position: absolute;
     right: 0;
-    top: 18px;
   }
 }
 
 .field-dropdown,
 .field-dropdown-item {
   cursor: pointer;
-  padding: 13px 50px 13px 20px;
+  padding: 12px 50px 12px 20px;
 }
 
 .field-dropdown-label {
   display: block;
-  height: 20px;
 }
 
 .field-dropdown-list-container {
@@ -57,15 +58,15 @@
 }
 
 .field-dropdown-item {
-  color: $primary-text;
+  color: $secondary-body-text;
 
   &:hover {
-    color: $secondary-cta;
+    color: $primary-text;
   }
 
   &.is-selected {
     @extend %heading-semi;
-    color: $primary-text;
+    color: $secondary-text;
   }
 
   &.is-disabled {
@@ -78,11 +79,35 @@
   }
 }
 
+.field-dropdown-invert {
+
+  &:after {
+    @include transform(rotate(-90deg));
+  }
+
+  .field-dropdown-list-container {
+    bottom: 100%;
+    top: initial;
+  }
+
+  &.is-open {
+    &:after {
+      @include transform(rotate(90deg));
+    }
+  }
+}
+
+
+
 // States
 
 .is-open {
   .field-dropdown-list-container {
     display: block;
+  }
+
+  &:after {
+    @include transform(rotate(-90deg));
   }
 
   .field-dropdown-label,
