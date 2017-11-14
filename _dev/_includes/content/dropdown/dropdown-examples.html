@@ -1,0 +1,36 @@
+
+{% assign title = 'html example' %}
+{% assign code = '
+<pre><code class="html">&lt;div class="field-group"&gt;
+  &lt;div id="dropdown-example" class="field-dropdown field-dropdown-up"&gt;
+    &lt;span class="field-dropdown-label"&gt;&lt;/span&gt;
+      &lt;div class="field-dropdown-list-container"&gt;
+        &lt;ul class="field-dropdown-list"&gt;
+          &lt;li class="field-dropdown-item" data-field-value="AD"&gt;Andorra&lt;/li&gt;
+          &lt;li class="field-dropdown-item" data-field-value="AU"&gt;Australia&lt;/li&gt;
+          &lt;li class="field-dropdown-item" data-field-value="AT"&gt;Austria&lt;/li&gt;
+          &lt;li class="field-dropdown-item" data-field-value="BH"&gt;Bahrain&lt;/li&gt;
+          &lt;li class="field-dropdown-item" data-field-value="BE"&gt;Belgium&lt;/li&gt;
+          &lt;li class="field-dropdown-item" data-field-value="BN"&gt;Brunei&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;input type="hidden" name="dropdownExample"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+' %}
+{% include example.html %}
+
+{% assign title = 'js example' %}
+{% assign code = '
+<pre><code>$("#dropdown-example").fieldDropdown({
+  inputName: "dropdownExample",
+  defaultItem: "BH",
+  onselect: function(el) {
+    var isoCode = $(el).data("field-value");
+  },
+});
+</code></pre>
+' %}
+{% include example.html %}
+
