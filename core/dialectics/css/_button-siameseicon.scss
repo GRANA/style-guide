@@ -1,0 +1,17 @@
+// Siamese icon
+
+.mn--bt-siameseicon {
+  &:after {
+    @extend %grana-icons;
+    font-size: 0.8rem;
+    margin: 0 0 0 20px;
+    position: relative;
+    text-decoration: none;
+  }
+}
+
+.mn--bt-siameseicon-arrow {
+  &:after {
+    content: "\e813";
+  }
+}

@@ -1,0 +1,36 @@
+// Primary button
+
+.mn--bt-primary-blue {
+  @include button-primary(
+    (
+      default: (background-color: $primary-brand, color: $primary-inverse-text),
+      hover: (background-color: darken($primary-brand, 10%), color: $primary-inverse-text),
+      progress: (background-color: darken($primary-brand, 20%), color: $primary-inverse-text),
+      disabled: (background-color: $primary-brand, color: $primary-inverse-text, opacity: 0.4)
+    )
+  );
+}
+
+$almostblack: #1d1f21;
+
+.mn--bt-primary-almostblack {
+  @include button-primary(
+    (
+      default: (background-color: $almostblack, color: $primary-inverse-text),
+      hover: (background-color: lighten($almostblack, 10%), color: $primary-inverse-text),
+      progress: (background-color: darken($almostblack, 20%), color: $primary-inverse-text),
+      disabled: (background-color: $almostblack, color: $primary-inverse-text, opacity: 0.4)
+    )
+  );
+}
+
+.mn--bt-primary-white {
+  @include button-primary(
+    (
+      default: (background-color: $primary-background, color: $almostblack),
+      hover: (background-color: $almostblack, color: $primary-background),
+      progress: (background-color: darken($almostblack, 20%), color: $primary-background),
+      disabled: (background-color: $almostblack, color: $primary-background, opacity: 0.4)
+    )
+  );
+}
