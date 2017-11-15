@@ -2,6 +2,7 @@
 // Grana Dialectics
 // http://grana.com
 
+@import "dialectics/css/mixins/button-primary";
 @import "dialectics/css/mixins/clearliststyle";
 @import "dialectics/css/mixins/clearfix";
 @import "dialectics/css/mixins/media-break";
@@ -13,6 +14,11 @@
 
 @import "dialectics/css/arrow-link";
 @import "dialectics/css/button";
+@import "dialectics/css/button-ghost";
+@import "dialectics/css/button-primary";
+@import "dialectics/css/button-secondary";
+@import "dialectics/css/button-siameseicon";
+@import "dialectics/css/button-siamesetext";
 @import "dialectics/css/checkbox";
 @import "dialectics/css/compact-cs";
 @import "dialectics/css/datatable";
