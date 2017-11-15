@@ -12,13 +12,15 @@
     background: $secondary-background;
     color: $primary-text;
     height: 44px;
+    padding-bottom: 12px;
+    padding-top: 12px;
   }
 
   td {
     border: 2px solid $secondary-background;
     color: $primary-text;
-    padding-bottom: 9px;
-    padding-top: 9px;
+    padding-bottom: 10px;
+    padding-top: 10px;
     vertical-align: top;
   }
 
