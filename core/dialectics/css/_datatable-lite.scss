@@ -1,19 +1,6 @@
 // Datatable lite
 
 .mn--datatable-lite {
-  @extend %body-m;
-
-  td {
-    padding-bottom: 8px;
-    padding-top: 8px;
-
-    &:not(:first-child) {
-      padding-left: 0;
-      padding-right: 20px;
-      text-align: right;
-  	}
-  }
-
   th {
     background-color: $primary-background;
     padding: 10px 0;
