@@ -17,10 +17,12 @@
   }
 
   th,
-  td:not(:first-child) {
-    padding-left: 0;
-    padding-right: 20px;
-    text-align: right;
+  td {
+    &:not(:first-child) {
+      padding-left: 0;
+      padding-right: 20px;
+      text-align: right;
+    }
   }
 
   .mn--datatable-helper,
