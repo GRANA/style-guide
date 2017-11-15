@@ -5,13 +5,13 @@
 .mn--datatable,
 .datatable {
   @extend %body-l;
+  @extend %line-height-1-3;
   border-collapse: collapse;
   width: 100%;
 
   th {
     background: $secondary-background;
     color: $primary-text;
-    height: 44px;
     padding-bottom: 12px;
     padding-top: 12px;
   }
