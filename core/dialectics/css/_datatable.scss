@@ -1,3 +1,8 @@
+// Datatable 
+// 
+// deprecate non mn prefixed selectors
+
+.mn--datatable,
 .datatable {
   border-collapse: collapse;
   width: 100%;
@@ -29,6 +34,7 @@
   }
 }
 
+.mn--datatable-helper,
 .datatable-helper {
   td {
     @extend %body-m;
@@ -42,6 +48,7 @@
 
 // table modifier for smaller screens
 
+.mn--datatable-mobile,
 .datatable-mobile {
 
   th {
@@ -64,6 +71,7 @@
     }
   }
 
+  .mn--datatable-helper,
   .datatable-helper {
     td {
       @extend %body-s;
