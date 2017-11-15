@@ -11,9 +11,11 @@
 
   th {
     background: $secondary-background;
-    color: $primary-text;
+    color: $almostblack;
+    font-weight: normal;
     padding-bottom: 12px;
     padding-top: 12px;
+    text-transform: lowercase;
   }
 
   td {
