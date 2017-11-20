@@ -11,10 +11,12 @@
   function radiobutton(el, options) {
     var defaults = {
       inputSelector: '.radiobutton',
+      inputDeselector: '.radiobutton-deselect',
     };
 
     this.options = $.extend({}, defaults, options);
     this.input = this.options.inputSelector;
+    this.inputDeselect = this.options.inputDeselector;
 
     this.init();
   }
@@ -24,8 +26,23 @@
     init: function() {
       var context = this;
 
-    },
+      $(document)
+        .on('click',this.inputDeselect + ' + label', function(e) {
+          e.preventDefault();
+        });
 
+      $(document)
+        .on('mousedown',this.inputDeselect + ' + label',
+          function() {
+            var $input = $(this).siblings(context.input);
+
+            if ($input.prop('checked')) {
+              $input.prop('checked', false).trigger('change');
+            } else {
+              $input.prop('checked', true).trigger('change');
+            }
+          });
+    },
   };
 
   /**
