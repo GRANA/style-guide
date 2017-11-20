@@ -1,0 +1,61 @@
+/// Creates a swatch stripe texture.
+///
+/// @name Swatch Stripe
+///
+/// @argument {string} $label
+///   The class name for the swatch
+///
+/// @argument {colour} $clr
+///   The main stripe colour
+///   
+/// @argument {colour} $altclr
+///   The alternate stripe colour
+///
+/// @argument {number (unit)} $size
+///   The width of the stripes
+///   
+/// @example scss
+///   @include swatch-stripe("compact-cs-multi", $primary-brand, $primary-background, 2rem);
+///
+
+$swatch-white: #fff;
+
+@mixin swatch-stripe($label, $clr, $altclr: $swatch-white, $size: 5em) {
+
+  .#{$label} {
+    background-color: rgba($clr, 1);
+    background-image: linear-gradient(90deg,
+      rgba($altclr, 1) 0%,
+      rgba($altclr, 1) 10%,
+      rgba($altclr, 0) 10%,
+      rgba($altclr, 0) 20%,
+      rgba($altclr, 1) 20%,
+      rgba($altclr, 1) 30%,
+      rgba($altclr, 0) 30%,
+      rgba($altclr, 0) 40%,
+      rgba($altclr, 1) 40%,
+      rgba($altclr, 1) 50%,
+      rgba($altclr, 0) 50%,
+      rgba($altclr, 0) 60%,
+      rgba($altclr, 1) 60%,
+      rgba($altclr, 1) 70%,
+      rgba($altclr, 0) 70%,
+      rgba($altclr, 0) 80%,
+      rgba($altclr, 1) 80%,
+      rgba($altclr, 1) 90%,
+      rgba($altclr, 0) 90%,
+      rgba($altclr, 0) 100%
+    );
+    background-position: 5px 5px;
+    background-size: $size;
+
+    &:after {
+      @include size(100px);
+      @include transition(opacity 0.2s ease);
+      content: "";
+      display: inline-block;
+      opacity: 0;
+      z-index: 0;
+    }
+  }
+}

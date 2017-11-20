@@ -75,3 +75,4 @@ $compact-cs-burgundy: #4e3643;
   border-color: darken($compact-cs-burgundy, 10%);
 }
 
+@include swatch-stripe("compact-cs-multi", $primary-brand, $primary-background, 2rem);
