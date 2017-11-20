@@ -8,6 +8,7 @@ var granaDocs = (function($) {
 
       // init core stuff to get ui componenets working
       $.fieldText();
+      $.radiobutton();
 
       // example related
       initSliderExamples();
