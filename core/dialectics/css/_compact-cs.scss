@@ -30,7 +30,7 @@ $compact-cs-size: 20px;
 }
 
 .compact-cs-name {
-  @extend %body-m;
+  @extend %mn--f-caption;
   @include user-select(none);
   display: inline-block;
   height: inherit;

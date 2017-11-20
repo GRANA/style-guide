@@ -9,7 +9,7 @@ $doc-layout-border-light: 1px solid darken($secondary-background, 3%);
 $doc-layout-border-dark: 1px solid lighten($ui-03, 3%);
 
 .doc {
-  @extend %body-l;
+  @extend %mn--f-body;
   box-sizing: border-box;
   color: $primary-text;
   font-family: $sofiapro;
@@ -78,9 +78,9 @@ $doc-layout-border-dark: 1px solid lighten($ui-03, 3%);
   margin-left: 45%;
 
   h3 {
-    @extend %heading;
-    @extend %heading-xs;
-    margin-bottom: 20px;
+    @extend %mn--f-body;
+    font-weight: 400;
+    margin: 0 0 20px;
   }
 
   pre {
@@ -135,14 +135,12 @@ $doc-layout-border-dark: 1px solid lighten($ui-03, 3%);
   }
 
   h1 {
-    @extend %heading-s;
-    @extend %line-height-1-1;
+    @extend %mn--f-title;
     font-weight: normal;
     margin: 0 0 20px;
   }
 
   p {
-    @extend %line-height-1-4;
     margin: 20px 0 0;
   }
 }
