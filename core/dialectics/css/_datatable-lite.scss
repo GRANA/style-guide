@@ -1,0 +1,18 @@
+// Datatable lite
+
+.mn--datatable-lite {
+  th {
+    background-color: $primary-background;
+    padding: 10px 0;
+  }
+
+  td {
+    &:nth-child(odd) {
+      border-right: 0;
+  	}
+
+    &:nth-child(even) {
+      border-left: 0;
+  	}
+  }
+}

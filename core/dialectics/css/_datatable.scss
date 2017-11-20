@@ -1,34 +1,40 @@
+// Datatable 
+// 
+// deprecate non mn prefixed selectors
+
+.mn--datatable,
 .datatable {
+  @extend %body-l;
+  @extend %line-height-1-3;
   border-collapse: collapse;
   width: 100%;
 
   th {
-    @extend %heading-xs;
-    @extend %heading-semi;
     background: $secondary-background;
+    color: $almostblack;
+    font-weight: normal;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    text-transform: lowercase;
+  }
+
+  td {
+    border: 2px solid $secondary-background;
     color: $primary-text;
-    height: 44px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    vertical-align: top;
   }
 
-  thead,
-  tbody {
-    td {
-      @extend %body-l;
-      border: 2px solid $secondary-background;
-      color: $primary-text;
-      padding-bottom: 9px;
-      padding-top: 9px;
-      vertical-align: top;
-	}
-
-    th,
-    td {
-      padding-left: 20px;
-      text-align: left;
-    }
+  th,
+  td {
+    padding-left: 20px;
+    text-align: left;
   }
+  
 }
 
+.mn--datatable-helper,
 .datatable-helper {
   td {
     @extend %body-m;
@@ -37,37 +43,5 @@
 
   tr:first-child td {
     padding-top: 20px;
-  }
-}
-
-// table modifier for smaller screens
-
-.datatable-mobile {
-
-  th {
-    @extend %heading-xxs;
-    height: 40px;
-  }
-
-  thead,
-  tbody {
-    td {
-      @extend %body-m;
-      height: 32px;
-    }
-
-    th,
-    td:not(:first-child) {
-      padding-left: 0;
-      padding-right: 20px;
-      text-align: right;
-    }
-  }
-
-  .datatable-helper {
-    td {
-      @extend %body-s;
-      padding-top: 10px;
-    }
   }
 }
