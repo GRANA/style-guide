@@ -2,6 +2,8 @@
 // Styles for the toggle module
 //
 
+$switcheroo-border-thickness: 2px;
+
 .mn--switcheroo {
   @extend %mn--f-body;
   @include clearliststyle;
@@ -15,19 +17,35 @@
 }
 
 .mn--switcheroo-panel {
-
-  border: 2px solid $inactive-text;
+  border: $switcheroo-border-thickness solid $inactive-text;
   flex-basis: 50px;
   flex-grow: 1;
   padding: 12px 20px;
+  position: relative;
   text-align: center;
 
   &:not(:first-child) {
     border-left: 0;
+
+    &:before {
+      background-color: $inactive-text;
+      content: "";
+      display: block;
+      height: calc(100% + (#{$switcheroo-border-thickness}*2));
+      left: -$switcheroo-border-thickness;
+      position: absolute;
+      top: -$switcheroo-border-thickness;
+      width: $switcheroo-border-thickness;
+    }
   }
 
   &.is-active {
     border-color: $primary-brand;
     color: $primary-brand;
+    z-index: 1;
+
+    &:before {
+      background-color: $primary-brand;
+    }
   }
 }
