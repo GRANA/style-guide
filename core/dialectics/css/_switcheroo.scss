@@ -23,6 +23,7 @@ $switcheroo-border-thickness: 2px;
 }
 
 .mn--switcheroo-label {
+  @include transition(color 0.2s ease);
   border: $switcheroo-border-thickness solid $inactive-text;
   cursor: pointer;
   display: block;
