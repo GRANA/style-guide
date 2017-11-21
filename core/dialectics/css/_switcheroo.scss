@@ -11,6 +11,11 @@ $switcheroo-border-thickness: 2px;
   color: $secondary-text;
   display: flex;
   margin-bottom: 20px;
+
+  .mn--switcheroo-subtext {
+    @extend %mn--f-caption;
+    margin: 10px 0 0;
+  }
 }
 
 .mn--switcheroo-input {
@@ -23,6 +28,11 @@ $switcheroo-border-thickness: 2px;
   display: block;
   padding: 12px 20px;
   position: relative;
+}
+
+.mn--switcheroo-labeltext {
+  font-weight: normal;
+  margin: 0;
 }
 
 .mn--switcheroo-input:checked + .mn--switcheroo-label {
