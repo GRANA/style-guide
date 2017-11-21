@@ -7,6 +7,7 @@ $switcheroo-border-thickness: 2px;
 .mn--switcheroo {
   @extend %mn--f-body;
   @include clearliststyle;
+  @include user-select(none);
   color: $secondary-text;
   display: flex;
   margin-bottom: 20px;
@@ -16,19 +17,33 @@ $switcheroo-border-thickness: 2px;
   display: none;
 }
 
-.mn--switcheroo-panel {
+.mn--switcheroo-label {
   border: $switcheroo-border-thickness solid $inactive-text;
-  flex-basis: 50px;
-  flex-grow: 1;
+  cursor: pointer;
+  display: block;
   padding: 12px 20px;
   position: relative;
+}
+
+.mn--switcheroo-input:checked + .mn--switcheroo-label {
+  border-color: $primary-brand;
+  color: $primary-brand;
+  z-index: 1;
+
+  &:before {
+    background-color: $primary-brand;
+  }
+}
+
+.mn--switcheroo-panel {
+  flex-basis: 50px;
+  flex-grow: 1;
   text-align: center;
 
-  &:not(:first-child) {
+  &:not(:first-child) .mn--switcheroo-label {
     border-left: 0;
 
     &:before {
-      background-color: $inactive-text;
       content: "";
       display: block;
       height: calc(100% + (#{$switcheroo-border-thickness}*2));
@@ -36,16 +51,6 @@ $switcheroo-border-thickness: 2px;
       position: absolute;
       top: -$switcheroo-border-thickness;
       width: $switcheroo-border-thickness;
-    }
-  }
-
-  &.is-active {
-    border-color: $primary-brand;
-    color: $primary-brand;
-    z-index: 1;
-
-    &:before {
-      background-color: $primary-brand;
     }
   }
 }
