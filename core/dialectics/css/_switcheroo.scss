@@ -8,7 +8,7 @@ $switcheroo-border-thickness: 2px;
   @extend %mn--f-body;
   @include clearliststyle;
   @include user-select(none);
-  color: $secondary-text;
+  color: $secondary-body-text;
   display: flex;
   margin-bottom: 20px;
 
@@ -41,9 +41,13 @@ $switcheroo-border-thickness: 2px;
   margin: 0;
 }
 
+.mn--switcheroo-input:checked + .mn--switcheroo-label, 
+.mn--switcheroo-label:hover {
+  color: $primary-brand;
+}
+
 .mn--switcheroo-input:checked + .mn--switcheroo-label {
   border-color: $primary-brand;
-  color: $primary-brand;
   z-index: 1;
 
   &:before {
