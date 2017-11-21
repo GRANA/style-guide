@@ -1,0 +1,35 @@
+// Switcheroo icon variation
+
+.mn--switcheroo-icon {
+  &-example-1 {
+    &:before {
+      content: "\e80A";
+    }
+  }
+
+  &-example-2 {
+    &:before {
+      content: "\e806";
+    }
+  }
+
+  &-example-3 {
+    &:before {
+      content: "\e805";
+    }
+  }
+
+  .mn--switcheroo-icon-container {
+    margin-bottom: 0;
+  }
+}
+
+.mn--switcheroo-icon-container {
+  margin-bottom: 10px;
+
+  &:before {
+    @extend %grana-icons;
+    font-size: 20px; 
+    width: auto;
+  }
+}
