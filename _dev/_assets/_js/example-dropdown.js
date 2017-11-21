@@ -21,6 +21,14 @@ var exampleDropdown = (function($) {
       },
     });
 
+    $('#dropdown-invert-example').fieldDropdown({
+      inputName: 'dropdownInvertExample',
+      defaultItem: 'BH',
+      onselect: function(el) {
+        var isoCode = $(el).data('field-value');
+      },
+    });
+
   };
 
   return {
