@@ -18,6 +18,10 @@ $switcheroo-border-thickness: 2px;
   }
 }
 
+.mn--switcheroo-inner {
+  height: inherit;
+}
+
 .mn--switcheroo-input {
   display: none;
 }
@@ -27,6 +31,7 @@ $switcheroo-border-thickness: 2px;
   border: $switcheroo-border-thickness solid $inactive-text;
   cursor: pointer;
   display: block;
+  height: 100%;
   padding: 12px 20px;
   position: relative;
 }
