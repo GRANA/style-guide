@@ -10,7 +10,7 @@
 .field-group,
 .field-label,
 .field-text {
-  @extend %body-l;
+  @extend %mn--f-body;
 }
 
 .field-label {
@@ -26,7 +26,6 @@
 }
 
 .field-text {
-  @extend %body-l;
   @include transition(border-bottom 0.2s ease);
   background-color: $secondary-background;
   border: 0;
@@ -42,7 +41,7 @@
 }
 
 .field-helper {
-  @extend %body-m;
+  @extend %mn--f-caption;
   color: $secondary-body-text;
   margin-top: 10px;
 }

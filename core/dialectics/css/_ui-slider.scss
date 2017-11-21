@@ -16,9 +16,9 @@
 }
 
 .ui-slider-range-labels {
-  @extend %body-m;
-  @extend %line-height-1-2;
+  @extend %mn--f-caption;
   color: $secondary-text;
+  line-height: 1.2;
   position: absolute;
   top: -35px;
   width: 100%;

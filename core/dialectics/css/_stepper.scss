@@ -55,8 +55,7 @@
 }
 
 .stepper-numeric {
-  @extend %body-l;
-  @extend %line-height-1-3;
+  @extend %mn--f-body;
   -moz-appearance: textfield;
   background-color: transparent;
   border: 0;
