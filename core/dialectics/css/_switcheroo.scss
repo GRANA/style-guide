@@ -1,0 +1,33 @@
+//
+// Styles for the toggle module
+//
+
+.mn--switcheroo {
+  @extend %mn--f-body;
+  @include clearliststyle;
+  color: $secondary-text;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.mn--switcheroo-input {
+  display: none;
+}
+
+.mn--switcheroo-panel {
+
+  border: 2px solid $inactive-text;
+  flex-basis: 50px;
+  flex-grow: 1;
+  padding: 12px 20px;
+  text-align: center;
+
+  &:not(:first-child) {
+    border-left: 0;
+  }
+
+  &.is-active {
+    border-color: $primary-brand;
+    color: $primary-brand;
+  }
+}
