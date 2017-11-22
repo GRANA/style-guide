@@ -1,5 +1,21 @@
+/// Creates a swatch half texture.
+///
+/// @name Swatch Half
+///
+/// @argument {string} $label
+///   The class name for the swatch
+///
+/// @argument {colour} $clr
+///   The left half colour
+///   
+/// @argument {colour} $altclr
+///   The alternate half colour
+///   
+/// @example scss
+///   @include swatch-half("compact-cs-half", $primary-brand, $primary-background);
+///
 
-@mixin swatch-half($label, $clr, $altclr: $swatch-white) {
+@mixin swatch-half($label, $clr, $altclr) {
   .#{$label} {
     background-color: rgba($clr, 1);
     background-image: linear-gradient(0deg,
