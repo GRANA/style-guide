@@ -1,0 +1,21 @@
+// Compact variation of colour selection
+
+$cs-compact-size: 18px;
+
+.mn--cs-compact {
+  height: $cs-compact-size;
+
+  .mn--cs-circle {
+    @include size($cs-compact-size);
+  }
+
+  .mn--cs-input:checked + .mn--cs-label {
+    $cs-compact-check-pos: $cs-compact-size/2px - 5px;
+  
+    &:after { 
+      left: $cs-compact-check-pos;
+      top: $cs-compact-check-pos;
+    }
+  }
+
+}
