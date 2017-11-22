@@ -1,0 +1,32 @@
+/// Creates a swatch thick stripe texture.
+///
+/// @name Swatch Stripe Thick
+///
+/// @argument {string} $label
+///   The class name for the swatch
+///
+/// @argument {colour} $clr
+///   The main stripe colour
+///   
+/// @argument {colour} $altclr
+///   The alternate stripe colour
+///   
+/// @example scss
+///   @include swatch-stripe-thick("compact-cs-split", $primary-brand, $primary-text);
+///
+
+$swatch-white: #fff;
+
+@mixin swatch-stripe-thick($label, $clr, $altclr: $swatch-white) {
+  .#{$label} {
+    background-color: rgba($clr, 1);
+    background-image: linear-gradient(0deg,
+      rgba($altclr, 1) 0%,
+      rgba($altclr, 1) 30%,
+      rgba($altclr, 0) 30%,
+      rgba($altclr, 0) 70%,
+      rgba($altclr, 1) 70%,
+      rgba($altclr, 1) 100%
+    );
+  }
+}
