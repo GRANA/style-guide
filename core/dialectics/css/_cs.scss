@@ -24,7 +24,7 @@
   display: inline-block;
 }
 
-.mn--cs-label {
+.mn--cs-name {
   @include user-select(none);
   display: inline-block;
   height: inherit;
@@ -43,8 +43,7 @@
   @extend %mn--f-body;
 }
 
-.mn--cs-input:checked + .mn--cs-label {
-  
+.mn--cs-input:checked + .mn--cs-label {  
   &:after { 
     @extend %grana-icons;
     color: $ui-01;
