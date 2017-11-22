@@ -1,0 +1,57 @@
+// Module for base colour selection
+
+.mn--cs {
+  cursor: pointer;
+  float: left;
+  position: relative;
+}
+
+.mn--cs-input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.mn--cs-label {
+  display: block;
+  height: inherit;
+  margin-bottom: 0;
+  margin-right: 20px;
+  position: relative;
+}
+
+.mn--cs-circle {
+  border-radius: 50%; 
+  display: inline-block;
+}
+
+.mn--cs-label {
+  @include user-select(none);
+  display: inline-block;
+  height: inherit;
+  line-height: 1.7;
+  margin-left: 10px;
+  position: relative;
+  text-transform: lowercase;
+  vertical-align: top;
+}
+
+.mn--cs-label-sm {
+  @extend %mn--f-caption;
+}
+
+.mn--cs-label-lg {
+  @extend %mn--f-body;
+}
+
+.mn--cs-input:checked + .mn--cs-label {
+  
+  &:after { 
+    @extend %grana-icons;
+    color: $ui-01;
+    content: "\e808";
+    font-size: 10px;
+    font-weight: bold;
+    margin: 0;
+    position: absolute;
+  }
+}
