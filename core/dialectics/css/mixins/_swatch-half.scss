@@ -1,0 +1,12 @@
+
+@mixin swatch-half($label, $clr, $altclr: $swatch-white) {
+  .#{$label} {
+    background-color: rgba($clr, 1);
+    background-image: linear-gradient(0deg,
+      rgba($altclr, 1) 0%,
+      rgba($altclr, 1) 50%,
+      rgba($altclr, 0) 50%,
+      rgba($altclr, 0) 100%
+    );
+  }
+}
