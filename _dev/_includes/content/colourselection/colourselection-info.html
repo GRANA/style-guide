@@ -1,9 +1,9 @@
 <h1>colour selection</h1>
 <p>Colour selection for use on category page quick add, and filtering.</p>
 
-<p>Input field of type <code>checkbox</code> and <code>radio</code> can be used. The input tag must have the class <code>.compact-cs-input</code>. There must be a label sibling with the class <code>.compact-cs-label</code> containing an inline <code>span</code> with the class <code>.compact-cs-circle</code>. Add the colour class to the span tag.</p>
-<p>The colour name may be added to a div next to <code>.compact-cs-circle</code> with a class name of <code>.compact-cs-name</code>.</p>
-<p>Use <code>checked</code> to choose the initial option.</p>
+<p>Input field of type <code>checkbox</code> and <code>radio</code> can be used. The input tag must have the class <code>.mn--cs-input</code>. There must be a label sibling with the class <code>.mn--cs-label</code> containing an inline <code>span</code> with the class <code>.mn--cs-circle</code>. Add the colour class to the span tag.</p>
+<p>The colour name may be added to a div next to <code>.mn--cs-circle</code> with a class name of <code>.mn--cs-name</code> and either <code>.mn--cs-name-sm</code> or <code>.mn--cs-name-lg</code>.</p>
+<p>The colour selection variation, compact, can be added with <code>.mn--cs-compact</code> on the div element with <code>.mn--cs</code>.</p>
 <figure>
   <div class="mn--cs mn--cs-compact">
     <input type="checkbox" name="cs-example-0" id="cs-example-0" class="mn--cs-input" checked>
@@ -20,6 +20,8 @@
     <label for="cs-example-2" class="mn--cs-label"><span class="mn--cs-circle compact-cs-multi"></span><div class="mn--cs-name mn--cs-name-sm">Burgundy</div></label>
   </div>
 </figure>
+
+<p>The large variation is added with <code>.mn--cs-large</code>.</p>
 
 <figure>
   <div class="mn--cs mn--cs-large">
