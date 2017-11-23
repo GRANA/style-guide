@@ -28,8 +28,6 @@
   @include user-select(none);
   display: inline-block;
   height: inherit;
-  line-height: 1.7;
-  margin-left: 10px;
   position: relative;
   text-transform: lowercase;
   vertical-align: top;
@@ -44,7 +42,7 @@
 }
 
 .mn--cs-input:checked + .mn--cs-label {  
-  &:after { 
+  .mn--cs-circle::after { 
     @extend %grana-icons;
     color: $ui-01;
     content: "\e808";

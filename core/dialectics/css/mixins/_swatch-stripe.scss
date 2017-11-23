@@ -48,14 +48,5 @@ $swatch-white: #fff;
     );
     background-position: 5px 5px;
     background-size: $size;
-
-    &:after {
-      @include size(100px);
-      @include transition(opacity 0.2s ease);
-      content: "";
-      display: inline-block;
-      opacity: 0;
-      z-index: 0;
-    }
   }
 }

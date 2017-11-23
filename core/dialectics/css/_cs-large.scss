@@ -1,0 +1,31 @@
+// Large variation of colour selection
+
+$cs-large-size: 28px;
+$cs-large-margin: 10px;
+
+.mn--cs-large {
+  height: $cs-large-size + ($cs-large-margin * 2);
+
+  .mn--cs-circle {
+    @include size($cs-large-size);
+    margin: $cs-large-margin;
+  }
+
+  .mn--cs-name-sm {
+    line-height: 4;
+  }
+
+  .mn--cs-name-lg {
+    line-height: 3.3;
+  }
+
+  .mn--cs-input:checked + .mn--cs-label {
+    $cs-large-check-pos: ($cs-large-size/2px - 5px) + $cs-large-margin;
+  
+    .mn--cs-circle::after { 
+      left: $cs-large-check-pos;
+      top: $cs-large-check-pos;
+    }
+  }
+
+}

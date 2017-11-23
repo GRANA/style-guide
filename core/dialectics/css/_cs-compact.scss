@@ -9,10 +9,22 @@ $cs-compact-size: 18px;
     @include size($cs-compact-size);
   }
 
+  .mn--cs-name {
+    margin-left: 10px;
+  }
+
+  .mn--cs-name-sm {
+    line-height: 1.7;
+  }
+
+  .mn--cs-name-lg {
+    line-height: 1.33;
+  }
+
   .mn--cs-input:checked + .mn--cs-label {
     $cs-compact-check-pos: $cs-compact-size/2px - 5px;
-  
-    &:after { 
+
+    .mn--cs-circle::after { 
       left: $cs-compact-check-pos;
       top: $cs-compact-check-pos;
     }
