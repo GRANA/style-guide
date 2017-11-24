@@ -21,6 +21,7 @@
 @mixin swatch-bundle($label, $clr1, $clr2, $clr3) {
 
   .#{$label} {
+    @include checkcontrast($clr1);
     background-image: linear-gradient(
       $clr1 0%,
       $clr1 33%,

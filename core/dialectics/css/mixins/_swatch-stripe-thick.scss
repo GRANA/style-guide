@@ -19,6 +19,7 @@ $swatch-white: #fff;
 
 @mixin swatch-stripe-thick($label, $clr, $altclr: $swatch-white) {
   .#{$label} {
+    @include checkcontrast($altclr);
     background-color: rgba($clr, 1);
     background-image: linear-gradient(0deg,
       rgba($altclr, 1) 0%,
