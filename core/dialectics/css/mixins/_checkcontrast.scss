@@ -1,0 +1,35 @@
+/// Determines the checkmark colour to maintain ideal contrast
+///
+/// @name Check Contrast
+///
+/// @argument {colour} $clr
+///   The primary colour to calculate the contrast
+///
+/// @argument {number (percent)} $thresh
+///   The threshold to determine what is dark and light. 
+///   ex. 0% is darkest, and 100% is the lightest
+///   
+/// @example scss
+///   .swatch-black {
+///     @include checkcontrast(#000);
+///   }
+///   
+/// @example scss
+///   .swatch-black {
+///     @include checkcontrast($black);
+///   }
+///
+
+$checkcontrast-thresh: 81%;
+
+@mixin checkcontrast($clr, $thresh: $checkcontrast-thresh) {
+  &:after {
+    @if lightness($clr) < $thresh {
+      color: $primary-inverse-text;
+
+    } else {
+      color: $primary-text;
+      
+    }
+  }
+}

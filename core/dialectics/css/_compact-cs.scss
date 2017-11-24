@@ -63,6 +63,7 @@ $compact-cs-size: 18px;
 // test colours
 
 .compact-cs-blue {
+  @include checkcontrast($primary-brand);
   background-color: $primary-brand;
   border: 1px solid darken($primary-brand, 20%);
 }
@@ -70,6 +71,7 @@ $compact-cs-size: 18px;
 $compact-cs-lilac: #bcb8c9;
 
 .compact-cs-lilac {
+  @include checkcontrast($compact-cs-lilac);
   background-color: $compact-cs-lilac;
   border-color: darken($compact-cs-lilac, 10%);
 }
@@ -77,6 +79,7 @@ $compact-cs-lilac: #bcb8c9;
 $compact-cs-burgundy: #4e3643;
 
 .compact-cs-burgundy {
+  @include checkcontrast($compact-cs-burgundy);
   background-color: $compact-cs-burgundy;
   border-color: darken($compact-cs-burgundy, 10%);
 }
