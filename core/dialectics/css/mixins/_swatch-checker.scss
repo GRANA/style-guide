@@ -1,0 +1,73 @@
+/// Creates a swatch checker texture.
+///
+/// @name Swatch Checker
+///
+/// @argument {string} $label
+///   The class name for the swatch
+///
+/// @argument {colour} $clr
+///   The main colour
+///   
+/// @argument {number} $shade
+///   The value of the shade of the checks from 0 - 255
+///   
+/// @argument {number} $op1
+///   The opacity of vertical lines. 0 - 1
+///
+/// @argument {number} $op2
+///   The opacity of horizontal lines. 0 - 1
+///
+/// @example scss
+///   @include swatch-checker("compact-cs-checker", $primary-brand);
+///
+
+@mixin swatch-checker($label, $clr, $shade: 255, $op1: 0.7, $op2: 0.4) {
+  .#{$label} {
+    @include checkcontrast($clr);
+    background-color: rgba($clr, 1);
+    background-image: linear-gradient(90deg,
+      rgba($shade, $shade, $shade, $op1) 0%,
+      rgba($shade, $shade, $shade, $op1) 10%,
+      rgba($shade, $shade, $shade, 0) 10%,
+      rgba($shade, $shade, $shade, 0) 20%,
+      rgba($shade, $shade, $shade, $op1) 20%,
+      rgba($shade, $shade, $shade, $op1) 30%,
+      rgba($shade, $shade, $shade, 0) 30%,
+      rgba($shade, $shade, $shade, 0) 40%,
+      rgba($shade, $shade, $shade, $op1) 40%,
+      rgba($shade, $shade, $shade, $op1) 50%,
+      rgba($shade, $shade, $shade, 0) 50%,
+      rgba($shade, $shade, $shade, 0) 60%,
+      rgba($shade, $shade, $shade, $op1) 60%,
+      rgba($shade, $shade, $shade, $op1) 70%,
+      rgba($shade, $shade, $shade, 0) 70%,
+      rgba($shade, $shade, $shade, 0) 80%,
+      rgba($shade, $shade, $shade, $op1) 80%,
+      rgba($shade, $shade, $shade, $op1) 90%,
+      rgba($shade, $shade, $shade, 0) 90%,
+      rgba($shade, $shade, $shade, 0) 100%
+    ),
+    linear-gradient(0,
+      rgba($shade, $shade, $shade, $op2) 0%,
+      rgba($shade, $shade, $shade, $op2) 10%,
+      rgba($shade, $shade, $shade, 0) 10%,
+      rgba($shade, $shade, $shade, 0) 20%,
+      rgba($shade, $shade, $shade, $op2) 20%,
+      rgba($shade, $shade, $shade, $op2) 30%,
+      rgba($shade, $shade, $shade, 0) 30%,
+      rgba($shade, $shade, $shade, 0) 40%,
+      rgba($shade, $shade, $shade, $op2) 40%,
+      rgba($shade, $shade, $shade, $op2) 50%,
+      rgba($shade, $shade, $shade, 0) 50%,
+      rgba($shade, $shade, $shade, 0) 60%,
+      rgba($shade, $shade, $shade, $op2) 60%,
+      rgba($shade, $shade, $shade, $op2) 70%,
+      rgba($shade, $shade, $shade, 0) 70%,
+      rgba($shade, $shade, $shade, 0) 80%,
+      rgba($shade, $shade, $shade, $op2) 80%,
+      rgba($shade, $shade, $shade, $op2) 90%,
+      rgba($shade, $shade, $shade, 0) 90%,
+      rgba($shade, $shade, $shade, 0) 100%
+    );
+  }
+}

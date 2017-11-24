@@ -23,6 +23,7 @@ $swatch-white: #fff;
 @mixin swatch-stripe($label, $clr, $altclr: $swatch-white, $size: 5em) {
 
   .#{$label} {
+    @include checkcontrast($altclr);
     background-color: rgba($clr, 1);
     background-image: linear-gradient(90deg,
       rgba($altclr, 1) 0%,
@@ -48,14 +49,5 @@ $swatch-white: #fff;
     );
     background-position: 5px 5px;
     background-size: $size;
-
-    &:after {
-      @include size(100px);
-      @include transition(opacity 0.2s ease);
-      content: "";
-      display: inline-block;
-      opacity: 0;
-      z-index: 0;
-    }
   }
 }

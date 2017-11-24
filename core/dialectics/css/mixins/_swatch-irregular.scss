@@ -1,0 +1,40 @@
+/// Creates an irregular swatch 
+///
+/// @name Swatch Irregular
+///
+/// @argument {string} $label
+///   The class name for the swatch
+///
+/// @argument {colour} $clr1
+///   The main colour
+///   
+/// @argument {colour} $clr2
+///   The second colour 
+///   
+/// @argument {colour} $clr3
+///   The third colour
+///   
+/// @example scss
+///   @include swatch-bundle("compact-cs-bundle", $primary-brand, $primary-background, $primary-text);
+///
+
+@mixin swatch-irregular($label, $clr1, $clr2, $clr3) {
+
+  .#{$label} {
+    @include checkcontrast($clr1);
+    background-image: linear-gradient(
+      $clr1 0%,
+      $clr1 30%,
+      $clr2 30%,
+      $clr2 60%,
+      $clr3 60%,
+      $clr3 75%,
+      $clr2 75%,
+      $clr2 80%,
+      $clr1 80%,
+      $clr1 90%,
+      $clr3 90%
+    );
+  }
+
+}

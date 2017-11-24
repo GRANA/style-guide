@@ -1,0 +1,35 @@
+/// Creates a bundle swatch
+///
+/// @name Swatch Bundle
+///
+/// @argument {string} $label
+///   The class name for the swatch
+///
+/// @argument {colour} $clr1
+///   The main colour
+///   
+/// @argument {colour} $clr2
+///   The second colour 
+///   
+/// @argument {colour} $clr3
+///   The third colour
+///   
+/// @example scss
+///   @include swatch-bundle("compact-cs-bundle", $primary-brand, $primary-background, $primary-text);
+///
+
+@mixin swatch-bundle($label, $clr1, $clr2, $clr3) {
+
+  .#{$label} {
+    @include checkcontrast($clr1);
+    background-image: linear-gradient(
+      $clr1 0%,
+      $clr1 33%,
+      $clr2 33%,
+      $clr2 66%,
+      $clr3 66%,
+      $clr3 100%
+    );
+  }
+
+}

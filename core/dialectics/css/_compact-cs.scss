@@ -1,14 +1,17 @@
 // Module for colour selection
+// 
+// This version of the cs module has been deprecated. See cs, cs-compact, and cs-large.
 
-$compact-cs-size: 20px;
+$compact-cs-size: 18px;
 
 .compact-cs {
   cursor: pointer;
+  float: left;
   height: $compact-cs-size;
+  position: relative;
 }
 
 .compact-cs-input {
-  @include size($compact-cs-size);
   position: absolute;
   visibility: hidden;
 }
@@ -42,21 +45,25 @@ $compact-cs-size: 20px;
 }
 
 .compact-cs-input:checked + .compact-cs-label {
+  $compact-cs-check-pos: $compact-cs-size/2px - 5px;
+  
   &:after { 
     @extend %grana-icons;
     color: $ui-01;
     content: "\e808";
     font-size: 10px;
     font-weight: bold;
-    left: 3px;
+    left: $compact-cs-check-pos;
+    margin: 0;
     position: absolute;
-    top: 5px;
+    top: $compact-cs-check-pos;
   }
 }
 
 // test colours
 
 .compact-cs-blue {
+  @include checkcontrast($primary-brand);
   background-color: $primary-brand;
   border: 1px solid darken($primary-brand, 20%);
 }
@@ -64,6 +71,7 @@ $compact-cs-size: 20px;
 $compact-cs-lilac: #bcb8c9;
 
 .compact-cs-lilac {
+  @include checkcontrast($compact-cs-lilac);
   background-color: $compact-cs-lilac;
   border-color: darken($compact-cs-lilac, 10%);
 }
@@ -71,6 +79,7 @@ $compact-cs-lilac: #bcb8c9;
 $compact-cs-burgundy: #4e3643;
 
 .compact-cs-burgundy {
+  @include checkcontrast($compact-cs-burgundy);
   background-color: $compact-cs-burgundy;
   border-color: darken($compact-cs-burgundy, 10%);
 }

@@ -1,26 +1,41 @@
 <h1>colour selection</h1>
 <p>Colour selection for use on category page quick add, and filtering.</p>
 
-<p>Input field of type <code>checkbox</code> and <code>radio</code> can be used. The input tag must have the class <code>.compact-cs-input</code>. There must be a label sibling with the class <code>.compact-cs-label</code> containing an inline <code>span</code> with the class <code>.compact-cs-circle</code>. Add the colour class to the span tag.</p>
-<p>The colour name may be added to a div next to <code>.compact-cs-circle</code> with a class name of <code>.compact-cs-name</code>.</p>
-<p>Use <code>checked</code> to choose the initial option.</p>
+<p>Input field of type <code>checkbox</code> and <code>radio</code> can be used. The input tag must have the class <code>.mn--cs-input</code>. There must be a label sibling with the class <code>.mn--cs-label</code> containing an inline <code>span</code> with the class <code>.mn--cs-circle</code>. Add the colour class to the span tag.</p>
+<p>The colour name may be added to a div next to <code>.mn--cs-circle</code> with a class name of <code>.mn--cs-name</code> and either <code>.mn--cs-name-sm</code> or <code>.mn--cs-name-lg</code>.</p>
+<p>The colour selection variation, compact, can be added with <code>.mn--cs-compact</code> on the div element with <code>.mn--cs</code>.</p>
 <figure>
-  <div class="field-group">
-    <div class="compact-cs">
-      <input type="checkbox" name="compact-cs-check-example" id="compact-cs-example-0" class="compact-cs-input" checked>
-      <label for="compact-cs-example-0" class="compact-cs-label"><span class="compact-cs-circle compact-cs-blue"></span><div class="compact-cs-name">Grana blue</div></label>
-    </div>
+  <div class="mn--cs mn--cs-compact">
+    <input type="checkbox" name="cs-example-0" id="cs-example-0" class="mn--cs-input" checked>
+    <label for="cs-example-0" class="mn--cs-label"><span class="mn--cs-circle compact-cs-blue"></span><div class="mn--cs-name mn--cs-name-sm">Grana blue</div></label>
   </div>
-  <div class="field-group">
-    <div class="compact-cs">
-      <input type="checkbox" name="compact-cs-check-example" id="compact-cs-example-1" class="compact-cs-input">
-      <label for="compact-cs-example-1" class="compact-cs-label"><span class="compact-cs-circle compact-cs-lilac"></span><div class="compact-cs-name">Lilac</div></label>
-    </div>
+
+  <div class="mn--cs mn--cs-compact">
+    <input type="checkbox" name="cs-example-1" id="cs-example-1" class="mn--cs-input">
+    <label for="cs-example-1" class="mn--cs-label"><span class="mn--cs-circle compact-cs-lilac"></span><div class="mn--cs-name mn--cs-name-sm">Lilac</div></label>
   </div>
-  <div class="field-group">
-    <div class="compact-cs">
-      <input type="checkbox" name="compact-cs-check-example" id="compact-cs-example-2" class="compact-cs-input">
-      <label for="compact-cs-example-2" class="compact-cs-label"><span class="compact-cs-circle compact-cs-multi"></span><div class="compact-cs-name">Burgundy</div></label>
-    </div>
+
+  <div class="mn--cs mn--cs-compact">
+    <input type="checkbox" name="cs-example-2" id="cs-example-2" class="mn--cs-input">
+    <label for="cs-example-2" class="mn--cs-label"><span class="mn--cs-circle compact-cs-multi"></span><div class="mn--cs-name mn--cs-name-sm">Burgundy</div></label>
+  </div>
+</figure>
+
+<p>The large variation is added with <code>.mn--cs-large</code>.</p>
+
+<figure>
+  <div class="mn--cs mn--cs-large">
+    <input type="checkbox" name="cs-large-example-0" id="cs-large-example-0" class="mn--cs-input" checked>
+    <label for="cs-large-example-0" class="mn--cs-label"><span class="mn--cs-circle compact-cs-blue"></span><div class="mn--cs-name mn--cs-name-sm">Grana blue</div></label>
+  </div>
+
+  <div class="mn--cs mn--cs-large">
+    <input type="checkbox" name="cs-large-example-1" id="cs-large-example-1" class="mn--cs-input">
+    <label for="cs-large-example-1" class="mn--cs-label"><span class="mn--cs-circle compact-cs-lilac"></span><div class="mn--cs-name mn--cs-name-sm">Lilac</div></label>
+  </div>
+
+  <div class="mn--cs mn--cs-large">
+    <input type="checkbox" name="cs-large-example-2" id="cs-large-example-2" class="mn--cs-input">
+    <label for="cs-large-example-2" class="mn--cs-label"><span class="mn--cs-circle compact-cs-multi"></span><div class="mn--cs-name mn--cs-name-sm">Burgundy</div></label>
   </div>
 </figure>
