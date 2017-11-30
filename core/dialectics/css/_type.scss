@@ -55,6 +55,18 @@ $ln-height-lg: 1.33;
   @include type-combo(10px, $ln-height-lg);
 }
 
+.mn--f-weight-400 {
+  font-weight: 400;
+}
+
+.mn--f-weight-500 {
+  font-weight: 500;
+}
+
+.mn--f-weight-600 {
+  font-weight: 600;
+}
+
 // deprecated
 
 %line-height-1-0 {
