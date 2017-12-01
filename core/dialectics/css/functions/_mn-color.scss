@@ -1,0 +1,14 @@
+/// Get a color hex from a color map
+///
+/// @name Get Color
+///
+/// @argument {string} $name
+///   The name of the color
+///
+/// @example scss
+///   @include getcolor($color-map, almostblack);
+///
+
+@function mn-color($name) {
+  @return map-get($mn-color-map, $name);
+}

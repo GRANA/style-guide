@@ -5,6 +5,20 @@
 // Please stay with colours on this page for design
 // of all UI elements.
 
+$mn-color-map: (
+  "white": #fff,
+  "lightgrey": #707881,
+  "darkgrey": #4c5258,
+  "styleguidebackground": #f9f9f9,
+  "brandblue": #0083c3,
+  "almostblack": #1d1f21,
+  "disabled": #cad0d3,
+  "green": #6fc49f,
+  "red": #ff5a5f
+);
+
+// deprecated
+
 $brand-01: #0083C3;
 $brand-02: #036394;
 
