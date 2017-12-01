@@ -6,7 +6,7 @@
 ///   The name of the color
 ///
 /// @example scss
-///   @include getcolor($color-map, almostblack);
+///   color: mn-color(almostblack);
 ///
 
 @function mn-color($name) {

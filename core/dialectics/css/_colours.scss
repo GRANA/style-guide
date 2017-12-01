@@ -1,9 +1,12 @@
-// These are the colour standards for the grana website.
-// They include the brand colour as well as the colours that
-// are used throughout our website.
-//
-// Please stay with colours on this page for design
-// of all UI elements.
+/// These are the colour standards for the grana website.
+/// They include the brand colour as well as the colours that
+/// are used throughout our website.
+///
+/// Please stay with colours on this page for design
+/// of all UI elements.
+/// 
+/// @example scss
+///   color: mn-color(almostblack);
 
 $mn-color-map: (
   "white": #fff,
