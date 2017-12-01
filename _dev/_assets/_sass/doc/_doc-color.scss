@@ -1,0 +1,32 @@
+
+.doc-color-border {
+  border: 1px solid mn-color("disabled");
+}
+
+.doc-color-box {
+  @include size(100% 150px);
+  margin-bottom: 20px;
+}
+
+.doc-color-list {
+  @include clearliststyle();
+  @include grid-container();
+
+  li {
+  	@extend %mn--f-caption;
+  	@include grid-column(4, (columns: 12, gutter: 0px));
+  	margin: 20px 0;
+  }
+}
+
+.doc-color-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;  
+}
+
+@each $color, $hex in $mn-color-map {
+  .doc-color-#{$color} {
+    background-color: $hex;
+  }
+}
