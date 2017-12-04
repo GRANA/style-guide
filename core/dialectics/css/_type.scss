@@ -15,36 +15,56 @@ $ln-height-lg: 1.33;
   line-height: $ln;
 }
 
-%mn--f-mega {
+%mn--f-mega,
+.mn--f-mega {
   @include type-combo(80px, $ln-height-tight);
 }
 
-%mn--f-submega {
+%mn--f-submega,
+.mn--f-submega {
   @include type-combo(60px, $ln-height-tight);
 }
 
-%mn--f-display {
+%mn--f-display,
+.mn--f-display {
   @include type-combo(40px, $ln-height-reg);
 }
 
-%mn--f-headline {
-  @include type-combo(30px, $ln-height-lg);
+%mn--f-headline,
+.mn--f-headline {
+  @include type-combo(30px, $ln-height-lg); 
 }
 
-%mn--f-title {
+%mn--f-title,
+.mn--f-title {
   @include type-combo(20px, $ln-height-lg);
 }
 
-%mn--f-body {
+%mn--f-body,
+.mn--f-body {
   @include type-combo(15px, $ln-height-lg);
 }
 
-%mn--f-caption {
+%mn--f-caption,
+.mn--f-caption {
   @include type-combo(12px, $ln-height-lg);
 }
 
-%mn--f-small {
+%mn--f-small,
+.mn--f-small {
   @include type-combo(10px, $ln-height-lg);
+}
+
+.mn--f-weight-400 {
+  font-weight: 400;
+}
+
+.mn--f-weight-500 {
+  font-weight: 500;
+}
+
+.mn--f-weight-600 {
+  font-weight: 600;
 }
 
 // deprecated
