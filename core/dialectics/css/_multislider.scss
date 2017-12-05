@@ -120,3 +120,32 @@
   cursor: default;
   opacity: 0;
 }
+
+// Variation
+
+.multislider-max {
+  height: 100%;
+  overflow: hidden;
+
+  .multislider-items,
+  .multislider-item,
+  .multislider-image,
+  .multislider-image img {
+    height: 100%;
+  }
+
+  .multislider-items {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .multislider-item {
+    opacity: initial;
+    padding: 0;
+  }
+
+  .multislider-image img {
+    position: relative;
+  }
+}
+
