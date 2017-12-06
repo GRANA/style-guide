@@ -143,9 +143,14 @@
     opacity: initial;
     padding: 0;
   }
+  .multislider-image {
+    opacity: 1;
 
-  .multislider-image img {
-    position: relative;
+    img {
+      position: relative;
+    }
+
   }
+  
 }
 
