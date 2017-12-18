@@ -132,6 +132,20 @@
 
 // Variation
 
+.multislider-full {
+  .multislider-image {
+    opacity: 1;
+    width: 100%;
+
+    img {
+      position: relative;
+      width: 100%;
+    }
+
+  }
+  
+}
+
 .multislider-max {
   height: 100%;
   overflow: hidden;
