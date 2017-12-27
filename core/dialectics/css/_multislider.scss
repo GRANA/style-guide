@@ -15,22 +15,30 @@
   display: inline-block;
   opacity: 1;
   position: absolute;
-  top: 35%;
+  top: 45%;
   z-index: 2;
 
   &:after {
     @extend %grana-icons;
     @include transition(all 0.2s ease);
     content: "\e813";
-    font-size: 24px;
+    font-size: 32px;
     margin: 50px;
     position: relative;
     text-decoration: none;
   }
+
+  &-light {
+    color: $primary-inverse-text;
+  }
+
+  &-dark {
+    color: $almostblack;
+  }
 }
 
 .multislider-arrow-left {
-  left: -40px;
+  left: 8%;
 
   &:after {
     @include transform(rotate(180deg));
@@ -38,13 +46,14 @@
 }
 
 .multislider-arrow-right {
-  right: -40px;
+  right: 8%;
 }
 
 .multislider-items {
   @include clearliststyle;
   position: relative;
   text-align: center;
+  width: 100%;
 }
 
 
@@ -120,3 +129,60 @@
   cursor: default;
   opacity: 0;
 }
+
+// Variation
+
+.multislider-full {
+
+  .multislider-item {
+    opacity: initial;
+    padding: 0;
+    width: 100%;
+  }
+
+  .multislider-image {
+    opacity: 1;
+    width: 100%;
+
+    img {
+      @include transform(scale(1.001));
+      position: relative;
+      width: 100%;
+    }
+
+  }
+  
+}
+
+.multislider-max {
+  height: 100%;
+  overflow: hidden;
+
+  .multislider-items,
+  .multislider-item,
+  .multislider-image,
+  .multislider-image img {
+    height: 100%;
+  }
+
+  .multislider-items {
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .multislider-item {
+    opacity: initial;
+    padding: 0;
+  }
+  .multislider-image {
+    opacity: 1;
+
+    img {
+      @include transform(scale(1.001));
+      position: relative;
+    }
+
+  }
+  
+}
+
