@@ -24,7 +24,6 @@
 
   &:after {
     @extend %grana-icons;
-    color: $ui-01;
     content: "\e808";
     font-size: 10px;
     font-weight: bold;
