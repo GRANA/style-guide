@@ -27,10 +27,10 @@
     this.inputValAttr = this.options.inputValueAttr;
     this.defaultItem = this.options.defaultItem;
     this.isFocused = false;
+    this.listItemsSelector = this.input + '-item');
 
     this.$inputHidden =
-        this.$el.find('input[name="' + this.options.inputName + '"]');
-    this.$listItems = this.$el.find(this.input + '-item');
+    this.$el.find('input[name="' + this.options.inputName + '"]');
     this.$label = this.$el.find(this.input + '-label');
     this.$scrollListContainer = this.$el.find(this.input + '-list-container');
     this.$scrollList = this.$scrollListContainer.find(this.input + '-list');
@@ -56,7 +56,7 @@
 
       this.$el.on('click', this.toggleList.bind(this));
 
-      this.$listItems.on('click', function() {
+      this.$el.on('click', this.listItemsSelector, function() {
         context.selectItem(this);
       });
 
