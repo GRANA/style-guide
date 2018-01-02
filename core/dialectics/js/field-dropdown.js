@@ -46,8 +46,7 @@
     init: function() {
 
       var context = this;
-
-
+      this.updateItems();
       this.selectDefault(this.defaultItem);
 
 
@@ -208,6 +207,10 @@
     setHiddenInput: function(el) {
       var value = $(el).data(this.inputValAttr);
       this.$inputHidden.val(value);
+    },
+
+    updateItems: function() {
+      this.$listItems = this.$el.find(this.listItemsSelector);
     },
 
     /**
