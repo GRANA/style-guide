@@ -27,7 +27,7 @@
     this.inputValAttr = this.options.inputValueAttr;
     this.defaultItem = this.options.defaultItem;
     this.isFocused = false;
-    this.listItemsSelector = this.input + '-item');
+    this.listItemsSelector = this.input + '-item';
 
     this.$inputHidden =
     this.$el.find('input[name="' + this.options.inputName + '"]');
