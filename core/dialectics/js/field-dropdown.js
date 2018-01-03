@@ -14,6 +14,7 @@
       wrapperSelector: '.field-group',
       inputValueAttr: 'field-value',
       defaultItem: false,
+      enableAutoDefault: true,
       inputName: null,
       onselect: function() {},
     };
@@ -26,6 +27,7 @@
     this.wrapper = this.options.wrapperSelector;
     this.inputValAttr = this.options.inputValueAttr;
     this.defaultItem = this.options.defaultItem;
+    this.autoDefault = this.options.enableAutoDefault;
     this.isFocused = false;
     this.listItemsSelector = this.input + '-item';
 
@@ -47,8 +49,10 @@
 
       var context = this;
       this.updateItems();
-      this.selectDefault(this.defaultItem);
 
+      if (this.autoDefault) {
+        this.selectDefault(this.defaultItem);
+      }
 
       // Handlers
       $(document).on('click', this.toggleAwayClick.bind(this));
