@@ -368,7 +368,7 @@
     var defaults = {
       defaultItem: false,
       enableAutoDefault: true,
-      onselect: function() {}
+      onselect: function() {},
     };
 
     this.options = $.extend({}, defaults, options);
@@ -388,7 +388,7 @@
     init: function() {
 
       var context = this;
-      
+
       if (this.autoDefault) {
         this.selectDefault(this.defaultItem);
       }
