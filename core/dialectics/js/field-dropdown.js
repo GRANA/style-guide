@@ -365,16 +365,20 @@
   };
 
   function fieldMobileDropdown(el, options) {
-    var defaults = {defaultItem: false, onselect: function() {}};
+    var defaults = {
+      defaultItem: false,
+      enableAutoDefault: true,
+      onselect: function() {}
+    };
 
     this.options = $.extend({}, defaults, options);
 
     this.defaultItem = this.options.defaultItem;
+    this.autoDefault = this.options.enableAutoDefault;
 
     this.$el = el;
     this.$select = this.$el.find('.field-dropdown-select');
     this.$label = this.$el.find('.field-dropdown-label');
-
 
     this.init();
   }
@@ -384,7 +388,10 @@
     init: function() {
 
       var context = this;
-      this.selectDefault(this.defaultItem);
+      
+      if (this.autoDefault) {
+        this.selectDefault(this.defaultItem);
+      }
 
       $('body').on('change', this.$select, function() {
         var $selected = context.$el.find(':selected');
