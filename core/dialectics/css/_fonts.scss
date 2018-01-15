@@ -2,14 +2,43 @@
 // FONTS
 //
 
-@include font-face("sofiapro", "../fonts/sofiapro/SofiaProRegular", $file-formats: eot woff2 woff ttf svg);
-@include font-face("sofiapro", "../fonts/sofiapro/SofiaProMedium", 500, $file-formats: eot woff2 woff ttf svg);
-@include font-face("sofiapro", "../fonts/sofiapro/SofiaProSemiBold", 600, $file-formats: eot woff2 woff ttf svg);
+// This is copied directly from bourbon's _font-face.scss so that the url
+// statements in the output sourcemap are relative to this file rather than 
+// the mixin file which causes breakages in WebPack build pipelines. See 
+// https://www.npmjs.com/package/resolve-url-loader#mixins for more info
 
-@include font-face("grana_icons", "../fonts/grana_icons/grana_icons_v3.03", $file-formats: eot woff ttf svg);
+@mixin grana-font-face(
+  $font-family,
+  $file-path,
+  $weight: normal,
+  $style: normal,
+  $asset-pipeline: $asset-pipeline,
+  $file-formats: eot woff2 woff ttf svg) {
+
+  $font-url-prefix: font-url-prefixer($asset-pipeline);
+
+  @font-face {
+    font-family: $font-family;
+    font-style: $style;
+    font-weight: $weight;
+
+    src: font-source-declaration(
+      $font-family,
+      $file-path,
+      $asset-pipeline,
+      $file-formats,
+      $font-url-prefix
+    );
+  }
+}
+
+@include grana-font-face("sofiapro", "../fonts/sofiapro/SofiaProRegular", $file-formats: eot woff2 woff ttf svg);
+@include grana-font-face("sofiapro", "../fonts/sofiapro/SofiaProMedium", 500, $file-formats: eot woff2 woff ttf svg);
+@include grana-font-face("sofiapro", "../fonts/sofiapro/SofiaProSemiBold", 600, $file-formats: eot woff2 woff ttf svg);
+
+@include grana-font-face("grana_icons", "../fonts/grana_icons/grana_icons_v3.03", $file-formats: eot woff ttf svg);
 
 $sofiapro: "sofiapro", arial, sans-serif;
-
 
 %grana-icons {
   display: inline-block;
