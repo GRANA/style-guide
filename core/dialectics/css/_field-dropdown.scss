@@ -41,12 +41,13 @@
 }
 
 .field-dropdown-list-container {
-  @include size(inherit 150px);
   display: none;
   left: 0;
+  max-height: 300px;
   overflow: scroll;
   position: absolute;
   top: 100%;
+  width: inherit;
 }
 
 .field-dropdown-list {

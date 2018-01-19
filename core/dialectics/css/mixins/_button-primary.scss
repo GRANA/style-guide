@@ -31,6 +31,11 @@
   background-color: map-get($default, background-color);
   color: map-get($default, color);
 
+  &:focus {
+    background-color: map-get($default, background-color);
+    color: map-get($default, color);
+  }
+
   @if map-has-key($default, border-color) {
     border-color: map-get($default, border-color);
   }
@@ -45,7 +50,6 @@
   $progress: map-get($states, progress);
 
   &:active,
-  &:focus,
   &.is-progress {
     background-color: map-get($progress, background-color);
     color: map-get($progress, color);

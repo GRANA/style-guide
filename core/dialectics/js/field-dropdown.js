@@ -14,6 +14,7 @@
       wrapperSelector: '.field-group',
       inputValueAttr: 'field-value',
       defaultItem: false,
+      enableAutoDefault: true,
       inputName: null,
       onselect: function() {},
     };
@@ -26,11 +27,12 @@
     this.wrapper = this.options.wrapperSelector;
     this.inputValAttr = this.options.inputValueAttr;
     this.defaultItem = this.options.defaultItem;
+    this.autoDefault = this.options.enableAutoDefault;
     this.isFocused = false;
+    this.listItemsSelector = this.input + '-item';
 
     this.$inputHidden =
-        this.$el.find('input[name="' + this.options.inputName + '"]');
-    this.$listItems = this.$el.find(this.input + '-item');
+    this.$el.find('input[name="' + this.options.inputName + '"]');
     this.$label = this.$el.find(this.input + '-label');
     this.$scrollListContainer = this.$el.find(this.input + '-list-container');
     this.$scrollList = this.$scrollListContainer.find(this.input + '-list');
@@ -46,17 +48,18 @@
     init: function() {
 
       var context = this;
+      this.updateItems();
 
-
-      this.selectDefault(this.defaultItem);
-
+      if (this.autoDefault) {
+        this.selectDefault(this.defaultItem);
+      }
 
       // Handlers
       $(document).on('click', this.toggleAwayClick.bind(this));
 
       this.$el.on('click', this.toggleList.bind(this));
 
-      this.$listItems.on('click', function() {
+      this.$el.on('click', this.listItemsSelector, function() {
         context.selectItem(this);
       });
 
@@ -210,6 +213,10 @@
       this.$inputHidden.val(value);
     },
 
+    updateItems: function() {
+      this.$listItems = this.$el.find(this.listItemsSelector);
+    },
+
     /**
      * Determine the focused item based on provided character.
      *
@@ -358,16 +365,20 @@
   };
 
   function fieldMobileDropdown(el, options) {
-    var defaults = {defaultItem: false, onselect: function() {}};
+    var defaults = {
+      defaultItem: false,
+      enableAutoDefault: true,
+      onselect: function() {},
+    };
 
     this.options = $.extend({}, defaults, options);
 
     this.defaultItem = this.options.defaultItem;
+    this.autoDefault = this.options.enableAutoDefault;
 
     this.$el = el;
     this.$select = this.$el.find('.field-dropdown-select');
     this.$label = this.$el.find('.field-dropdown-label');
-
 
     this.init();
   }
@@ -377,7 +388,10 @@
     init: function() {
 
       var context = this;
-      this.selectDefault(this.defaultItem);
+
+      if (this.autoDefault) {
+        this.selectDefault(this.defaultItem);
+      }
 
       $('body').on('change', this.$select, function() {
         var $selected = context.$el.find(':selected');
