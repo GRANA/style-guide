@@ -43,12 +43,18 @@
   &:checked + label {
     &:before {
       border: 1px solid $primary-brand;
-	}
+	  }
   }
 
   &:checked + label {
     &:after {
       background-color: $primary-brand;
+    }
+  }
+
+  &.is-error + label {
+    &:before {
+      border: 1px solid mn-color("red");
     }
   }
 }
