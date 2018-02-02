@@ -15,6 +15,12 @@ before_script:
 
 script: "gulp jekyll"
 
+
+before_deploy:
+  - git config --local user.name "Adam clone"
+  - git config --local user.email "adam@grana.com"
+  - git tag "$(date +'%Y%m%d')-$(git log --format=%h -1)"
+
 deploy:
   provider: pages
   skip_cleanup: true
@@ -24,6 +30,16 @@ deploy:
   github_token: $GITHUB_TOKEN
   on:
     branch: master
+
+# Create a release automatically every time a change is committed to master.
+deploy:
+  provider: releases
+  api_key: $GITHUB_TOKEN
+  file_glob: true
+  file: *
+  skip_cleanup: true
+  on:
+    branch: M2-3012
 
 env:
   global:
