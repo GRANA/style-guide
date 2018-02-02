@@ -6,7 +6,7 @@
   <h3 align="center">Mangolian</h3>
 
   <p align="center">
-    A minimal design pattern library.
+    A minimal design pattern library
   </p>
 </p>
 
