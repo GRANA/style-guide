@@ -19,28 +19,30 @@ script: "gulp jekyll"
 before_deploy:
   - git config --local user.name "Adam clone"
   - git config --local user.email "adam@grana.com"
-  - git tag "$(date +'%Y%m%d')-$(git log --format=%h -1)"
+  - RELEASE_NAME="$(date +'%Y%m%d')-$(git log --format=%h -1)"
+  - git tag "$RELEASE_NAME"
 
 deploy:
-  provider: pages
-  skip_cleanup: true
-  email: adam@grana.com
-  name: Adam clone
-  local_dir: docs
-  github_token: $GITHUB_TOKEN
-  on:
-    branch: master
-
-# Create a release automatically every time a change is committed to master.
-deploy:
-  provider: releases
-  api_key: $GITHUB_TOKEN
-  file_glob: true
-  file: *
-  skip_cleanup: true
-  on:
-    branch: M2-3012
+  - provider: pages
+    skip_cleanup: true
+    email: adam@grana.com
+    name: Adam clone
+    local_dir: docs
+    github_token: $GITHUB_TOKEN
+    on:
+      branch: master
+  - provider: releases
+    name: $RELEASE_NAME
+    api_key:
+      secure: $GITHUB_TOKEN
+    file_glob: true
+    file:
+      - _dev/js/core.concat.*.js
+      - _dev/css/main.css
+    skip_cleanup: true
+    on:
+      branch: master
 
 env:
   global:
-    secure: wV2GNEHOszb/r8/zOemsE/61wiUsNKya28mRyZjHQrGCUYZNWxM2uQ03iSVfRbrdoTH1NaqnU3Oeh3Va/UxC7SY5jVRqcTeV1m7ISZRjEbF8TDrz4iVl5rIq6FqiMbG3IxgJZGuKcUv6Jf2q5BQglFmTfYhw5nHKbjnJJtBZ40P+9Dzfe+j/Gk5y25EY9xgrNCOPmVbKW7iRJ/rA+uKOm8YfA/SiqbsTvi1EapBOQfVS5I7fVIY/Ri9IYXIXDgx+IUKIkEg88hkbSqNU3XnRzWrkrMFtPaAh/+CDWZtY7rEtDZKGwK+VFzxLzCG56LV+HF3BY33VGTiKMAjaMl7M0Xpvry0JT4QULL61OZNQVdRMwowmHu2UcT88CCuBcYmyJUFcZmm2PvQA2E0zpv7ZRo7RGQerqoLcfXRbOuqkfLDO5LUmVYZeEV1AgIY6aiGzyF2h1BUcj2znF0XFXLZIbHwGt5qG9Nf2kjw0m8q3NmCK18xOBgFN0nWleDiQbYsh5x3CQVDgMj48emOb28Pbn42TWYDigxIsNOb030HRJIJ6TvFg0v6JARMcvOZrdQcmel64DMv0AH1HVKx6XGCDia9Ovo1JvtwphExiSRwgOTsTCU6M+6NWBlUIuVtqYz3WDEp2FAvFy7zZCEMjEYhFHkwPFmeoY51QxVp7kE1i32E=
+  - secure: MQ2rC+hgUPN//xB8rXWulNcnzGAvQ7aoelDm8tTE2PJCmfOr1pHourQhMsYwzL1JdlM1/3cY4nGst40919b9ItK+pI8hQDwDUm+HdFnyKmb5fOQ3z0E4tIFVOREvsP3wP5wvdHa04lVzftIDlWm9dXSdIIWyjGgnibcO0r/v/2jCfkK7xQKpcs2iIf9gI7zF0+jhzBUQ1r1U1K1Qmgqdw22Nfra5dWrao4sELfWTn815/YpUiRsYyLCQ/UGUSY0M6M4E4KwXi/95U50q5GCaZ79vFVJI+K82ydR43PDRUFEK+lehWpaKW7y5qC5Pc3UvF9H89VGl5VeymULUmmIYn32L0CAgUvZD432Et5yQlDucHdMf+OfjqjGKlUmvs1pgBdP4TtbZIAwryeEIhAcH9eugAhZVoHE2wKux0ClRYM4YXqC0UZ4rSjyULQbf5yNW2Q2JIJ18vbgEiQtF7boXUsIo2NyaY7UiYLsoiFdbtqzH4fEwO55ix9ZD/jxkebgI+lZMrVkUfNDEATFPTR4e5sHeY5YN/HQnkIxHghVkpYWiDQJcMUz+e4UZXt2FjW4Migj+6AW5b95dyST6bHGvj+KzxSDyy9QBFvgBXHBJOynMfe7zOWMaQykJ9SW3H9N1kgKH7XN8f3chD7v3aEImPytQfAd+oHNJNX56gUsHxdg=

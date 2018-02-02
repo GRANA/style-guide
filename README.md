@@ -23,6 +23,7 @@ on implementation for developers and designers with the goal of maintaining cons
 - Grana font iconography
 
 ## Installation
+[![Build Status](https://travis-ci.org/GRANA/style-guide.svg?branch=master)](https://travis-ci.org/GRANA/style-guide)
 
 ### Bower
 
