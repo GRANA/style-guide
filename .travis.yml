@@ -19,7 +19,8 @@ script: "gulp jekyll"
 before_deploy:
   - git config --local user.name "Adam clone"
   - git config --local user.email "adam@grana.com"
-  - git tag "$(date +'%Y%m%d')-$(git log --format=%h -1)"
+  - RELEASE_NAME="$(date +'%Y%m%d')-$(git log --format=%h -1)"
+  - git tag "$RELEASE_NAME"
 
 deploy:
   - provider: pages
@@ -31,6 +32,7 @@ deploy:
     on:
       branch: master
   - provider: releases
+    name: $RELEASE_NAME
     api_key:
       secure: $GITHUB_TOKEN
     file_glob: true
