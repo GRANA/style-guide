@@ -34,7 +34,9 @@ deploy:
     api_key:
       secure: $GITHUB_TOKEN
     file_glob: true
-    file: ./*
+    file:
+      - _dev/js/core.concat.*.js
+      - _dev/css/main.css
     skip_cleanup: true
     on:
       branch: M2-3012
