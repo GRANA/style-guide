@@ -17,7 +17,7 @@ script: "gulp jekyll"
 
 
 before_deploy:
-  ->
+  >
     if ! [ "$BEFORE_DEPLOY_RUN" ]; then
       export BEFORE_DEPLOY_RUN=1;
       git config --local user.name "Adam clone"
