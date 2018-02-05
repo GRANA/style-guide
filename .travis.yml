@@ -17,10 +17,14 @@ script: "gulp jekyll"
 
 
 before_deploy:
-  - git config --local user.name "Adam clone"
-  - git config --local user.email "adam@grana.com"
-  - RELEASE_NAME="$(date +'%Y%m%d')-$(git log --format=%h -1)"
-  - git tag "$RELEASE_NAME"
+  >
+    if ! [ "$BEFORE_DEPLOY_RUN" ]; then
+      export BEFORE_DEPLOY_RUN=1;
+      git config --local user.name "Adam clone"
+      git config --local user.email "adam@grana.com"
+      RELEASE_NAME="$(date +'%Y%m%d')-$(git log --format=%h -1)"
+      git tag "$RELEASE_NAME"
+    fi
 
 deploy:
   - provider: pages
