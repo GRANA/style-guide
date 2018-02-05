@@ -17,10 +17,14 @@ script: "gulp jekyll"
 
 
 before_deploy:
-  - git config --local user.name "Adam clone"
-  - git config --local user.email "adam@grana.com"
-  - RELEASE_NAME="$(date +'%Y%m%d')-$(git log --format=%h -1)"
-  - git tag "$RELEASE_NAME"
+  ->
+    if ! [ "$BEFORE_DEPLOY_RUN" ]; then
+      export BEFORE_DEPLOY_RUN=1;
+      git config --local user.name "Adam clone"
+      git config --local user.email "adam@grana.com"
+      RELEASE_NAME="$(date +'%Y%m%d')-$(git log --format=%h -1)"
+      git tag "$RELEASE_NAME"
+    fi
 
 deploy:
   - provider: pages
@@ -30,7 +34,7 @@ deploy:
     local_dir: docs
     github_token: $GITHUB_TOKEN
     on:
-      branch: master
+      branch: M2-3012
   - provider: releases
     name: $RELEASE_NAME
     api_key:
@@ -41,7 +45,7 @@ deploy:
       - _dev/css/main.css
     skip_cleanup: true
     on:
-      branch: master
+      branch: M2-3012
 
 env:
   global:
