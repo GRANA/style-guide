@@ -393,7 +393,7 @@
         this.selectDefault(this.defaultItem);
       }
 
-      $('body').on('change', this.$select, function() {
+      $(this.$select).on('change', function() {
         var $selected = context.$el.find(':selected');
         context.selectItem($selected);
       });
