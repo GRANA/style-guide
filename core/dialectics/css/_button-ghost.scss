@@ -12,10 +12,10 @@ $almostblack: #1d1f21;
 .mn--bt-ghost-almostblack {
   @include button-primary(
     (
-      default: (background-color: $primary-background, color: $almostblack, border-color: $almostblack),
-      hover: (background-color: $almostblack, color: $primary-inverse-text),
-      progress: (background-color: $almostblack, color: $primary-inverse-text),
-      disabled: (background-color: $primary-background, color: $almostblack, opacity: 0.4)
+      default: (background-color: transparent, color: mn-color("almostblack"), border-color: mn-color("almostblack")),
+      hover: (background-color: mn-color("almostblack"), color: mn-color("white")),
+      progress: (background-color: mn-color("almostblack"), color: mn-color("white")),
+      disabled: (background-color: transparent, color: mn-color("almostblack"), opacity: 0.4)
     )
   );
 }
@@ -23,10 +23,21 @@ $almostblack: #1d1f21;
 .mn--bt-ghost-blue {
   @include button-primary(
     (
-      default: (background-color: $primary-background, color: $primary-brand, border-color: $primary-brand),
-      hover: (background-color: $primary-brand, color: $primary-inverse-text),
-      progress: (background-color: $primary-brand, color: $primary-inverse-text),
-      disabled: (background-color: $primary-background, color: $primary-brand, opacity: 0.4)
+      default: (background-color: transparent, color: mn-color("brandblue"), border-color: mn-color("brandblue")),
+      hover: (background-color: mn-color("brandblue"), color: mn-color("white")),
+      progress: (background-color: mn-color("brandblue"), color: mn-color("white")),
+      disabled: (background-color: transparent, color: mn-color("brandblue"), opacity: 0.4)
+    )
+  );
+}
+
+.mn--bt-ghost-white {
+  @include button-primary(
+    (
+      default: (background-color: transparent, color: mn-color("white"), border-color: mn-color("white")),
+      hover: (background-color: transparent, color: mn-color("white")),
+      progress: (background-color: transparent, color: mn-color("white")),
+      disabled: (background-color: transparent, color: mn-color("white"), opacity: 0.4)
     )
   );
 }
