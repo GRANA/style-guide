@@ -30,3 +30,14 @@ $almostblack: #1d1f21;
     )
   );
 }
+
+.mn--bt-ghost-white {
+  @include button-primary(
+    (
+      default: (background-color: transparent, color: mn-color("white"), border-color: mn-color("white")),
+      hover: (background-color: transparent, color: mn-color("white")),
+      progress: (background-color: transparent, color: mn-color("white")),
+      disabled: (background-color: transparent, color: mn-color("white"), opacity: 0.4)
+    )
+  );
+}
