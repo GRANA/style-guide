@@ -44,7 +44,13 @@ Including the style guide into your grana dev environment requires Bower for han
 ```bash
    bower install
    ```
+### npm
 
+Add the following to your package.json dependencies
+
+```json
+  "mangolian-style-guide": "github:GRANA/style-guide"
+```
 ### Project
 
 1. Import Style Guide into the projects main.scss file:
