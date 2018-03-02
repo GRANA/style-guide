@@ -49,7 +49,9 @@ Including the style guide into your grana dev environment requires Bower for han
 Add the following to your package.json dependencies
 
 ```json
-  "mangolian-style-guide": "github:GRANA/style-guide"
+  "dependencies": {
+    "mangolian-style-guide": "github:GRANA/style-guide"
+  }
 ```
 ### Project
 
