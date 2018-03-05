@@ -18,8 +18,7 @@ script: "gulp jekyll"
 
 before_deploy:
   >
-    if ! [ "$BEFORE_DEPLOY_RUN" ]; then
-      export BEFORE_DEPLOY_RUN=1;
+    if ! [ "$HAS_RUN_DEPLOYMENT" ]; then
       git config --local user.name "Adam clone"
       git config --local user.email "adam@grana.com"
       gulp bump
@@ -39,12 +38,6 @@ deploy:
     name: $RELEASE_NAME
     api_key:
       secure: $GITHUB_TOKEN
-    script:
-      >
-        git add package.json bower.json
-        git commit -m "bump release to $RELEASE_NAME"
-        git push origin master
-        git tag "$RELEASE_NAME"
     file_glob: true
     file:
       - _dev/js/core.concat.*.js
@@ -52,6 +45,15 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
+after_deploy:
+  >
+    if ! [ "$HAS_RUN_DEPLOYMENT" ]; then
+      git add package.json bower.json
+      git commit -m "bump release to $RELEASE_NAME"
+      git push origin master
+      git tag "$RELEASE_NAME"
+      export HAS_RUN_DEPLOYMENT=1;
+    fi
 
 env:
   global:
