@@ -39,12 +39,6 @@ deploy:
     name: $RELEASE_NAME
     api_key:
       secure: $GITHUB_TOKEN
-    script:
-      >
-        git add package.json bower.json
-        git commit -m "bump release to $RELEASE_NAME"
-        git push origin master
-        git tag "$RELEASE_NAME"
     file_glob: true
     file:
       - _dev/js/core.concat.*.js
@@ -52,6 +46,12 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
+after_deploy:
+  >
+    git add package.json bower.json
+    git commit -m "bump release to $RELEASE_NAME"
+    git push origin master
+    git tag "$RELEASE_NAME"
 
 env:
   global:
