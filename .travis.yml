@@ -24,10 +24,6 @@ before_deploy:
       git config --local user.email "adam@grana.com"
       gulp bump
       RELEASE_NAME=$(cat package.json | python -c "import sys, json; print(json.load(sys.stdin)['version'])")
-      git add package.json bower.json
-      git commit -m "bump release to $RELEASE_NAME"
-      git push origin master
-      git tag "$RELEASE_NAME"
     fi
 
 deploy:
@@ -43,6 +39,12 @@ deploy:
     name: $RELEASE_NAME
     api_key:
       secure: $GITHUB_TOKEN
+    script:
+      >
+        git add package.json bower.json
+        git commit -m "bump release to $RELEASE_NAME"
+        git push origin master
+        git tag "$RELEASE_NAME"
     file_glob: true
     file:
       - _dev/js/core.concat.*.js
