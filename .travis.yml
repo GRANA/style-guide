@@ -25,7 +25,6 @@ before_deploy:
       gulp bump
       RELEASE_NAME=$(cat package.json | python -c "import sys, json; print(json.load(sys.stdin)['version'])")
       git commit -a -m "bump release to $RELEASE_NAME"
-      git push
       git tag "$RELEASE_NAME"
     fi
 
@@ -39,6 +38,7 @@ deploy:
     on:
       branch: master
   - provider: releases
+    script: git push && git push --tags
     name: $RELEASE_NAME
     api_key:
       secure: $GITHUB_TOKEN
