@@ -9,6 +9,7 @@ var cp = require('child_process');
 var sequence = require('run-sequence');
 var concat = require('gulp-concat');
 var pump = require('pump');
+var bump = require('gulp-bump');
 
 
 gulp.task('compress-core', function () {
@@ -103,4 +104,14 @@ gulp.task('default', ['scss-lint','sass','eslint']);
 // guide elements.
 gulp.task('jekyll', function(callback){
   sequence('default', 'jekyll-fontcopy','jekyll-compress', 'build-jekyll', callback);
+});
+
+// Bumps package and bower JSON files
+gulp.task('bump', function(){
+  gulp.src([
+    './package.json', 
+    './bower.json'
+  ])
+  .pipe(bump({type:'patch'}))
+  .pipe(gulp.dest('./'));
 });

@@ -22,7 +22,9 @@ before_deploy:
       export BEFORE_DEPLOY_RUN=1;
       git config --local user.name "Adam clone"
       git config --local user.email "adam@grana.com"
-      RELEASE_NAME="$(date +'%Y%m%d')-$(git log --format=%h -1)"
+      gulp bump
+      RELEASE_NAME=$(cat package.json | python -c "import sys, json; print(json.load(sys.stdin)['version'])")
+      git commit -a -m "bump release to $RELEASE_NAME"
       git tag "$RELEASE_NAME"
     fi
 
