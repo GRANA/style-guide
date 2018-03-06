@@ -52,6 +52,8 @@ after_deploy:
       echo "https://${GITHUB_TOKEN}:@github.com" > .git/credentials
       git add package.json bower.json
       git commit -m "bump release to $RELEASE_NAME"
+      git checkout master
+      git merge HEAD@{1}
       git push https://github.com/GRANA/style-guide.git master
       git tag "$RELEASE_NAME"
       export HAS_RUN_DEPLOYMENT=1;
