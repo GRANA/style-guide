@@ -48,9 +48,11 @@ deploy:
 after_deploy:
   >
     if ! [ "$HAS_RUN_DEPLOYMENT" ]; then
+      git config credential.helper "store --file=.git/credentials"
+      echo "https://${GITHUB_TOKEN}:@github.com" > .git/credentials
       git add package.json bower.json
       git commit -m "bump release to $RELEASE_NAME"
-      git push $GITHUB_TOKEN@github.com:GRANA/style-guide.git master
+      git push https://github.com/GRANA/style-guide.git master
       git tag "$RELEASE_NAME"
       export HAS_RUN_DEPLOYMENT=1;
     fi
