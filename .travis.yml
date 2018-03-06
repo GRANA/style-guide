@@ -54,8 +54,8 @@ after_deploy:
       git commit -m "bump release to $RELEASE_NAME"
       git checkout master
       git merge HEAD@{1}
-      git push https://github.com/GRANA/style-guide.git master
-      git tag "$RELEASE_NAME"
+      #git push https://github.com/GRANA/style-guide.git master
+      #git tag "$RELEASE_NAME"
       export HAS_RUN_DEPLOYMENT=1;
     fi
 
