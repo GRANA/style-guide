@@ -50,7 +50,7 @@ after_deploy:
     if ! [ "$HAS_RUN_DEPLOYMENT" ]; then
       git add package.json bower.json
       git commit -m "bump release to $RELEASE_NAME"
-      git push https://$GITHUB_TOKEN@github.com:grana/style-guide master
+      git push https://$GITHUB_TOKEN@github.com:GRANA/style-guide master
       git tag "$RELEASE_NAME"
       export HAS_RUN_DEPLOYMENT=1;
     fi
