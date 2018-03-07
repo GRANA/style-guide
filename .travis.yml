@@ -19,11 +19,11 @@ script: "gulp jekyll"
 before_deploy:
   >
     if ! [ "$HAS_RUN_DEPLOYMENT" ]; then
-      git config --local user.name "Adam clone"
-      git config --local user.email "adam@grana.com"
-      gulp bump
-      RELEASE_NAME=$(cat package.json | python -c "import sys, json; print(json.load(sys.stdin)['version'])")
-      IS_BUMP_COMMIT=$(git log -1 --pretty=%B | python -c "import sys; print('update' in sys.stdin.read())")
+      git config --local user.name "Adam clone";
+      git config --local user.email "adam@grana.com";
+      gulp bump;
+      RELEASE_NAME=$(cat package.json | python -c "import sys, json; print(json.load(sys.stdin)['version'])");
+      IS_BUMP_COMMIT=$(git log -1 --pretty=%B | python -c "import sys; print('update' in sys.stdin.read())");
       export HAS_RUN_DEPLOYMENT=1;
     fi
 
@@ -52,10 +52,10 @@ deploy:
     script:
       >
         if ! [ "$HAS_COMMITTED_TO_MASTER" ]; then
-          git add package.json bower.json
-          git commit -m "bump release to $RELEASE_NAME"
-          git push https://$GITHUB_TOKEN@github.com master
-          git tag "$RELEASE_NAME"
+          git add package.json bower.json;
+          git commit -m "bump release to $RELEASE_NAME";
+          git push https://$GITHUB_TOKEN@github.com master;
+          git tag "$RELEASE_NAME";
           export HAS_COMMITTED_TO_MASTER=1;
         fi
     on:
