@@ -23,6 +23,8 @@ before_deploy:
       git config --local user.email "adam@grana.com"
       gulp bump
       RELEASE_NAME=$(cat package.json | python -c "import sys, json; print(json.load(sys.stdin)['version'])")
+      IS_BUMP_COMMIT=git log -1 --pretty=%B | python -c "import sys; print('run' in sys.stdin.read())"
+      export HAS_RUN_DEPLOYMENT=1;
     fi
 
 deploy:
@@ -45,20 +47,20 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
-after_deploy:
-  >
-    if ! [ "$HAS_RUN_DEPLOYMENT" ]; then
-      git config credential.helper "store --file=.git/credentials"
-      echo "https://${GITHUB_TOKEN}:@github.com" > .git/credentials
-      git add package.json bower.json
-      git commit -m "bump release to $RELEASE_NAME"
-      git checkout master
-      git merge HEAD@{1}
-      #git push https://github.com/GRANA/style-guide.git master
-      #git tag "$RELEASE_NAME"
-      export HAS_RUN_DEPLOYMENT=1;
-    fi
-
+  - provider: script
+    skip_cleanup: true
+    script:
+      >
+        if ! [ "$HAS_COMMITTED_TO_MASTER" ]; then
+          git add package.json bower.json
+          git commit -m "bump release to $RELEASE_NAME"
+          git push https://$GITHUB_TOKEN@github.com master
+          git tag "$RELEASE_NAME"
+          export HAS_COMMITTED_TO_MASTER=1;
+        fi
+    on:
+      branch: master
+      condition: $IS_BUMP_COMMIT = False
 env:
   global:
   - secure: MQ2rC+hgUPN//xB8rXWulNcnzGAvQ7aoelDm8tTE2PJCmfOr1pHourQhMsYwzL1JdlM1/3cY4nGst40919b9ItK+pI8hQDwDUm+HdFnyKmb5fOQ3z0E4tIFVOREvsP3wP5wvdHa04lVzftIDlWm9dXSdIIWyjGgnibcO0r/v/2jCfkK7xQKpcs2iIf9gI7zF0+jhzBUQ1r1U1K1Qmgqdw22Nfra5dWrao4sELfWTn815/YpUiRsYyLCQ/UGUSY0M6M4E4KwXi/95U50q5GCaZ79vFVJI+K82ydR43PDRUFEK+lehWpaKW7y5qC5Pc3UvF9H89VGl5VeymULUmmIYn32L0CAgUvZD432Et5yQlDucHdMf+OfjqjGKlUmvs1pgBdP4TtbZIAwryeEIhAcH9eugAhZVoHE2wKux0ClRYM4YXqC0UZ4rSjyULQbf5yNW2Q2JIJ18vbgEiQtF7boXUsIo2NyaY7UiYLsoiFdbtqzH4fEwO55ix9ZD/jxkebgI+lZMrVkUfNDEATFPTR4e5sHeY5YN/HQnkIxHghVkpYWiDQJcMUz+e4UZXt2FjW4Migj+6AW5b95dyST6bHGvj+KzxSDyy9QBFvgBXHBJOynMfe7zOWMaQykJ9SW3H9N1kgKH7XN8f3chD7v3aEImPytQfAd+oHNJNX56gUsHxdg=
