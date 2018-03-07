@@ -36,7 +36,7 @@ deploy:
     github_token: $GITHUB_TOKEN
     on:
       branch: master
-      condition: $IS_BUMP_COMMIT == False
+      condition: $IS_BUMP_COMMIT = False
   - provider: releases
     name: $RELEASE_NAME
     api_key:
@@ -48,7 +48,7 @@ deploy:
     skip_cleanup: true
     on:
       branch: master
-      condition: $IS_BUMP_COMMIT == False
+      condition: $IS_BUMP_COMMIT = False
 after_deploy: 
   >
     if ! [ "$HAS_COMMITTED_TO_MASTER" ]; then
