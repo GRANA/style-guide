@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/GRANA/style-guide.svg?branch=master)](https://travis-ci.org/GRANA/style-guide)
+
 <p align="center">
   <a href="https://grana.com">
     <img src="https://ci5.googleusercontent.com/proxy/Tnzq17baRFIbJf5GaewtP0PPIHqKlkud3xV8KspOZWp_yRSoevRG5PzOYlQBJs4NCoNJyCyi3S8k1GXyTQ_EM2M6_vRYU7qKcf0J5Uqs53N1T27A9n3fctBLeJHR-qGAd-yDam01o2SSEiaBK70cR3scQp37V3vX4j_1z0MeixM=s0-d-e1-ft#https://media.grana.com/static/version1500534080/frontend/Grana/desktop/en_US/Magento_Email/logo_email.png" width=200>
@@ -23,7 +25,6 @@ on implementation for developers and designers with the goal of maintaining cons
 - Grana font iconography
 
 ## Installation
-[![Build Status](https://travis-ci.org/GRANA/style-guide.svg?branch=master)](https://travis-ci.org/GRANA/style-guide)
 
 ### Bower
 
@@ -38,36 +39,42 @@ Including the style guide into your grana dev environment requires Bower for han
 
 ```bash
    bower login -t {TOKEN}
-   ```
+```
 3. Install dependencies:
 
 ```bash
    bower install
-   ```
+```
 ### npm
 
 Add the following to your package.json dependencies
 
 ```json
   "dependencies": {
-    "mangolian-style-guide": "github:GRANA/style-guide"
+    "mangolian-style-guide": "git+ssh://git@github.com:GRANA/style-guide.git#[x.x.x]",
   }
 ```
+
+Replace [x.x.x] with the version of Mangolian that you intend to use
+
 ### Project
 
 1. Import Style Guide into the projects main.scss file:
 
 ```scss
    @import "dialectics/core/dialectics";
-   ```
+```
+
 2. Include js files in dialectics/core/dialectics/js
 
 ### Dependencies
 
-- Jquery 1.11.1
 - Sass 3.4.22 
 - Bourbon 4.2.2
 - Neat 2.0.0
+- Jquery 1.11.1
+
+Note that Bourbon and Neat must be loaded before the Mangolian, as it depends on their mixins.
 
 ## Sass
 
@@ -85,16 +92,16 @@ The documentation uses Jekyll static webpage builder hosted on Github pages. Vie
 
 ```bash
    git clone git@github.com:GRANA/style.guide.git
-   ```
+```
    
 2. While in the directory, run node package manager to install dependency modules:
 
  ```bash
    npm install
-   ```
+```
    
 3.  Run gulp to build project:
 
 ```bash
    gulp jekyll
-   ```
+```
