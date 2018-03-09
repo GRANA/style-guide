@@ -22,6 +22,8 @@ before_deploy:
     if ! [ "$HAS_RUN_DEPLOYMENT" ]; then
       git config --local user.name "Adam clone";
       git config --local user.email "adam@grana.com";
+      git config credential.helper "store --file=.git/credentials"
+      echo "https://${GITHUB_TOKEN}:@github.com" > .git/credentials
       gulp bump;
       RELEASE_NAME=$(cat package.json | python -c "import sys, json; print(json.load(sys.stdin)['version'])");
       export HAS_RUN_DEPLOYMENT=1;
