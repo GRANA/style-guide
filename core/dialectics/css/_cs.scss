@@ -19,7 +19,9 @@
 }
 
 .mn--cs-circle {
-  border-radius: 50%; 
+  border-radius: 50%;
+  border-style: solid;
+  border-width: 1px;
   display: inline-block;
 
   &:after {
