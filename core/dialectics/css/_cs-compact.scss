@@ -5,6 +5,7 @@ $cs-compact-size: 18px;
 .mn--cs-compact {
   height: $cs-compact-size;
   margin-right: 20px;
+  margin-top: 10px;
 
   .mn--cs-circle {
     @include size($cs-compact-size);
