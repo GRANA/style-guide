@@ -4,23 +4,28 @@ $cs-large-size: 28px;
 $cs-large-margin: 10px;
 
 .mn--cs-large {
-  height: $cs-large-size + ($cs-large-margin * 2);
+  height: $cs-large-size;
+  margin-right: $cs-large-margin;
+  margin-top: $cs-large-margin;
 
   .mn--cs-circle {
     @include size($cs-large-size);
-    margin: $cs-large-margin;
+  }
+
+  .mn--cs-name {
+    margin-left: $cs-large-margin;
   }
 
   .mn--cs-name-sm {
-    line-height: 4;
+    line-height: 2.8;
   }
 
   .mn--cs-name-lg {
-    line-height: 3.3;
+    line-height: 2;
   }
 
   .mn--cs-input:checked + .mn--cs-label {
-    $cs-large-check-pos: ($cs-large-size/2px - 5px) + $cs-large-margin;
+    $cs-large-check-pos: ($cs-large-size/2px - 14px) + $cs-large-margin;
   
     .mn--cs-circle::after { 
       left: $cs-large-check-pos;
