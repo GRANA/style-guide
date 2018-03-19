@@ -7,9 +7,9 @@ $switcheroo-border-thickness: 2px;
 .mn--switcheroo {
   @extend %mn--f-body;
   @include clearliststyle;
+  @include display(flex);
   @include user-select(none);
   color: $secondary-body-text;
-  display: flex;
   margin-bottom: 20px;
 
   .mn--switcheroo-subtext {
@@ -57,8 +57,8 @@ $switcheroo-border-thickness: 2px;
 }
 
 .mn--switcheroo-panel {
-  flex-basis: 50px;
-  flex-grow: 1;
+  @include flex-basis(50px);
+  @include flex-grow(1);
   text-align: center;
 
   &:not(:first-child) .mn--switcheroo-label {
