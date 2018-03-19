@@ -13,6 +13,8 @@
 }
 
 .stepper-button,
+.stepper-button:active,
+.stepper-button:focus,
 .stepper-numeric {
   color: $secondary-body-text;
 }
