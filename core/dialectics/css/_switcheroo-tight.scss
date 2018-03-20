@@ -1,13 +1,12 @@
 // Switcheroo tight variation
 
 .mn--switcheroo-tight {
-  @extend %mn--f-caption;
-
   .mn--switcheroo-label {
     padding: 5px;
   }
 
   .mn--switcheroo-labeltext {
+    @extend %mn--f-caption;
     text-transform: uppercase;
   }
 }
