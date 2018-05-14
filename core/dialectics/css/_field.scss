@@ -34,6 +34,18 @@
   outline: none;
   padding: 12px 20px;
   width: 100%;
+
+  &-rightpad-lg {
+    padding-right: 120px;
+  }
+
+  &-rightpad-m {
+    padding-right: 90px;
+  }
+
+  &-rightpad-s {
+    padding-right: 60px;
+  }
 }
 
 .field-text-white {
