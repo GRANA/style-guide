@@ -46,6 +46,10 @@
   &-rightpad-s {
     padding-right: 60px;
   }
+
+  .field-group & {
+    text-align: left;
+  }
 }
 
 .field-text-white {
