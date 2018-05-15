@@ -1,5 +1,6 @@
 var gulp = require('gulp');
-var gutil = require('gulp-util');
+var log = require('fancy-log');
+var colors = require('ansi-colors');
 var sass = require('gulp-sass');
 var scsslint = require('gulp-scss-lint');
 var eslint = require('gulp-eslint');
@@ -68,7 +69,7 @@ gulp.task('eslint', () => {
 gulp.task('sass', function() {
   return gulp.src('./_dev/css/main.scss')
   .pipe(sass({style: 'expanded'}))
-  .on('error', gutil.log)
+  .on('error', log)
   .pipe(gulp.dest('./_dev/css'))
 });
 
@@ -80,7 +81,7 @@ gulp.task('watch', function() {
 // Triggers Jekyll to build the website generating from the _dev folder.
 gulp.task('build-jekyll', (code) => {
   return cp.spawn('bundle', ['exec', 'jekyll', 'build'])
-    .on('error', (error) => gutil.log(gutil.colors.red(error.message)))
+    .on('error', (error) => log(colors.red(error.message)))
     .on('close', code);
 });
 
