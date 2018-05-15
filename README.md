@@ -93,8 +93,21 @@ The documentation uses Jekyll static webpage builder hosted on Github pages. Vie
    npm install
    ```
    
-3.  Run gulp to build project:
+3. Run gulp to build project:
 
 ```bash
    gulp jekyll
    ```
+
+4. Serve your freshly built project:
+
+```
+   jekyll serve
+```
+
+Alternatively, if you experience ruby gem issues, try
+
+
+```
+   bundle exec jekyll serve
+```
