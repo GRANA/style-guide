@@ -30,10 +30,27 @@
   background-color: $secondary-background;
   border: 0;
   border-bottom: 2px solid transparent;
+  font-family: inherit;
   margin: 0;
   outline: none;
   padding: 12px 20px;
   width: 100%;
+
+  &-rightpad-lg {
+    padding-right: 120px;
+  }
+
+  &-rightpad-m {
+    padding-right: 90px;
+  }
+
+  &-rightpad-s {
+    padding-right: 60px;
+  }
+
+  .field-group & {
+    text-align: left;
+  }
 }
 
 .field-text-white {
@@ -44,6 +61,7 @@
   @extend %mn--f-caption;
   color: $secondary-body-text;
   margin-top: 10px;
+  text-align: left;
 }
 
 .field-submit {
