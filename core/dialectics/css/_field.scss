@@ -2,12 +2,6 @@
 // Styles for the input fields
 //
 
-.field-group {
-  margin: 20px 0;
-  position: relative;
-}
-
-.field-group,
 .field-label,
 .field-text {
   @extend %mn--f-body;
