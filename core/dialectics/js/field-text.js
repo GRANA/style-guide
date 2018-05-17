@@ -46,6 +46,13 @@
       // the class
       $(document).on('keyup change paste', this.input, function() {
         context.checkEmpty(this);
+        context.setCharacterCount(this);
+      });
+
+      // Need to run on init for all inputs
+      $(this.input).each(function() {
+        context.checkEmpty(this);
+        context.setCharacterCount(this);
       });
 
     },
@@ -59,6 +66,17 @@
         $fieldGroup.removeClass('is-filled');
       } else {
         $fieldGroup.addClass('is-filled');
+      }
+    },
+
+    setCharacterCount: function(el) {
+      var $el = $(el);
+      var maxLength = $el.attr('maxlength');
+      if (typeof maxLength !== typeof undefined && maxLength !== false) {
+        var $view = $('<div class="field-textarea-count"></div>');
+        $view.append($el.val().length + '/' + maxLength);
+        $el.closest('.field-group').find('.field-textarea-count').remove();
+        $view.insertAfter($el);
       }
     },
 

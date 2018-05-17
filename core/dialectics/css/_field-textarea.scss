@@ -1,0 +1,12 @@
+.field-textarea {
+  height: 120px;
+  resize: none;
+}
+
+.field-textarea-count {
+  @extend %mn--f-caption;
+  bottom: 10px;
+  color: mn-color("disabled");
+  position: absolute;
+  right: 10px;
+}
