@@ -3,8 +3,30 @@
 //
 
 .field-group {
-  margin: 20px 0;
+  margin-bottom: 20px;
+  margin-top: 20px;
   position: relative;
+}
+
+.field-group-section {
+  @include grid-container;
+
+  &-collapse {
+    @include grid-collapse;
+  }
+
+  &-half,
+  &-full {
+    margin-top: 0;
+  }
+
+  &-half {
+    @include grid-column(6);
+  }
+
+  &-full {
+    @include grid-column(12);
+  }
 }
 
 .field-group,
