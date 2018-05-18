@@ -29,6 +29,14 @@
   @extend %mn--bt;
 }
 
+.mn--bt-full {
+  width: 100%;
+}
+
+.mn--bt-center {
+  text-align: center;
+}
+
 //deprecated
 
 %std-btn {
