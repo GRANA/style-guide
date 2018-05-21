@@ -72,7 +72,7 @@
     setCharacterCount: function(el) {
       var $el = $(el);
       var maxLength = $el.attr('maxlength');
-      if (typeof maxLength !== typeof undefined && maxLength !== false) {
+      if (typeof maxLength !== typeof undefined && maxLength !== false && $el.hasClass('field-textarea')) {
         var $view = $('<div class="field-textarea-count"></div>');
         $view.append($el.val().length + '/' + maxLength);
         $el.closest('.field-group').find('.field-textarea-count').remove();
