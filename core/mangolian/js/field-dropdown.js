@@ -96,6 +96,7 @@
      * Open the dropdown
      */
     openList: function() {
+      this.$el.closest('.field-group').addClass('field-group-top');
       this.$el.addClass('is-open');
       this.setFocus();
       this.setItemPositionOnOpen();
@@ -105,6 +106,7 @@
      * Close the dropdown
      */
     closeList: function() {
+      this.$el.closest('.field-group').removeClass('field-group-top');
       this.$el.removeClass('is-open');
       this.removeFocus();
     },

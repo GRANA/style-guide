@@ -36,6 +36,25 @@
   padding: 12px 50px 12px 20px;
 }
 
+.field-dropdown-white {
+  background: mn-color("white");
+
+  .field-dropdown-item {
+    background: mn-color("white");
+  }
+}
+
+.field-dropdown-large {
+  /// temp overide. Needs to be replaced by mixin
+  font-size: 15px;
+  line-height: 1.33;
+
+  &,
+  .field-dropdown-item {
+    padding: 13px 50px 13px 20px;
+  }
+}
+
 .field-dropdown-label {
   display: block;
 }

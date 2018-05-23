@@ -4,6 +4,10 @@
   margin-bottom: 20px;
   margin-top: 20px;
   position: relative;
+
+  &-top {
+    z-index: 999;
+  }
 }
 
 .field-group-section {
