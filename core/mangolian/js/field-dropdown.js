@@ -136,6 +136,16 @@
     },
 
     /**
+     * Sets a dummy default state that makes it null and allows 
+     * us to display the label as instructions.
+     * @param {string} label
+     */
+    setNullDefaultState: function(label) {
+        this.switchLabel(label);
+        this.$inputHidden.val(null);
+    },
+
+    /**
      * Takes the supplied item value and selects it.
      *
      * @param  {String} val Value of the item
