@@ -212,7 +212,7 @@
      */
     setHiddenInput: function(el) {
       var value = $(el).data(this.inputValAttr);
-      this.$inputHidden.val(value);
+      this.$inputHidden.val(value).trigger('change');
     },
 
     updateItems: function() {
