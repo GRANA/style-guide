@@ -54,6 +54,9 @@
 
 .field-dropdown-label {
   display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .field-dropdown-list-container {
