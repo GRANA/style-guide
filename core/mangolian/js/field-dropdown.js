@@ -136,13 +136,13 @@
     },
 
     /**
-     * Sets a dummy default state that makes it null and allows 
+     * Sets a dummy default state that makes it null and allows
      * us to display the label as instructions.
      * @param {string} label
      */
     setNullDefaultState: function(label) {
-        this.switchLabel(label);
-        this.$inputHidden.val(null);
+      this.switchLabel(label);
+      this.$inputHidden.val(null);
     },
 
     /**
