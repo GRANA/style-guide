@@ -1,7 +1,7 @@
 @charset "UTF-8";
 // Grana Dialectics
 // http://grana.com
-
+ 
 @import "dialectics/css/functions/mn-color";
 
 @import "dialectics/css/mixins/button-primary";
@@ -16,6 +16,7 @@
 @import "dialectics/css/mixins/swatch-stripe";
 @import "dialectics/css/mixins/swatch-stripe-thick";
 
+@import "dialectics/css/reset";
 @import "dialectics/css/fonts";
 @import "dialectics/css/colours";
 @import "dialectics/css/type";
