@@ -82,10 +82,12 @@ gulp.task('watch', function() {
 });
 
 gulp.task("build-babel", function () {
-    return gulp.src("./core/dialectics/js/src/app.jsx")
-    .pipe(babel())
-    .pipe(rename("bundle.js"))
-    .pipe(gulp.dest("./core/dialectics/js/dist"));
+    return pump([
+        gulp.src("./core/dialectics/js/src/*.jsx"),
+        concat('bundle.js'),
+        babel(),
+        gulp.dest("./core/dialectics/js/dist")
+    ]);
 });
 
 gulp.task("copy-babel", function () {
