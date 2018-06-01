@@ -16,7 +16,9 @@ var babel = require("gulp-babel");
 
 gulp.task('compress-core', function () {
   return pump([
-    gulp.src('./core/dialectics/js/*.js'),
+    gulp.src(['./core/dialectics/js/*.js',
+      '!./core/dialectics/js/field-text.js'
+      ]),
     concat('core.concat.js'),
     uglify(),
     rename({
