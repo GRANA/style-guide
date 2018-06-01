@@ -4,7 +4,8 @@ class FieldText extends React.Component {
 		super(props);
 		this.state = { 
 			isFocus: false,
-			isFilled: false
+			isFilled: false,
+			isError: false
 		};
 
 		this.onBlur = this.onBlur.bind(this);
@@ -33,14 +34,17 @@ class FieldText extends React.Component {
 	render() {
 		var classes = classNames([
 			this.state.isFocus && 'is-focus',
-			this.state.isFilled && 'is-filled'
+			this.state.isFilled && 'is-filled',
+			this.state.isError && 'is-error'
 	    ]);
 
 		return (
 			<div className={'field-group ' + classNames(classes)}>
 				<label htmlFor={this.props.name} className="field-label">{this.props.label}</label>
 				<input type="text" id={this.props.name} onBlur={this.onBlur} onFocus={this.onFocus} onKeyUp={this.checkEmpty} onPaste={this.checkEmpty} className="field-text" name={this.props.name}/>
-				<div className="field-helper">hint and helper text</div>
+				{this.props.helper && (
+			      <div className="field-helper">{this.props.helper}</div>
+			    )}
 			</div>
 		);
 	}

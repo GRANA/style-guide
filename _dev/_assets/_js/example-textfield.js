@@ -13,7 +13,7 @@ var exampleTextfield = (function($) {
    */
   initTextfieldExamples = function() {
     ReactDOM.render(
-      React.createElement(FieldText, {name: 'standard-textfield-example', label: 'label'}, null),
+      React.createElement(FieldText, {name: 'standard-textfield-example', label: 'label', helper: 'field helper text'}, null),
       document.getElementById('example-figure-standard-textfield')
     );
   };
