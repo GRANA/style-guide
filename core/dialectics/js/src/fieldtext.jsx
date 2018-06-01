@@ -5,7 +5,7 @@ class FieldText extends React.Component {
 		this.state = { 
 			isFocus: false,
 			isFilled: false,
-			isError: false
+			isError: props.isError
 		};
 
 		this.onBlur = this.onBlur.bind(this);
