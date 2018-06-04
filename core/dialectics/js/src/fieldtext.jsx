@@ -24,10 +24,10 @@ class FieldText extends React.Component {
 	checkEmpty(evt) {
 		var value = evt.target.value;
 
-		if (!value) {
-			this.setState({isFilled: false});
-		} else {
+		if (value) {
 			this.setState({isFilled: true});
+		} else {
+			this.setState({isFilled: false});
 		}
     }
 
