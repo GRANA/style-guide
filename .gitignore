@@ -4,5 +4,8 @@
 /.idea
 /_dev/css/main.css
 /_dev/fonts
-/_dev/js/*
+/_dev/js/bundle.js
+/_dev/js/core.concat.min.js
+/_dev/js/doc.min.js
+/_dev/js/examples.concat.min.js
 /core/dialectics/js/dist
