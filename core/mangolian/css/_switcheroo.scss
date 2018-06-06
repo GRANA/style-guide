@@ -38,6 +38,7 @@ $switcheroo-border-thickness: 2px;
 }
 
 .mn--switcheroo-labeltext {
+  @extend %mn--f-body;
   font-weight: normal;
   margin: 0;
 }
