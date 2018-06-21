@@ -9,3 +9,8 @@ $layout-fixed: 1200px;
   min-width: $layout-fixed;
   width: 100%;
 }
+
+.mn--module {
+  width: $layout-fixed;
+  margin: 40px auto;
+}
