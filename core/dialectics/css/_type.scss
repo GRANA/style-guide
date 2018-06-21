@@ -5,17 +5,13 @@
  // legibility on different screen sizes. Type styles that are
  // named the same should refer back to the device to determine
  // followed style.
+ // 
+ // Deprecated. Please use mixins instead
 
 $ln-height-tight: 1.1;
 $ln-height-reg: 1.3;
 $ln-height-lg: 1.33;
 
-@mixin type-combo($size, $ln) {
-  font-size: $size;
-  line-height: $ln;
-}
-
-%mn--f-mega,
 .mn--f-mega {
   @include type-combo(80px, $ln-height-tight);
 }
