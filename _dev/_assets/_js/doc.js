@@ -39,6 +39,8 @@ var granaDocs = (function($) {
         scrollOnSection();
       });
 
+      $.titleAnimate({fps: 3});
+
     });
 
     $(window).load(function() {
