@@ -2,21 +2,19 @@
 // Code tag styling for highlight.js
 //
 
-$code-black: #000;
-
 .hljs {
-  background-color: $code-black;
+  background-color: transparent;
   font-size: 13px;
   padding: 1.4em;
 }
 
 .hljs,
 .hljs-subst {
-  color: $secondary-text;
+  color: mn-color("almostblack");
 }
 
 .hljs-attr {
-  color: lighten($primary-brand, 20%);
+  color: mn-color("brandblue");
 }
 
 .hljs-type,
@@ -27,5 +25,5 @@ $code-black: #000;
 .hljs-quote,
 .hljs-template-tag,
 .hljs-deletion {
-  color: $error;
+  color: mn-color("green");
 }
