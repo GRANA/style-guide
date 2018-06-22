@@ -2,7 +2,6 @@ $sidenav-logo-height: 50px;
 
 .sidenav {
   @include size($sidebar-width 100%);
-  background-color: $secondary-background;
   border-right: $doc-layout-border-light;
   color: $primary-text;
   left: 0;
@@ -24,7 +23,7 @@ $sidenav-logo-height: 50px;
 }
 
 .sidenav-logo {
-  color: $primary-brand;
+  color: mn-color("brandblue");
   display: inline-block;
   left: 20px;
   position: relative;
