@@ -1,0 +1,10 @@
+<h1>grid</h1>
+<p>Grid is used to quickly construct layouts. It is a mobile first, responsive, 12 column fluid grid with 20px gutters. It is a float based grid using the Neat library.<code></code> </p>
+
+<div class="mn--grid-dev">
+	<div class="mn--row">
+		{% for i in (1..12) %}
+			<div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"></div>
+		{% endfor %}
+	</div>
+</div>
