@@ -1,0 +1,25 @@
+// Mobile first grid system 
+
+$gridbreaks: (xs: 0, sm: 564px, md: 768px, lg: 992px, xl: 1200px);
+
+.mn--grid-dev {
+  background: mn-color("styleguidebackground");
+}
+
+.mn--col-dev {
+  background: mn-color("brandblue");
+}
+
+.mn--row {
+  @include grid-container();
+}
+
+.mn--col {
+  @each $name, $value in $gridbreaks {
+    &-#{$name} {
+      @media only screen and (min-width: $value) {
+        @include grid-column-set();
+      }
+    }
+	}
+}
