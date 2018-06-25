@@ -2,6 +2,14 @@
 
 $gridbreaks: (xs: 0, sm: 564px, md: 768px, lg: 992px, xl: 1200px);
 
+.mn--grid-dev {
+  background: mn-color("styleguidebackground");
+}
+
+.mn--col-dev {
+  background: mn-color("brandblue");
+}
+
 .mn--row {
   @include grid-container();
 }
