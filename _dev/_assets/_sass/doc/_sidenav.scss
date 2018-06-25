@@ -2,6 +2,7 @@ $sidenav-logo-height: 50px;
 
 .sidenav {
   @include size($sidebar-width 100%);
+  background-color: white;
   border-right: $doc-layout-border-light;
   color: $primary-text;
   left: 0;
