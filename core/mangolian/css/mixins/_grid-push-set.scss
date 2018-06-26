@@ -1,0 +1,22 @@
+/// Creates set of push declarations
+///
+/// @name Grid Push Set
+///
+/// @example scss
+/// 
+/// .mn--push-xs {
+///   @include grid-column-set();
+/// }
+///
+
+@mixin grid-push-set() {
+
+  $columns: 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1;
+
+  @each $colamt in $columns {
+    &-#{$colamt} {
+      @include grid-push($colamt);
+    }
+  }
+
+}

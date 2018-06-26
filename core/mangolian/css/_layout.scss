@@ -12,5 +12,5 @@ $layout-fixed: 1200px;
 
 .mn--module {
   margin: 40px auto;
-  width: $layout-fixed;
+  max-width: $layout-fixed;
 }
