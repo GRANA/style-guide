@@ -14,7 +14,8 @@ $layout-fixed: 1200px;
   margin: 40px auto;
   max-width: $layout-fixed;
 
-  @media only screen and (min-width: 564px) {
-  	margin: 100px auto
+  &-fullwidth {
+    margin: 40px 0;
+    max-width: none;
   }
 }
