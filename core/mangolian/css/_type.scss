@@ -12,6 +12,7 @@ $ln-height-tight: 1.1;
 $ln-height-reg: 1.3;
 $ln-height-lg: 1.33;
 
+%mn--f-mega,
 .mn--f-mega {
   @include type-combo(80px, $ln-height-tight);
 }
