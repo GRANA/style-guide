@@ -1,0 +1,12 @@
+/// Get a type properties from typography map
+///
+/// @name Get Typography
+///
+/// @argument {string} $name
+///   The name of the color
+///
+
+@mixin mn-type($name) {
+  $typeobject: map-get($mn-typography-map, $name);
+  @include type-combo(map-get($typeobject, size), map-get($typeobject, line-height));
+}

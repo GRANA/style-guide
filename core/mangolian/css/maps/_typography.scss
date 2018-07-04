@@ -1,0 +1,16 @@
+/// Typography map
+
+$ln-height-tight: 1.1;
+$ln-height-reg: 1.3;
+$ln-height-lg: 1.33;
+
+$mn-typography-map: (
+  small: (size: 10px, line-height: $ln-height-lg),
+  caption: (size: 12px, line-height: $ln-height-lg),
+  body: (size: 15px, line-height: $ln-height-lg),
+  title: (size: 20px, line-height: $ln-height-lg),
+  headline: (size: 30px, line-height: $ln-height-lg),
+  display: (size: 40px, line-height: $ln-height-reg),
+  submega: (size: 60px, line-height: $ln-height-tight),
+  mega: (size: 80px, line-height: $ln-height-tight)
+);

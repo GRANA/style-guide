@@ -1,0 +1,21 @@
+/// Creates a type combination
+///
+/// @name Type Combo
+///
+/// @argument {px} $size
+///   Font size in pixels
+///
+/// @argument {number)} $ln
+///   Line height without units
+///   ex. 1.2
+///   
+/// @example scss
+/// .mn--f-mega {
+///   @include type-combo(80px, 1.1);
+/// }
+///
+
+@mixin type-combo($size, $ln) {
+  font-size: $size;
+  line-height: $ln;
+}

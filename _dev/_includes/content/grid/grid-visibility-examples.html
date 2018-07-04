@@ -1,0 +1,11 @@
+{% assign title = 'example' %}
+{% assign code = '
+<pre><code class="html">
+&lt;div class="mn--vis-xs-block mn--vis-sm-none"&gt;only xs visible&lt;/div&gt;
+&lt;div class="mn--vis-xs-none mn--vis-sm-block"&gt;sm and up visible&lt;/div&gt;
+&lt;div class="mn--vis-xs-none mn--vis-md-block"&gt;md and up visible&lt;/div&gt;
+&lt;div class="mn--vis-xs-none mn--vis-lg-block"&gt;lg and up visible&lt;/div&gt;
+&lt;div class="mn--vis-xs-none mn--vis-xl-block"&gt;only xl visible&lt;/div&gt;
+</code></pre>
+' %}
+{% include example.html %}

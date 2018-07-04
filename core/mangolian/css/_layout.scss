@@ -9,3 +9,13 @@ $layout-fixed: 1200px;
   min-width: $layout-fixed;
   width: 100%;
 }
+
+.mn--module {
+  margin: 0 auto 40px;
+  max-width: $layout-fixed;
+
+  &-fullwidth {
+    margin: 0 0 40px;
+    max-width: none;
+  }
+}
