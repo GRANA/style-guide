@@ -15,7 +15,7 @@ var bump = require('gulp-bump');
 
 gulp.task('compress-core', function () {
   return pump([
-    gulp.src('./core/dialectics/js/*.js'),
+    gulp.src('./core/mangolian/js/*.js'),
     concat('core.concat.js'),
     uglify(),
     rename({
@@ -57,8 +57,8 @@ gulp.task('scss-lint', function() {
 
 // Style check JS
 gulp.task('eslint', () => {
-  return gulp.src(['./core/dialectics/js/**/*.js',
-    '!./core/dialectics/js/jquery-ui.js',
+  return gulp.src(['./core/mangolian/js/**/*.js',
+    '!./core/mangolian/js/jquery-ui.js',
     './_dev/_assets/**/*.js'])
     .pipe(eslint())
     .pipe(eslint.format())
@@ -90,7 +90,7 @@ gulp.task('jekyll-compress', gulp.parallel('compress-core','compress-doc','compr
 
 // This copies the fonts that are currently embeddedd in our core style.
 gulp.task('jekyll-fontcopy', function() {
-   return gulp.src('./core/dialectics/fonts/**/*')
+   return gulp.src('./core/mangolian/fonts/**/*')
   .pipe(gulp.dest('./_dev/fonts'));
 });
 
