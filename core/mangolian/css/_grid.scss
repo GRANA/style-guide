@@ -33,3 +33,23 @@ $gridbreaks: (xs: 0, sm: 564px, md: 768px, lg: 992px, xl: 1200px);
     }
   }
 }
+
+.mn--visible {
+  @each $name, $value in $gridbreaks {
+    &-#{$name} {
+      @media only screen and (min-width: $value) {
+        display: block;
+      }
+    }
+  }
+}
+
+.mn--hide {
+  @each $name, $value in $gridbreaks {
+    &-#{$name} {
+      @media only screen and (min-width: $value) {
+        display: none;
+      }
+    }
+  }
+}
