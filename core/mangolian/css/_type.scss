@@ -12,6 +12,24 @@ $ln-height-tight: 1.1;
 $ln-height-reg: 1.3;
 $ln-height-lg: 1.33;
 
+$type-map: "small", "caption", "body", "title", "headline", "display", "submega", "mega";
+$type-map-length: length($type-map);
+
+@each $type in $type-map {
+  $index: index($type-map, $type);
+
+  .mn--fs-#{$type} {
+    @include mn-type($type);
+
+    @if $index < $type-map-length {
+      $next: nth($type-map, $index + 1);
+      @media only screen and (min-width: 564px) {
+        @include mn-type($next);
+      }
+    }
+  }
+}
+
 %mn--f-mega,
 .mn--f-mega {
   @include type-combo(80px, $ln-height-tight);
