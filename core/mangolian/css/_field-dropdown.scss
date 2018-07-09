@@ -5,7 +5,9 @@
 .field-dropdown {
   @extend %mn--f-caption;
   @include user-select(none);
+  @include transition(border-bottom 0.2s ease);
   background: $secondary-background;
+  border-bottom: 2px solid transparent;
   position: relative;
   text-align: left;
   text-transform: lowercase;
@@ -36,8 +38,25 @@
   padding: 12px 50px 12px 20px;
 }
 
+.field-dropdown-white {
+  background: mn-color("white");
+
+  .field-dropdown-item {
+    background: mn-color("white");
+  }
+}
+
+.field-dropdown-large {
+  /// temp overide. Needs to be replaced by mixin
+  font-size: 15px;
+  line-height: 1.33;
+}
+
 .field-dropdown-label {
   display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .field-dropdown-list-container {
@@ -113,5 +132,11 @@
   .field-dropdown-label,
   &:after {
     color: $text-04;
+  }
+}
+
+.is-error {
+  .field-dropdown {
+    border-bottom: 2px solid $error;
   }
 }

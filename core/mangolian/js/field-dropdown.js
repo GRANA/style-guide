@@ -96,6 +96,7 @@
      * Open the dropdown
      */
     openList: function() {
+      this.$el.closest('.field-group').addClass('field-group-top');
       this.$el.addClass('is-open');
       this.setFocus();
       this.setItemPositionOnOpen();
@@ -105,6 +106,7 @@
      * Close the dropdown
      */
     closeList: function() {
+      this.$el.closest('.field-group').removeClass('field-group-top');
       this.$el.removeClass('is-open');
       this.removeFocus();
     },
@@ -131,6 +133,16 @@
       }
 
 
+    },
+
+    /**
+     * Sets a dummy default state that makes it null and allows
+     * us to display the label as instructions.
+     * @param {string} label
+     */
+    setNullDefaultState: function(label) {
+      this.switchLabel(label);
+      this.$inputHidden.val(null);
     },
 
     /**
@@ -210,7 +222,7 @@
      */
     setHiddenInput: function(el) {
       var value = $(el).data(this.inputValAttr);
-      this.$inputHidden.val(value);
+      this.$inputHidden.val(value).trigger('change');
     },
 
     updateItems: function() {
