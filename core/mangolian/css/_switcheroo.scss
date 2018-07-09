@@ -5,7 +5,7 @@
 $switcheroo-border-thickness: 2px;
 
 .mn--switcheroo {
-  @extend %mn--f-body;
+  @include mn-type("body");
   @include clearliststyle;
   @include display(flex);
   @include user-select(none);
@@ -38,7 +38,7 @@ $switcheroo-border-thickness: 2px;
 }
 
 .mn--switcheroo-labeltext {
-  @extend %mn--f-body;
+  @include mn-type("body");
   font-weight: normal;
   margin: 0;
 }
