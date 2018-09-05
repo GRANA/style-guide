@@ -145,7 +145,7 @@
     width: 100%;
 
     img {
-      @include transform(scale(1.001));
+      @include transform(scale(1.002));
       position: relative;
       width: 100%;
     }
@@ -179,7 +179,7 @@
     opacity: 1;
 
     img {
-      @include transform(scale(1.001));
+      @include transform(scale(1.002));
       position: relative;
     }
 
