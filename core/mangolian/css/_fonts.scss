@@ -36,7 +36,7 @@
 @include grana-font-face("sofiapro", "../fonts/sofiapro/SofiaProMedium", 500, $file-formats: eot woff2 woff ttf);
 @include grana-font-face("sofiapro", "../fonts/sofiapro/SofiaProSemiBold", 600, $file-formats: eot woff2 woff ttf);
 
-@include grana-font-face("grana_icons", "../fonts/grana_icons/grana_icons_v3.03", $file-formats: eot woff ttf svg);
+@include grana-font-face("grana_icons", "../fonts/grana_icons/grana_icons_v3.04", $file-formats: eot woff ttf svg);
 
 $sofiapro: "sofiapro", arial, sans-serif;
 
