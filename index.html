@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Mangolian Design System</title>
+  <script
+		  src="https://code.jquery.com/jquery-1.11.1.min.js"
+		  integrity="sha256-VAvG3sHdS5LqTT+5A/aeq/bZGa/Uj04xKxY8KM/w9EE="
+		  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+  <script type="text/javascript" src="js/core.concat.min.js"></script>
+  <script type="text/javascript" src="vendor/title.animate.js"></script>
+  <script type="text/javascript" src="js/doc.min.js"></script>
+  <script type="text/javascript" src="js/examples.concat.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+  <body class="doc">
+  	<div class="sidenav">
+  <div class="doc-sandwich">
+    <div class="doc-sandwich-inner"></div>
+  </div>
+  <div class="sidenav-logo-section">
+    <div class="sidenav-logo"></div>
+  </div>
+  <nav role="navigation" class="sidenav-menu">
+    <h5 class="sidenav-menu-heading">styles</h5>
+    <ul class="sidenav-menu-items">
+      <li><a class="sidenav-menu-link" href="#colors">colors</a></li>
+      <li><a class="sidenav-menu-link" href="#grid">grid</a>
+        <ul class="sidenav-menu-sub-items">
+          <li><a class="sidenav-menu-link" href="#grid-breakpoints">breakpoints</a></li>
+          <li><a class="sidenav-menu-link" href="#grid-visibility">visibility</a></li>
+        </ul>
+      </li>
+      <li><a class="sidenav-menu-link" href="#typography">typography</a>
+        <ul class="sidenav-menu-sub-items">
+          <li><a class="sidenav-menu-link" href="#typography-sizes">type sizes</a></li>
+          <li><a class="sidenav-menu-link" href="#typography-line">line-height</a></li>
+          <li><a class="sidenav-menu-link" href="#typography-weight">font weight</a></li>
+        </ul>
+      </li>
+    </ul>
+    <h5 class="sidenav-menu-heading">components</h5>
+  	<ul class="sidenav-menu-items">
+      <li><a class="sidenav-menu-link" href="#buttons">buttons</a>
+        <ul class="sidenav-menu-sub-items">
+          <li><a class="sidenav-menu-link" href="#buttons-primary">primary button</a></li>
+          <li><a class="sidenav-menu-link" href="#buttons-ghost">ghost button</a></li>
+          <li><a class="sidenav-menu-link" href="#buttons-secondary">secondary button</a></li>
+          <li><a class="sidenav-menu-link" href="#buttons-siamese">siamese button</a></li>
+        </ul>
+      </li>
+  	  <li><a class="sidenav-menu-link" href="#checkbox">checkbox</a></li>
+      <li><a class="sidenav-menu-link" href="#colourselection">colour selection</a></li>
+      <li><a class="sidenav-menu-link" href="#datatable">datatable</a>
+        <ul class="sidenav-menu-sub-items">
+          <li><a class="sidenav-menu-link" href="#datatable-small">datatable small</a></li>
+          <li><a class="sidenav-menu-link" href="#datatable-lite">datatable lite</a></li>
+        </ul>
+      </li>
+      <li><a class="sidenav-menu-link" href="#dropdown">dropdown</a>
+        <ul class="sidenav-menu-sub-items">
+          <li><a class="sidenav-menu-link" href="#dropdown-invert">dropdown invert</a></li>
+        </ul>
+      </li>
+      <li><a class="sidenav-menu-link" href="#link">link</a>
+         <ul class="sidenav-menu-sub-items">
+          <li><a class="sidenav-menu-link" href="#link-arrow">link arrow</a></li>
+        </ul>
+      </li>
+  	  <li><a class="sidenav-menu-link" href="#radiobutton">radio button</a>
+         <ul class="sidenav-menu-sub-items">
+          <li><a class="sidenav-menu-link" href="#error-radiobutton">error radio button</a></li>
+        </ul>
+      </li>
+      <li><a class="sidenav-menu-link" href="#slider">slider</a>
+        <ul class="sidenav-menu-sub-items">
+          <li><a class="sidenav-menu-link" href="#range-slider">range slider</a></li>
+        </ul>
+      </li>
+      <li><a class="sidenav-menu-link" href="#stepper">stepper</a>
+        <ul class="sidenav-menu-sub-items">
+          <li><a class="sidenav-menu-link" href="#blue-stepper">blue stepper</a></li>
+          <li><a class="sidenav-menu-link" href="#outline-stepper">outline stepper</a></li>
+        </ul>
+      </li>
+      <li><a class="sidenav-menu-link" href="#switcheroo">switcheroo</a>
+        <ul class="sidenav-menu-sub-items">
+          <li><a class="sidenav-menu-link" href="#switcheroo-tight">switcheroo tight</a></li>
+        </ul>
+      </li>
+  	  <li><a class="sidenav-menu-link" href="#textfield">textfield</a>
+        <ul class="sidenav-menu-sub-items">
+          <li><a class="sidenav-menu-link" href="#standard-textfield">standard textfield</a></li>
+          <li><a class="sidenav-menu-link" href="#error-textfield">error textfield</a></li>
+        </ul>
+      </li>
+      <li><a class="sidenav-menu-link" href="#textarea">textarea</a></li>
+  	</ul>
+  </nav>
+</div>
+  	<div class="doc-background">
+  <div class="doc-background-right"></div>
+</div>
+  	<div class="doc-content">
+  	  <div class="doc-content-inner">
+        <div  id="colors"  class="doc-section first-section ">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>colors</h1>
+<p>These are the standard mangolian colors. They can be added to properties using the helper function, <code>mn-color("almostblack")</code>.</p>
+<ul class="doc-color-list">
+  <li>
+  	<div class="doc-color-box doc-color-white doc-color-border"></div>
+  	<div class="doc-color-name">white</div>
+  	<div>#fffff</div>
+  </li>
+  <li>
+    <div class="doc-color-box doc-color-lightgrey"></div>
+    <div class="doc-color-name">lightgrey</div>
+  	<div>#707881</div>
+  </li>
+  <li>
+    <div class="doc-color-box doc-color-darkgrey"></div>
+    <div class="doc-color-name">darkgrey</div>
+  	<div>#4c5258</div>
+  </li>
+  <li>
+    <div class="doc-color-box doc-color-styleguidebackground"></div>
+    <div class="doc-color-name">styleguidebackground</div>
+  	<div>#f9f9f9</div>
+  </li>
+  <li>
+    <div class="doc-color-box doc-color-brandblue"></div>
+    <div class="doc-color-name">brandblue</div>
+  	<div>#0083cb</div>
+  </li>
+  <li>
+    <div class="doc-color-box doc-color-almostblack"></div>
+    <div class="doc-color-name">almostblack</div>
+  	<div>#1d1f21</div>
+  </li>
+  <li>
+    <div class="doc-color-box doc-color-disabled"></div>
+    <div class="doc-color-name">disabled</div>
+  	<div>#cad0d3</div>
+  </li>
+  <li>
+    <div class="doc-color-box doc-color-green"></div>
+    <div class="doc-color-name">green</div>
+  	<div>#6fc49f</div>
+  </li>
+  <li>
+    <div class="doc-color-box doc-color-red"></div>
+    <div class="doc-color-name">red</div>
+  	<div>#ff5a5f</div>
+  </li>
+</ul>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+      
+    </div>
+  </div>
+</div>
+<div  id="grid"  class="doc-section first-section ">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>grid</h1>
+<p>Grid is used to quickly construct layouts. It is a mobile first, responsive, 12 column fluid grid with 20px gutters. It is a float based grid using the Neat library.<code></code> </p>
+
+<div class="mn--grid-dev">
+	<div class="mn--row">
+		
+			<div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"></div>
+		
+			<div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"></div>
+		
+			<div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"></div>
+		
+			<div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"></div>
+		
+			<div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"></div>
+		
+			<div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"></div>
+		
+			<div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"></div>
+		
+			<div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"></div>
+		
+			<div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"></div>
+		
+			<div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"></div>
+		
+			<div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"></div>
+		
+			<div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"></div>
+		
+	</div>
+</div>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">&lt;div class="mn--grid-dev"&gt;
+  &lt;div class="mn--row"&gt;
+      &lt;div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"&gt;&lt;/div&gt;
+      &lt;div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"&gt;&lt;/div&gt;
+      &lt;div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"&gt;&lt;/div&gt;
+      &lt;div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"&gt;&lt;/div&gt;
+      &lt;div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"&gt;&lt;/div&gt;
+      &lt;div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"&gt;&lt;/div&gt;
+      &lt;div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"&gt;&lt;/div&gt;
+      &lt;div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"&gt;&lt;/div&gt;
+      &lt;div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"&gt;&lt;/div&gt;
+      &lt;div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"&gt;&lt;/div&gt;
+      &lt;div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"&gt;&lt;/div&gt;
+      &lt;div style="height: 300px;" class="mn--col-dev mn--col-xs-6 mn--col-sm-4 mn--col-md-3 mn--col-lg-2 mn--col-xl-1"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+</div>
+      
+    </div>
+  </div>
+</div>
+<div  id="grid-breakpoints"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>breakpoints</h1>
+<p>There are five breakpoints beginning with small screened devices to larger desktop viewports. At a minimum, an element must have <code>.mn--col-xs-[number of columns]</code> to be the default. You can add subsequent column classes to get the desired layout for each breakpoint: <code>class="mn--col-xs-6 mn--col-sm-3"</code></p>
+
+<table class="mn--datatable">
+	<thead>
+	  <tr>
+	    <th>label</th>
+	    <th>value</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+	    <td>xs</td>
+	    <td>0px</td>
+	  </tr>
+	  <tr>
+	    <td>sm</td>
+	    <td>564px</td>
+	  </tr>
+	  <tr>
+	    <td>m</td>
+	    <td>768px</td>
+	  </tr>
+	  <tr>
+	    <td>lg</td>
+	    <td>992px</td>
+	  </tr>
+	  <tr>
+	    <td>xl</td>
+	    <td>1200px</td>
+	  </tr>
+	</tbody>
+</table>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+      
+    </div>
+  </div>
+</div>
+<div  id="grid-visibility"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>visiblity</h1>
+<p>We can control the visibility of elements based on the media queries, which can be useful in situations where the layout must change to accomodate different screen sizes.</p>
+<figure>
+    <div class="mn--vis-xs-block mn--vis-sm-none">only xs visible</div>
+    <div class="mn--vis-xs-none mn--vis-sm-block">sm and up visible</div>
+    <div class="mn--vis-xs-none mn--vis-md-block">md and up visible</div>
+    <div class="mn--vis-xs-none mn--vis-lg-block">lg and up visible</div>
+    <div class="mn--vis-xs-none mn--vis-xl-block">only xl visible</div>
+</figure>
+
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">
+&lt;div class="mn--vis-xs-block mn--vis-sm-none"&gt;only xs visible&lt;/div&gt;
+&lt;div class="mn--vis-xs-none mn--vis-sm-block"&gt;sm and up visible&lt;/div&gt;
+&lt;div class="mn--vis-xs-none mn--vis-md-block"&gt;md and up visible&lt;/div&gt;
+&lt;div class="mn--vis-xs-none mn--vis-lg-block"&gt;lg and up visible&lt;/div&gt;
+&lt;div class="mn--vis-xs-none mn--vis-xl-block"&gt;only xl visible&lt;/div&gt;
+</code></pre>
+
+</div>
+
+      
+    </div>
+  </div>
+</div>
+<div  id="typography"  class="doc-section first-section ">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>typography</h1>
+<p>These are the typography standards that are used in Mangolian UI for both desktop and mobile. Sofia Pro is the standard typeface used across the Grana brand.  Desktop and mobile typography vary due to the readability and legibility on different screen sizes. Type styles that are named the same should refer back to the device to determine followed style.</p>
+<p>The sass variable <code>$sofiapro</code> contains the recommended font stack.</p>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code>
+$sofiapro: "sofiapro", arial, sans-serif;
+
+font-family: $sofiapro;
+</code></pre>
+
+</div>
+      
+    </div>
+  </div>
+</div>
+<div  id="typography-sizes"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>type sizes</h1>
+<p>We have eight different text sizes to be utilized using a mixin. The intent is that each mixin can be added to css modules' type selectors, minimizing the amount of classes used on an element.</p>
+<div class="doc-scroll">
+  <table class="mn--datatable doc-type-size-table">
+    <thead>
+      <tr>
+        <th>px</th>
+        <th>mixin</th>
+        <th>actual</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>80px</td>
+        <td>mn-type("mega")</td>
+        <td><span class="mn--f-mega">the owls are not what they seem</span></td>
+      </tr>
+      <tr>
+        <td>60px</td>
+        <td>mn-type("submega")</td>
+        <td><span class="mn--f-submega">the owls are not what they seem</span></td>
+      </tr>
+      <tr>
+        <td>40px</td>
+        <td>mn-type("display")</td>
+        <td><span class="mn--f-display">the owls are not what they seem</span></td>
+      </tr>
+      <tr>
+        <td>30px</td>
+        <td>mn-type("headline")</td>
+        <td><span class="mn--f-headline">the owls are not what they seem</span></td>
+      </tr>
+      <tr>
+        <td>20px</td>
+        <td>mn-type("title")</td>
+        <td><span class="mn--f-title">the owls are not what they seem</span></td>
+      </tr>
+      <tr>
+        <td>15px</td>
+        <td>mn-type("body")</td>
+        <td><span class="mn--f-body">the owls are not what they seem</span></td>
+      </tr>
+      <tr>
+        <td>12px</td>
+        <td>mn-type("caption")</td>
+        <td><span class="mn--f-caption">the owls are not what they seem</span></td>
+      </tr>
+      <tr>
+        <td>10px</td>
+        <td>mn-type("small")</td>
+        <td><span class="mn--f-small">the owls are not what they seem</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>sass example</h3>
+  
+<pre><code>.container-title {
+  @include mn-type("title");
+  color: $primary-text;
+  text-transform: lowercase;	
+}
+</code></pre>
+
+</div>
+      
+    </div>
+  </div>
+</div>
+<div  id="typography-line"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>line-height</h1>
+<p>Line-height creates the spacing for text in order to maintain ledgibility for different type sizes. Furthermore, a component's structure, such as margin and padding are contigent on this value. It is important for elements to be attributed with the appropriate line-height.</p>
+
+<p>We have three line-heights: tight, regular, and large. These line-heights do not need to be included as they are baked into the type size placeholders.</p>
+
+
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+      
+    </div>
+  </div>
+</div>
+<div  id="typography-weight"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>font weight</h1>
+<p>There are three weights we use for our type: regular, medium, and semibold. You can add the font-weight property directly to the selector.</p>
+<table class="mn--datatable">
+  <thead>
+    <tr>
+      <th>weight</th>
+      <th>actual</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>400</td>
+      <td><span class="mn--f-title">regular</span></td>
+    </tr>
+    <tr>
+      <td>500</td>
+      <td><span class="mn--f-title mn--f-weight-500">medium</span></td>
+    </tr>
+    <tr>
+      <td>600</td>
+      <td><span class="mn--f-title mn--f-weight-600">semibold</span></td>
+    </tr>
+  </tbody>
+</table>
+
+
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+      
+    </div>
+  </div>
+</div>
+<div  id="buttons"  class="doc-section first-section ">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>buttons</h1>
+<p>These are the basic button styles that are used on v4 of the Grana website. They are used to initialise an action, either in the background or the foreground of an experience. Buttons normally activate through a click or a tap depending on desktop or mobile use.</p>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+      
+    </div>
+  </div>
+</div>
+<div  id="buttons-primary"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>primary button</h1>
+<p>Use when it’s the principle call to action on the page. The colour of the primary button should be flexible to the context of its use — as long as it has the primary dominance of the page.</p>
+<p>Add the <code>.mn--bt-primary</code> class to a clickable element such as an anchor or button. You must include a colour variation: <code>.mn--bt-primary-blue</code>, <code>.mn--bt-primary-almostblack</code>, or <code>.mn--bt-primary-white</code>.</p>
+<figure>
+  <a href="#" class="mn--bt-primary mn--bt-primary-blue">shop now</a>
+  <a href="#" class="mn--bt-primary mn--bt-primary-almostblack">shop now</a>
+  <button class="mn--bt-primary mn--bt-primary-white">shop now</button>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">&lt;a href="#" class="mn--bt-primary mn--bt-primary-blue"&gt;shop now&lt;/a&gt;
+&lt;a href="#" class="mn--bt-primary mn--bt-primary-almostblack"&gt;shop now&lt;/a&gt;
+&lt;button class="mn--bt-primary mn--bt-primary-white"&gt;shop now&lt;/button&gt;
+</code></pre>
+
+</div>
+      
+    </div>
+  </div>
+</div>
+<div  id="buttons-ghost"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>ghost button</h1>
+<p>Use this button to replace the primary button there is no other secondary button or when attention should be given to the background image in which the button lives. Refer to above for guidance on button sets.</p>
+<p>Add the <code>.mn--bt-ghost</code> class to a clickable element such as an anchor or button. You must include a colour variation: <code>.mn--bt-ghost-blue</code> or <code>.mn--bt-primary-almostblack</code>.</p>
+<figure>
+  <a href="#" class="mn--bt-ghost mn--bt-ghost-blue">shop now</a>
+  <a href="#" class="mn--bt-ghost mn--bt-ghost-almostblack">shop now</a>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">&lt;a href="#" class="mn--bt-ghost mn--bt-ghost-blue"&gt;shop now&lt;/a&gt;
+&lt;a href="#" class="mn--bt-ghost mn--bt-ghost-almostblack"&gt;shop now&lt;/a&gt;
+</code></pre>
+
+</div>
+      
+    </div>
+  </div>
+</div>
+<div  id="buttons-secondary"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>secondary button</h1>
+<p>Use for secondary actions of each page. These buttons should not function as links but as actions that change what or how data is displayed on the page (view more, show all, etc).</p>
+<p>Add the <code>.mn--bt-secondary</code> class to an anchor tag. You must include a colour variation: <code>.mn--bt-secondary-almostblack</code> or <code>.mn--bt-secondary-white</code>.</p>
+<figure>
+  <a href="#" class="mn--bt-secondary mn--bt-secondary-almostblack">shop now</a>
+  <a href="#" class="mn--bt-secondary mn--bt-secondary-white">shop now</a>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">&lt;a href="#" class="mn--bt-secondary mn--bt-secondary-almostblack"&gt;shop now&lt;/a&gt;
+&lt;a href="#" class="mn--bt-secondary mn--bt-secondary-white"&gt;shop now&lt;/a&gt;
+</code></pre>
+
+</div>
+      
+    </div>
+  </div>
+</div>
+<div  id="buttons-siamese"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>siamese button</h1>
+<p>This variation is used where additional information or icon is attached to the button. The information or icon should give the user more context to the function or action of that button.</p>
+<p>Both <code>.mn--bt-siamesetext</code> and <code>.mn--bt-siameseicon</code> can be combined with other buttons styles. The siamese icon has one variation, <code>.mn--bt-siameseicon-arrow</code>.</p>
+<figure>
+  <a href="#" class="mn--bt-primary mn--bt-primary-blue mn--bt-siamesetext">
+  	<div class="mn--bt-siamesetext-inner">add to bag<span class="mn--bt-siamesetext-right">IRD1,000,000</span></div>
+  </a>
+  <a href="#" class="mn--bt-ghost mn--bt-ghost-almostblack mn--bt-siameseicon mn--bt-siameseicon-arrow">shop now</a>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">&lt;a href="#" class="mn--bt-primary mn--bt-primary-blue mn--bt-siamesetext"&gt;
+  &lt;div class="mn--bt-siamesetext-inner"&gt;
+    add to bag&lt;span class="mn--bt-siamesetext-right"&gt;IRD1,000,000&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/a&gt;
+&lt;a href="#" 
+  class="mn--bt-ghost 
+  mn--bt-ghost-almostblack 
+  mn--bt-siameseicon
+  mn--bt-siameseicon-arrow"&gt;shop now&lt;/a&gt;
+</code></pre>
+
+</div>
+      
+    </div>
+  </div>
+</div>
+<div  id="checkbox"  class="doc-section first-section ">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>checkbox</h1>
+<p>Checkboxes allow users to select multiple options from a set.</p>
+<p>The input field of type <code>checkbox</code> must have the class <code>.checkbox</code> and can be wrapped in <code>.field-group</code>. The input field must have a label sibling with the class <code>.checkbox-label</code> containing an inline <code>span</code> with the <code>.checkbox-label-box</code> class. Use <code>checked</code> to preselect an option.</p>
+<figure>
+  <div class="field-group">
+    <input type="checkbox" id="checkbox-example" class="checkbox" checked>
+	<label for="checkbox-example" class="checkbox-label"><span class="checkbox-label-box"></span></label>
+  </div>
+  <div class="field-group">
+    <input type="checkbox" id="checkbox-example-1" class="checkbox">
+	<label for="checkbox-example-1" class="checkbox-label"><span class="checkbox-label-box"></span></label>
+  </div>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">&lt;div class="field-group"&gt;
+  &lt;input type="checkbox" id="checkbox-example" class="checkbox" checked&gt;
+  &lt;label for="checkbox-example" class="checkbox-label"&gt;
+    &lt;span class="checkbox-label-box"&gt;&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+
+</div>
+
+
+      
+    </div>
+  </div>
+</div>
+<div  id="colourselection"  class="doc-section first-section ">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>colour selection</h1>
+<p>Colour selection for use on category page quick add, and filtering.</p>
+
+<p>Input field of type <code>checkbox</code> and <code>radio</code> can be used. The input tag must have the class <code>.mn--cs-input</code>. There must be a label sibling with the class <code>.mn--cs-label</code> containing an inline <code>span</code> with the class <code>.mn--cs-circle</code>. Add the colour class to the span tag.</p>
+<p>The colour name may be added to a div next to <code>.mn--cs-circle</code> with a class name of <code>.mn--cs-name</code> and either <code>.mn--cs-name-sm</code> or <code>.mn--cs-name-lg</code>.</p>
+<p>The colour selection variation, compact, can be added with <code>.mn--cs-compact</code> on the div element with <code>.mn--cs</code>.</p>
+<figure>
+  <div class="mn--cs mn--cs-compact">
+    <input type="checkbox" name="cs-example-0" id="cs-example-0" class="mn--cs-input" checked>
+    <label for="cs-example-0" class="mn--cs-label"><span class="mn--cs-circle compact-cs-blue"></span><div class="mn--cs-name mn--cs-name-sm">Grana blue</div></label>
+  </div>
+
+  <div class="mn--cs mn--cs-compact">
+    <input type="checkbox" name="cs-example-1" id="cs-example-1" class="mn--cs-input">
+    <label for="cs-example-1" class="mn--cs-label"><span class="mn--cs-circle compact-cs-lilac"></span><div class="mn--cs-name mn--cs-name-sm">Lilac</div></label>
+  </div>
+
+  <div class="mn--cs mn--cs-compact">
+    <input type="checkbox" name="cs-example-2" id="cs-example-2" class="mn--cs-input">
+    <label for="cs-example-2" class="mn--cs-label"><span class="mn--cs-circle compact-cs-multi"></span><div class="mn--cs-name mn--cs-name-sm">Burgundy</div></label>
+  </div>
+</figure>
+
+<p>The large variation is added with <code>.mn--cs-large</code>.</p>
+
+<figure>
+  <div class="mn--cs mn--cs-large">
+    <input type="checkbox" name="cs-large-example-0" id="cs-large-example-0" class="mn--cs-input" checked>
+    <label for="cs-large-example-0" class="mn--cs-label"><span class="mn--cs-circle compact-cs-blue"></span><div class="mn--cs-name mn--cs-name-sm">Grana blue</div></label>
+  </div>
+
+  <div class="mn--cs mn--cs-large">
+    <input type="checkbox" name="cs-large-example-1" id="cs-large-example-1" class="mn--cs-input">
+    <label for="cs-large-example-1" class="mn--cs-label"><span class="mn--cs-circle compact-cs-lilac"></span><div class="mn--cs-name mn--cs-name-sm">Lilac</div></label>
+  </div>
+
+  <div class="mn--cs mn--cs-large">
+    <input type="checkbox" name="cs-large-example-2" id="cs-large-example-2" class="mn--cs-input">
+    <label for="cs-large-example-2" class="mn--cs-label"><span class="mn--cs-circle compact-cs-multi"></span><div class="mn--cs-name mn--cs-name-sm">Burgundy</div></label>
+  </div>
+</figure>
+
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">&lt;div class="mn--cs mn--cs-compact"&gt;
+  &lt;input type="checkbox" name="compact-cs-check-example" id="compact-cs-example-0" 
+  class="mnc--cs-input" checked&gt;
+  &lt;label for="compact-cs-example-0" class="mn--cs-label"&gt;
+    &lt;span class="mn--cs-circle compact-cs-blue">&lt;/span&gt;
+    &lt;div class="mn--cs-name mn--cs-name-sm"&gt;Grana blue&lt;/div&gt;
+  &lt;/label&gt;
+&lt;/div&gt;
+</code></pre>
+
+</div>
+
+      
+    </div>
+  </div>
+</div>
+<div  id="datatable"  class="doc-section first-section ">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>datatable</h1>
+<p>Data tables present raw data sets and give meaning to the data through their arrangement while making sure that the data is easily readable, scannable and comparable. Within the Grana website, whether mobile or desktop, data tables only display information – users should not be able to manipulate or the data that is presented within the cells.</p>
+<p>Add <code>.mn--datatable</code> to the <code>table</code> tag.</p>
+<figure>
+  <table class="mn--datatable">
+    <thead>
+      <tr>
+        <th>Country</th>
+        <th>Refund Process</th>
+        <th>Refund Period</th>
+        <th>Refund Fee</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Canada</td>
+        <td>14 working days</td>
+        <td>30 days</td>
+        <td>CA$17</td>
+      </tr>
+      <tr>
+        <td>United States</td>
+        <td>14 working days</td>
+        <td>30 days</td>
+        <td>US$8</td>
+      </tr>
+    </tbody>
+  </table>
+
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">&lt;table class="mn--datatable"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Country&lt;/th&gt;
+      &lt;th&gt;Refund Process&lt;/th&gt;
+      &lt;th&gt;Refund Period&lt;/th&gt;
+      &lt;th&gt;Refund Fee&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Canada&lt;/td&gt;
+      &lt;td&gt;14 working days&lt;/td&gt;
+      &lt;td&gt;30 days&lt;/td&gt;
+      &lt;td&gt;CA$17&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;United States&lt;/td&gt;
+      &lt;td&gt;14 working days&lt;/td&gt;
+      &lt;td&gt;30 days&lt;/td&gt;
+      &lt;td&gt;US$8&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+</div>
+      
+    </div>
+  </div>
+</div>
+<div  id="datatable-small"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>datatable small</h1>
+<p>The small data table is used in context where the data table might just be a part of a group of components within a page. Use a minimum padding of 20px in between each column. The widest item in the column (including data and column title) should delineate the column border.  The data table should always fit the full width of the mobile grid and define each column by the nearest percentage ratio that fits the data.</p>
+<p>Add <code>.mn--datatable</code> and <code>.mn--datatable-small</code> to the <code>table</code> tag.</p>
+<figure>
+  <table class="mn--datatable mn--datatable-small">
+    <thead>
+      <tr>
+        <th>Country</th>
+        <th>Refund Process</th>
+        <th>Refund Period</th>
+        <th>Refund Fee</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Canada</td>
+        <td>14 working days</td>
+        <td>30 days</td>
+        <td>CA$17</td>
+      </tr>
+      <tr>
+        <td>United States</td>
+        <td>14 working days</td>
+        <td>30 days</td>
+        <td>US$8</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">&lt;table class="mn--datatable mn--datatable-small"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Country&lt;/th&gt;
+      &lt;th&gt;Refund Process&lt;/th&gt;
+      &lt;th&gt;Refund Period&lt;/th&gt;
+      &lt;th&gt;Refund Fee&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Canada&lt;/td&gt;
+      &lt;td&gt;14 working days&lt;/td&gt;
+      &lt;td&gt;30 days&lt;/td&gt;
+      &lt;td&gt;CA$17&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;United States&lt;/td&gt;
+      &lt;td&gt;14 working days&lt;/td&gt;
+      &lt;td&gt;30 days&lt;/td&gt;
+      &lt;td&gt;US$8&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+</div>
+      
+    </div>
+  </div>
+</div>
+<div  id="datatable-lite"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>datatable lite</h1>
+<p>The lite data table is a variation that is applicable for both the large and small versions of the data table. This version allows for a smaller amount of information to be much more readily accessible to the audience. The lite data table consists of only two columns with no divider. The column title is outside of table body without its own row. The height of the rows and the internal padding rules still apply.</p>
+<p>Add <code>.mn--datatable</code> and <code>.mn--datatable-lite</code> to the <code>table</code> tag. You can also create a small datatable using <code>.mn--datatable-small</code>. Be sure to include a <code>colspan</code> to the header cell.</p>
+<figure>
+  <table class="mn--datatable mn--datatable-small mn--datatable-lite">
+    <thead>
+      <tr>
+        <th colspan="2">column title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>value 1</td>
+        <td>value a</td>
+      </tr>
+      <tr>
+        <td>value 2</td>
+        <td>value b</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">&lt;table class="mn--datatable mn--datatable-small mn--datatable-lite"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th colspan="2"&gt;column tile&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;value 1&lt;/td&gt;
+      &lt;td&gt;value a&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;value 2&lt;/td&gt;
+      &lt;td&gt;value b&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+
+</div>
+      
+    </div>
+  </div>
+</div>
+<div  id="dropdown"  class="doc-section first-section ">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>dropdown</h1>
+<p>A dropdown allows the user to choose between multiple options.</p>
+<p>The data attribute <code>field-value</code> is added to the <code>.field-dropdown-item</code> with the value to be passed to the hidden input field.</p>
+<p>To disable a dropdown item, add the state class <code>.is-disabled</code>.</p>
+<figure class="doc-overflow">
+<div class="field-group">
+  <div id="dropdown-example" class="field-dropdown">
+    <span class="field-dropdown-label"></span>
+      <div class="field-dropdown-list-container">
+        <ul class="field-dropdown-list">
+          <li class="field-dropdown-item" data-field-value="AD">Andorra</li>
+          <li class="field-dropdown-item" data-field-value="AU">Australia</li>
+          <li class="field-dropdown-item" data-field-value="AT">Austria</li>
+          <li class="field-dropdown-item" data-field-value="BH">Bahrain</li>
+          <li class="field-dropdown-item" data-field-value="BE">Belgium</li>
+          <li class="field-dropdown-item" data-field-value="BN">Brunei</li>
+        </ul>
+      </div>
+      <input type="hidden" name="dropdownExample">
+  </div>
+</div>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+
+<div class="doc-example">
+  <h3>html example</h3>
+  
+<pre><code class="html">&lt;div class="field-group"&gt;
+  &lt;div id="dropdown-example" class="field-dropdown field-dropdown-up"&gt;
+    &lt;span class="field-dropdown-label"&gt;&lt;/span&gt;
+      &lt;div class="field-dropdown-list-container"&gt;
+        &lt;ul class="field-dropdown-list"&gt;
+          &lt;li class="field-dropdown-item" data-field-value="AD"&gt;Andorra&lt;/li&gt;
+          &lt;li class="field-dropdown-item" data-field-value="AU"&gt;Australia&lt;/li&gt;
+          &lt;li class="field-dropdown-item" data-field-value="AT"&gt;Austria&lt;/li&gt;
+          &lt;li class="field-dropdown-item" data-field-value="BH"&gt;Bahrain&lt;/li&gt;
+          &lt;li class="field-dropdown-item" data-field-value="BE"&gt;Belgium&lt;/li&gt;
+          &lt;li class="field-dropdown-item" data-field-value="BN"&gt;Brunei&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;input type="hidden" name="dropdownExample"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+</div>
+
+
+
+<div class="doc-example">
+  <h3>js example</h3>
+  
+<pre><code>$("#dropdown-example").fieldDropdown({
+  inputName: "dropdownExample",
+  defaultItem: "BH",
+  onselect: function(el) {
+    var isoCode = $(el).data("field-value");
+  },
+});
+</code></pre>
+
+</div>
+
+
+      
+    </div>
+  </div>
+</div>
+<div  id="dropdown-invert"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>dropdown invert</h1>
+<p>Add <code>.field-dropdown-invert</code> next to <code>.field-dropdown</code> to have the list open upwards.</p>
+<figure class="doc-overflow">
+<div class="field-group">
+  <div id="dropdown-invert-example" class="field-dropdown field-dropdown-invert">
+    <span class="field-dropdown-label"></span>
+      <div class="field-dropdown-list-container">
+        <ul class="field-dropdown-list">
+          <li class="field-dropdown-item" data-field-value="AD">Andorra</li>
+          <li class="field-dropdown-item" data-field-value="AU">Australia</li>
+          <li class="field-dropdown-item" data-field-value="AT">Austria</li>
+          <li class="field-dropdown-item" data-field-value="BH">Bahrain</li>
+          <li class="field-dropdown-item" data-field-value="BE">Belgium</li>
+          <li class="field-dropdown-item" data-field-value="BN">Brunei</li>
+        </ul>
+      </div>
+      <input type="hidden" name="dropdownInvertExample">
+  </div>
+</div>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+      
+    </div>
+  </div>
+</div>
+<div  id="link"  class="doc-section first-section ">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>link</h1>
+<p>Links are the primary navigational element on the Grana website. Clicking on a link should always take users to another page. If the action taken by the user will change or manipulate data, use a button instead.</p>
+<figure>
+  <a href="#" class="mn--link">see what's new</a>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">&lt;a href="#" class="mn--link"&gt;see what&#39;s new&lt;/a&gt;</code></pre>
+
+</div>
+      
+    </div>
+  </div>
+</div>
+<div  id="link-arrow"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>link arrow</h1>
+<p>Arrow links should exist as separate elements within a layout and should not be contained in the same container as a text field. They can be used in a number of font sizes depending on usage context. The arrow glyph also has corresponding small, medium, and large sizes.</p>
+<p>Comes in two colours, <code>.mn--link-arrow-almostblack</code> and <code>.mn--link-arrow-white</code>.</p>
+<figure>
+  <a href="#" class="mn--link-arrow mn--link-arrow-almostblack">show me where</a>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">&lt;a href="#" class="mn--link-arrow mn--link-arrow-almostblack"&gt;show me where&lt;/a&gt;</code></pre>
+
+</div>
+      
+    </div>
+  </div>
+</div>
+<div  id="radiobutton"  class="doc-section first-section ">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>radio button</h1>
+<p>Radio buttons are used in situations where there are two or more options, and the user may only select one.</p>
+
+<p>The input field of type <code>radio</code> must have the class <code>.radiobutton</code> and can be wrapped in <code>.field-group</code>. The input field must have a label sibling containing an inline <code>span</code> with the class <code>.radiobutton-label-name</code>. Use <code>checked</code> to choose the initial option.</p>
+<p>Add <code>.radiobutton-deselect</code> to the input to allow for deselection.</p>
+<figure>
+  <div class="field-group">
+    <input type="radio" name="radio-example" id="radio-example-0" class="radiobutton radiobutton-deselect" checked>
+    <label for="radio-example-0"><span class="radiobutton-label-name">option 1</span></label>
+  </div>
+  <div class="field-group">
+    <input type="radio" name="radio-example" id="radio-example-1" class="radiobutton radiobutton-deselect">
+    <label for="radio-example-1"><span class="radiobutton-label-name">option 2</span></label>
+  </div>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">&lt;div class="field-group"&gt;
+  &lt;input type="radio" name="radio-example" id="radio-example-0" class="radiobutton" checked&gt;
+  &lt;label for="radio-example-0"&gt;
+    &lt;span class="radiobutton-label-name"&gt;
+      option 1
+    &lt;/span&gt;
+  &lt;/label&gt;
+ &lt;/div&gt;
+</code></pre>
+
+</div>
+
+      
+    </div>
+  </div>
+</div>
+<div  id="error-radiobutton"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>error radio button</h1>
+<p>Radio buttons have an error state. Add the <code>.is-error</code> class to the <code>input</code> tag.</p>
+<figure>
+  <div class="field-group">
+    <input type="radio" name="radio-error-example" id="radio-error-example-0" class="radiobutton is-error">
+    <label for="radio-error-example-0"><span class="radiobutton-label-name">option 1</span></label>
+  </div>
+  <div class="field-group">
+    <input type="radio" name="radio-error-example" id="radio-error-example-1" class="radiobutton is-error">
+    <label for="radio-error-example-1"><span class="radiobutton-label-name">option 2</span></label>
+  </div>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">&lt;div class="field-group"&gt;
+  &lt;input type="radio" name="radio-error-example" id="radio-error-example-0" class="radiobutton is-error"&gt;
+  &lt;label for="radio-error-example-0"&gt;
+    &lt;span class="radiobutton-label-name"&gt;
+      option 1
+    &lt;/span&gt;
+  &lt;/label&gt;
+ &lt;/div&gt;
+</code></pre>
+
+</div>
+
+      
+    </div>
+  </div>
+</div>
+<div  id="slider"  class="doc-section first-section ">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>slider</h1>
+<p>A slider selects a value within a range of values. The standard slider features one handle to select a single value.</p>
+<p>The implementation requires a div element with a unique id, which the slider plugin uses. The element must contain the div <code>.ui-slider-range-labels</code> with the child element <code>.ui-slider-range-cur</code>.</p>
+<p>Please refer to the <a href="http://api.jqueryui.com/slider/" target="_blank">jQuery UI Slider API</a> for features.</p>
+<figure>
+  <div id="slider-example">
+    <div class="ui-slider-range-labels">
+    	<div class="ui-slider-range-cur"></div>
+    </div>
+  </div>
+</figure>
+
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>html example</h3>
+  
+<pre><code class="html">&lt;div id="slider-example"&gt;
+  &lt;div class="ui-slider-range-labels"&gt;
+    &lt;div class="ui-slider-range-cur"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  </code></pre>
+
+</div>
+
+
+
+<div class="doc-example">
+  <h3>js example</h3>
+  
+<pre><code>$('#slider-example').slider({
+  min: 0,
+  max: 100,
+  step: 5,
+  values: [ 20 ],
+  slide: function(event,ui) {
+    $(this).find('.ui-slider-range-cur').html('$' + ui.values[0]);
+  },
+});
+$('#slider-example').find('.ui-slider-range-cur').html('$' + $('#slider-example').slider('values',0));
+</code></pre>
+
+</div>
+
+      
+    </div>
+  </div>
+</div>
+<div  id="range-slider"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>range slider</h1>
+<p>A range slider allows a range to be chosen within the min and max values. </p>
+
+<p>Similar to a regular slider, it requires a div element with a unique id, which the slider plugin uses. The element must contain the div <code>.ui-slider-range-labels</code> with the child elements <code>.ui-slider-range-min</code> and <code>.ui-slider-range-max</code>.</p>
+
+<figure>
+  <div id="slider-range-example">
+    <div class="ui-slider-range-labels">
+    	<div class="ui-slider-range-min"></div><div class="ui-slider-range-max"></div>
+    </div>
+  </div>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>html example</h3>
+  
+<pre><code class="html">&lt;div id="slider-range-example"&gt;
+  &lt;div class="ui-slider-range-labels"&gt;
+    &lt;div class="ui-slider-range-min"&gt;&lt;/div&gt;
+    &lt;div class="ui-slider-range-max"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+  </code></pre>
+
+</div>
+
+
+
+<div class="doc-example">
+  <h3>js example</h3>
+  
+<pre><code>$('#slider-range-example').slider({
+  range: true,
+  min: 0,
+  max: 100,
+  step: 5,
+  values: [ 20, 50 ],
+  slide: function(event,ui) {
+    $(this).find('.ui-slider-range-min').html('$' + ui.values[0]);
+    $(this).find('.ui-slider-range-max').html('$' + ui.values[1]);
+  },
+});
+$('#slider-range-example').find('.ui-slider-range-min').html('$' + $('#slider-range-example').slider('values',0));
+$('#slider-range-example').find('.ui-slider-range-max').html('$' + $('#slider-range-example').slider('values',1));
+</code></pre>
+
+</div>
+
+      
+    </div>
+  </div>
+</div>
+
+<div  id="stepper"  class="doc-section first-section ">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>stepper</h1>
+<p>The stepper allows users to change the value in increments specified in the <code>step</code> attribute between the <code>min</code> and <code>max</code> values.</p>
+<figure>
+<div id="stepper-example" class="stepper" style="width: 120px;">
+  <button class="stepper-button stepper-down"></button>
+  <input type="number" class="stepper-numeric" min="1" max="99" step="1" value="1" readonly>
+  <button class="stepper-button stepper-up"></button>
+</div>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+
+<div class="doc-example">
+  <h3>html example</h3>
+  
+<pre><code class="html">&lt;div id="stepper-example" class="stepper"&gt;
+  &lt;button class="stepper-button stepper-down"&gt;&lt;/button&gt;
+  &lt;input type="number" class="stepper-numeric" 
+    min="1" 
+    max="99" 
+    step="1" 
+    value="1" 
+    readonly&gt;
+  &lt;button class="stepper-button stepper-up"&gt;&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+
+</div>
+
+
+
+<div class="doc-example">
+  <h3>js example</h3>
+  
+<pre><code>$('#stepper-example').stepper();</code></pre>
+
+</div>
+
+
+      
+    </div>
+  </div>
+</div>
+<div  id="blue-stepper"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>blue stepper</h1>
+<p>A blue variation on the default stepper. Add <code>.stepper-blue</code> to the main stepper element.</p>
+<figure>
+<div id="stepper-example-blue" class="stepper stepper-blue" style="width: 120px;">
+  <button class="stepper-button stepper-down"></button>
+  <input type="number" class="stepper-numeric" min="1" max="99" step="1" value="1" readonly>
+  <button class="stepper-button stepper-up"></button>
+</div>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+      
+    </div>
+  </div>
+</div>
+<div  id="outline-stepper"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>outline stepper</h1>
+<p>An outline variation on the default stepper. Add <code>.stepper-outline</code> to the main stepper element.</p>
+<figure>
+<div id="stepper-example-outline" class="stepper stepper-outline" style="width: 120px;">
+  <button class="stepper-button stepper-down"></button>
+  <input type="number" class="stepper-numeric" min="1" max="99" step="1" value="1" readonly>
+  <button class="stepper-button stepper-up"></button>
+</div>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+      
+    </div>
+  </div>
+</div>
+<div  id="switcheroo"  class="doc-section first-section ">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>switcheroo</h1>
+<p>The switcheroo is a component that allows the user to choose an exclusive selection from a number of options. This selection manipulates and changes the content shown to the user.</p>
+<p>Include <code>.mn--switcheroo-icon</code> next to <code>.mn--switcheroo</code> if there is only an icon.</p>
+<figure>
+<ul class="mn--switcheroo">
+  <li class="mn--switcheroo-panel">
+  	<input type="radio" id="switcheroo-example-credit" class="mn--switcheroo-input" name="switcheroo-example" value="credit" checked>
+  	<label for="switcheroo-example-credit" class="mn--switcheroo-label">
+  	  <div class="mn--switcheroo-inner">
+  	  	<div class="mn--switcheroo-icon-container mn--switcheroo-icon-example-1"></div>
+  	  	<h4 class="mn--switcheroo-labeltext">credit card</h4>
+  	  	<p class="mn--switcheroo-subtext">description and text</p>
+  	  </div>
+  	</label>
+  </li>
+  <li class="mn--switcheroo-panel">
+    <input type="radio" id="switcheroo-example-paypal" class="mn--switcheroo-input" name="switcheroo-example" value="paypal">
+    <label for="switcheroo-example-paypal" class="mn--switcheroo-label">
+      <div class="mn--switcheroo-inner">
+      	<div class="mn--switcheroo-icon-container mn--switcheroo-icon-example-2"></div>
+  	  	<h4 class="mn--switcheroo-labeltext">paypal</h4>
+  	  	<p class="mn--switcheroo-subtext">description and text</p>
+  	  </div>
+    </label>
+  	
+  </li>
+  <li class="mn--switcheroo-panel">
+  	<input type="radio" id="switcheroo-example-cash" class="mn--switcheroo-input" name="switcheroo-example" value="cash">
+  	<label for="switcheroo-example-cash" class="mn--switcheroo-label">
+  	  <div class="mn--switcheroo-inner">
+  	  	<div class="mn--switcheroo-icon-container mn--switcheroo-icon-example-3"></div>
+  	  	<h4 class="mn--switcheroo-labeltext">cash</h4>
+  	  	<p class="mn--switcheroo-subtext">description and text</p>
+  	  </div>
+    </label>
+  </li>
+</ul>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">
+&lt;ul class="mn--switcheroo"&gt;
+  &lt;li class="mn--switcheroo-panel"&gt;
+    &lt;input type="radio" id="switcheroo-example-credit" class="mn--switcheroo-input" name="switcheroo-example" value="credit" checked&gt;
+    &lt;label for="switcheroo-example-credit" class="mn--switcheroo-label"&gt;
+      &lt;div class="mn--switcheroo-inner"&gt;
+        &lt;div class="mn--switcheroo-icon-container mn--switcheroo-icon-example-1"&gt;&lt;/div&gt;
+        &lt;h4 class="mn--switcheroo-labeltext"&gt;credit card&lt;/h4&gt;
+        &lt;p class="mn--switcheroo-subtext"&gt;description and text&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/label&gt;
+  &lt;/li&gt;
+  &lt;li class="mn--switcheroo-panel"&gt;
+    &lt;input type="radio" id="switcheroo-example-paypal" class="mn--switcheroo-input" name="switcheroo-example" value="paypal"&gt;
+    &lt;label for="switcheroo-example-paypal" class="mn--switcheroo-label"&gt;
+      &lt;div class="mn--switcheroo-inner"&gt;
+        &lt;div class="mn--switcheroo-icon-container mn--switcheroo-icon-example-2"&gt;&lt;/div&gt;
+        &lt;h4 class="mn--switcheroo-labeltext"&gt;paypal&lt;/h4&gt;
+        &lt;p class="mn--switcheroo-subtext"&gt;description and text&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/label&gt;
+  &lt;/li&gt;
+  &lt;li class="mn--switcheroo-panel"&gt;
+    &lt;input type="radio" id="switcheroo-example-cash" class="mn--switcheroo-input" name="switcheroo-example" value="cash"&gt;
+    &lt;label for="switcheroo-example-cash" class="mn--switcheroo-label"&gt;
+      &lt;div class="mn--switcheroo-inner"&gt;
+        &lt;div class="mn--switcheroo-icon-container mn--switcheroo-icon-example-3"&gt;&lt;/div&gt;
+        &lt;h4 class="mn--switcheroo-labeltext"&gt;cash&lt;/h4&gt;
+        &lt;p class="mn--switcheroo-subtext"&gt;description and text&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/label&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+</div>
+      
+    </div>
+  </div>
+</div>
+<div  id="switcheroo-tight"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>switcheroo tight</h1>
+<p>There’s a variation of the text only switcher with tighter padding between the panel border and the label. Keep the use of this variation to situations where content within an element is being manipulated or changed.</p>
+<p>Include <code>.mn--switcheroo-tight</code> next to <code>.mn--switcheroo</code>.</p>
+<figure>
+<ul class="mn--switcheroo mn--switcheroo-tight">
+  <li class="mn--switcheroo-panel">
+  	<input type="radio" id="switcheroo-tight-example-xxs" class="mn--switcheroo-input" name="switcheroo-tight-example" value="xxs">
+  	<label for="switcheroo-tight-example-xxs" class="mn--switcheroo-label">
+  	  <div class="mn--switcheroo-inner">
+  	  	<h4 class="mn--switcheroo-labeltext">xxs</h4>
+  	  </div>
+  	</label>
+  </li>
+  <li class="mn--switcheroo-panel">
+    <input type="radio" id="switcheroo-tight-example-xs" class="mn--switcheroo-input" name="switcheroo-tight-example" value="xs">
+    <label for="switcheroo-tight-example-xs" class="mn--switcheroo-label">
+      <div class="mn--switcheroo-inner">
+      	<h4 class="mn--switcheroo-labeltext">xs</h4>
+  	  </div>
+    </label>
+  </li>
+  <li class="mn--switcheroo-panel">
+  	<input type="radio" id="switcheroo-tight-example-s" class="mn--switcheroo-input" name="switcheroo-tight-example" value="s" checked>
+  	<label for="switcheroo-tight-example-s" class="mn--switcheroo-label">
+  	  <div class="mn--switcheroo-inner">
+  	  	<h4 class="mn--switcheroo-labeltext">s</h4>
+  	  </div>
+    </label>
+  </li>
+  <li class="mn--switcheroo-panel">
+    <input type="radio" id="switcheroo-tight-example-m" class="mn--switcheroo-input" name="switcheroo-tight-example" value="m">
+    <label for="switcheroo-tight-example-m" class="mn--switcheroo-label">
+      <div class="mn--switcheroo-inner">
+        <h4 class="mn--switcheroo-labeltext">m</h4>
+      </div>
+    </label>
+  </li>
+  <li class="mn--switcheroo-panel">
+    <input type="radio" id="switcheroo-tight-example-l" class="mn--switcheroo-input" name="switcheroo-tight-example" value="l">
+    <label for="switcheroo-tight-example-l" class="mn--switcheroo-label">
+      <div class="mn--switcheroo-inner">
+        <h4 class="mn--switcheroo-labeltext">l</h4>
+      </div>
+    </label>
+  </li>
+  <li class="mn--switcheroo-panel">
+    <input type="radio" id="switcheroo-tight-example-xl" class="mn--switcheroo-input" name="switcheroo-tight-example" value="xl">
+    <label for="switcheroo-tight-example-xl" class="mn--switcheroo-label">
+      <div class="mn--switcheroo-inner">
+        <h4 class="mn--switcheroo-labeltext">xl</h4>
+      </div>
+    </label>
+  </li>
+</ul>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+      
+    </div>
+  </div>
+</div>
+<div  id="textfield"  class="doc-section first-section ">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>textfield</h1>
+<p>Text input fields allow users on the site to input text, select text, and lookup data via auto-completion. They will usually appear in forms. Users may enter text, numbers, or mixed-format types of input.</p>
+<p>Upon touching or selecting the text field two actions occur: The cursor is placed there and The keyboard is displayed  (mobile device)</p> 
+<p>For mobile devices, the auto-correct functionality should be disabled for relevant inputs that include proper names, street names, email addresses, usernames, etc.</p>
+<p>The auto-capitalisation functionality for the first letter of each text field and the first letter of each sentence should only be enabled where appropriate and if required by the locale.  For example, this is especially relevant for input fields that: ask for proper noun inputs and contains sentence like messages, such as gift card messages</p>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+    </div>
+  </div>
+</div>
+<div  id="standard-textfield"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>standard textfield</h1>
+<p>Standard text inputs have the class <code>.field-text</code> and must be wrapped in <code>.field-group</code>. The grouping includes the label with <code>.field-label</code> and optional elements such as <code>.field-helper</code>.</p>
+<figure>
+	<div class="field-group">
+		<label for="field-preinput" class="field-label">Label text</label>
+		<input type="text" id="field-preinput" class="field-text" name="single-line-field">
+		<div class="field-helper">hint and helper text</div>
+	</div>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">&lt;div class="field-group"&gt;
+  &lt;label for="field-preinput" class="field-label">Label text&lt;/label&gt;
+  &lt;input type="text" id="field-preinput" class="field-text" name="single-line-field"&gt;
+  &lt;div class="field-helper">hint and helper text&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+</div>
+      
+    </div>
+  </div>
+</div>
+<div  id="error-textfield"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>error textfield</h1>
+<p class="doc-p">We can change the appearance and state of a standard input; simply add the <code>.is-error</code> modifier to the input's <code>.field-group</code> container. Javascript toggles the error and places a <code>.field-helper</code> element with the appropriate message.</p>
+<figure>
+  <div class="field-group is-error">
+    <label for="field-errorinput" class="field-label">Label text</label>
+    <input type="text" id="field-errorinput" class="field-text" name="single-line-field">
+    <div class="field-helper">error text</div>
+  </div>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+
+<div class="doc-example">
+  <h3>example</h3>
+  
+<pre><code class="html">
+&lt;div class="field-group is-error"&gt;
+  &lt;label for="field-errorinput" class="field-label">Label text&lt;/label&gt;
+  &lt;input type="text" id="field-errorinput" class="field-text" name="single-line-field"&gt;
+  &lt;div class="field-helper">error text&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+</div>
+      
+    </div>
+  </div>
+</div>
+
+<div  id="textarea"  class="doc-section">
+  <div class="doc-section-pad doc-info">
+    <div class="doc-info-pad">
+      
+      <h1>textarea</h1>
+<p>Textareas must have the <code>.field-textarea</code> class and are identical to textfield inputs in that they have the class <code>.field-text</code> and must be wrapped in <code>.field-group</code>. The grouping includes the label with <code>.field-label</code> and optional elements such as <code>.field-helper</code>. These multi-line fields may have a character counter if the <code>textarea</code> attribute <code>maxlength</code> is set.</p>
+<figure>
+  <div class="field-group">
+    <label for="field-textarea" class="field-label">message</label>
+    <textarea id="field-textarea" class="field-text field-textarea" name="textarea-example" maxlength="200"></textarea>
+  </div>
+</figure>
+      
+    </div>
+  </div>
+  <div class="doc-section-pad doc-examples">
+    <div class="doc-examples-pad">
+      
+      
+      
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+    
+  </body>
+
+</html>
